@@ -1,0 +1,673 @@
+schema_version: "0.1.0"
+module:
+  id: P-011-MEPL-001
+  name: "$7 Prompt #11 Master Evidence and Product Ledger"
+  parent: P-011-OMNI-001
+  related_modules:
+    - P-011-EEBDS-001
+    - P-011-E6C-001
+    - P-011-E6C-CHAR-001
+    - P-011-DSF-001
+  work_packet: WP-OMNI-0005
+  status: data_model_architecture
+  implementation_target:
+    first: q3_accessible_xlsx
+    later_optional:
+      - sqlite
+      - postgresql
+      - airtable
+      - approved_control_tower_database
+  governing_law:
+    - Quality and Quality Assurance is Job #1
+    - No proof, no inventory
+    - No certification, no delivery
+    - No human approval, no release
+
+claims:
+  workbook_implemented: false
+  production_database_deployed: false
+  live_connectors_configured: false
+  autonomous_release: false
+  autonomous_minting: false
+  autonomous_human_approval: false
+
+principles:
+  - stable_ids_never_reused
+  - approved_history_not_silently_overwritten
+  - privacy_aware_routing_and_export
+  - independent_model_lines_until_approved_comparison
+  - model_agreement_is_not_source_verification
+  - blockchain_hash_is_not_truth_certification
+  - q4_minimum_for_approved_inventory
+  - red_risk_or_failed_critical_gate_blocks_release
+  - human_approval_is_human_only
+  - documentation_is_not_deployment
+  - corrections_propagate_to_all_affected_targets
+  - restricted_evidence_excluded_from_public_prototype
+
+id_prefixes:
+  module: MOD-
+  program: PRG-
+  workstream: WS-
+  work_packet: WP-
+  continuation_packet: CP-
+  decision: DEC-
+  artifact: ART-
+  source: SRC-
+  claim: CLM-
+  contradiction: CON-
+  requirement: REQ-
+  test: TST-
+  defect: DEF-
+  risk: RSK-
+  gate_result: GATE-
+  approval: APR-
+  product: PROD-
+  product_version: VER-
+  model_line_edition: ED-
+  character: CHAR-
+  ecosystem: ECO-
+  ceiu: CEIU-
+  learning_object: LO-
+  skill: SKILL-
+  assessment: ASM-
+  build_project: BUILD-
+  media_asset: MEDIA-
+  nft_provenance: NFT-
+  offer: OFFER-
+  campaign: CAM-
+  affiliate: AFF-
+  revenue_event: REV-
+  cost_event: COST-
+  support_event: SUP-
+  device: DEV-
+  platform: PLAT-
+  connector: CONN-
+  incident: INC-
+  correction: COR-
+  retirement: RET-
+  franchise_node: NODE-
+  audit: AUD-
+  archive: ARC-
+  audit_event: EVT-
+  quality_evidence_packet: QEP-
+
+privacy_classes:
+  public:
+    public_export: allowed_after_review
+    public_ai: allowed_after_review
+    broad_slack: allowed_after_review
+    nft_metadata: allowed_after_review
+    blockchain: allowed_after_review
+  internal:
+    public_export: blocked
+    public_ai: blocked
+    broad_slack: blocked
+    nft_metadata: blocked
+    blockchain: blocked
+  confidential:
+    public_export: prohibited
+    public_ai: prohibited
+    broad_slack: prohibited
+    nft_metadata: prohibited
+    blockchain: prohibited
+    access: named_roles_only
+  restricted:
+    public_export: prohibited
+    public_ai: prohibited
+    general_ai_chat: prohibited
+    broad_slack: prohibited
+    public_repository: prohibited
+    nft_metadata: prohibited
+    blockchain: prohibited
+    access: approved_private_vault_only
+
+model_lines:
+  independent:
+    - chatgpt_business
+    - gemini_notebooklm
+    - claude_fabric_hermes
+  additional:
+    - human_editorial
+  locked_until_independent_approval:
+    - comparison
+    - merged_premium
+  independence_requirements:
+    - separate_work_packet
+    - separate_source_manifest
+    - independent_first_pass
+    - separate_quality_packet
+    - copied_output_not_counted_as_independent
+    - source_dependence_report_required_before_comparison
+
+truth_labels:
+  VF_verified_fact: verified_fact
+  OA_official_assessment: official_assessment
+  CT_corroborated_testimony: corroborated_testimony
+  AL_allegation: allegation
+  WH_working_hypothesis: working_hypothesis
+  FD_fictional_dramatization: fictional_dramatization
+  CX_contradicted: contradicted
+
+certification_levels:
+  Q0_idea: 0
+  Q1_structured_draft: 1
+  Q2_evidence_mapped: 2
+  Q3_testable_pilot: 3
+  Q4_certified_product: 4
+  Q5_production_proven: 5
+  Q6_franchise_replicable: 6
+  Q7_continuum_stewarded: 7
+
+risk_gate:
+  green: eligible_for_ordinary_review
+  yellow: conditional_or_limited
+  orange: pilot_or_quarantine_only
+  red: stop_work_no_release
+
+critical_release_logic:
+  minimum_certification: Q4_certified_product
+  critical_gates_must_pass: true
+  red_risk_prohibited: true
+  open_critical_defects_allowed: 0
+  human_approval_required: true
+  rights_privacy_security_accessibility_required: true
+  score_override_prohibited: true
+
+workbook:
+  target_file_name: P011_Master_Evidence_Product_Ledger_Q3.xlsx
+  sheets:
+    - order: 0
+      name: 00_README
+      purpose: instructions_scope_boundaries_and_navigation
+    - order: 1
+      name: 01_CURRENT_CHECKPOINT
+      purpose: current_packet_next_action_quality_and_blockers
+    - order: 2
+      name: 02_DASHBOARD
+      purpose: executive_operating_dashboard
+    - order: 3
+      name: 03_MODULES_PROGRAMS
+      tables: [Modules, Programs]
+    - order: 4
+      name: 04_WORKSTREAMS_PACKETS
+      tables: [Workstreams, WorkPackets, WorkPacketDependencyLinks]
+    - order: 5
+      name: 05_CONTINUATION_DECISIONS
+      tables: [ContinuationPackets, Decisions, Artifacts]
+    - order: 6
+      name: 06_PRODUCTS_VERSIONS
+      tables: [Products, ProductVersions]
+    - order: 7
+      name: 07_MODEL_LINE_EDITIONS
+      tables: [ModelLineEditions]
+    - order: 8
+      name: 08_SOURCES_CLAIMS
+      tables: [Sources, Claims, ClaimSourceLinks]
+    - order: 9
+      name: 09_CONTRADICTIONS
+      tables: [Contradictions]
+    - order: 10
+      name: 10_REQUIREMENTS_TESTS
+      tables: [Requirements, Tests]
+    - order: 11
+      name: 11_DEFECTS_RISKS
+      tables: [Defects, Risks]
+    - order: 12
+      name: 12_GATES_APPROVALS
+      tables: [GateResults, Approvals, QualityEvidencePackets]
+    - order: 13
+      name: 13_CHARACTERS_ECOSYSTEMS
+      tables: [Characters, Ecosystems]
+    - order: 14
+      name: 14_CEIUS
+      tables: [CEIUs, CEIUEcosystemLinks, ProductCharacterLinks]
+    - order: 15
+      name: 15_LEARNING_SKILLS
+      tables: [LearningObjects, Skills, Assessments, LearningObjectSkillLinks, LearningObjectAssessmentLinks]
+    - order: 16
+      name: 16_BUILD_MEDIA_NFT
+      tables: [BuildProjects, MediaAssets, NFTProvenance]
+    - order: 17
+      name: 17_OFFERS_CAMPAIGNS
+      tables: [Offers, Campaigns, Affiliates, CampaignAffiliateLinks]
+    - order: 18
+      name: 18_REVENUE_COSTS
+      tables: [RevenueEvents, CostEvents, SupportEvents]
+    - order: 19
+      name: 19_DEVICES_PLATFORMS
+      tables: [Devices, Platforms]
+    - order: 20
+      name: 20_CONNECTORS
+      tables: [Connectors, ConnectorWorkPacketLinks]
+    - order: 21
+      name: 21_INCIDENTS_CORRECTIONS
+      tables: [Incidents, Corrections, CorrectionTargets, Retirements]
+    - order: 22
+      name: 22_FRANCHISE_AUDITS
+      tables: [FranchiseNodes, FranchiseNodeProductLinks, Audits]
+    - order: 23
+      name: 23_ARCHIVE_AUDIT_EVENTS
+      tables: [Archives, AuditEvents]
+    - order: 24
+      name: 24_DATA_DICTIONARY
+      purpose: canonical_field_definitions_and_relationships
+    - order: 25
+      name: 25_ENUMS_VALIDATION
+      purpose: validation_lists_and_state_machines
+    - order: 26
+      name: 26_IMPORT_EXPORT
+      purpose: import_export_contract_and_logs
+    - order: 27
+      name: 27_VERSION_HISTORY
+      purpose: workbook_structure_formula_and_correction_history
+  mobile_views:
+    - MOBILE_CURRENT
+    - MOBILE_NEXT_ACTIONS
+    - MOBILE_RELEASE_BLOCKS
+    - MOBILE_PRODUCT_STATUS
+    - MOBILE_INCIDENTS
+    - MOBILE_REVENUE_SUMMARY
+  accessibility:
+    - frozen_headers
+    - filters
+    - readable_column_widths
+    - plain_language_labels
+    - instructions_on_each_complex_sheet
+    - not_color_alone
+    - keyboard_friendly_tables
+    - high_contrast_warning_labels
+
+entities:
+  Modules:
+    primary_key: module_id
+    fields: [module_name, module_version, status, parent_module_id, canonical_repository, canonical_path, human_owner, privacy_class, created_at, updated_at, supersedes_module_id, retirement_id]
+  Programs:
+    primary_key: program_id
+    foreign_keys: {module_id: Modules.module_id}
+    fields: [program_name, purpose, human_owner, status, priority, privacy_class, start_date, target_date, actual_completion_date]
+  Workstreams:
+    primary_key: workstream_id
+    foreign_keys: {program_id: Programs.program_id}
+    fields: [workstream_name, objective, owner, reviewer, status, priority, percent_complete, blocked_reason, current_work_packet_id]
+  WorkPackets:
+    primary_key: work_packet_id
+    foreign_keys: {workstream_id: Workstreams.workstream_id, device_id: Devices.device_id, platform_id: Platforms.platform_id}
+    fields: [title, objective, scope_in, scope_out, acceptance_criteria, owner, model_line, privacy_class, status, priority, issue_reference, branch_reference, pull_request_reference, started_at, due_at, completed_at, next_action]
+  ContinuationPackets:
+    primary_key: continuation_packet_id
+    foreign_keys: {work_packet_id: WorkPackets.work_packet_id, device_id: Devices.device_id, platform_id: Platforms.platform_id}
+    fields: [packet_version, supersedes_packet_id, status, created_at, human_owner, reviewer, model_line, privacy_class, objective_summary, work_completed_summary, blocker_summary, highest_priority_next_action, resume_prompt, risk_gate, certification_level, human_approval_status, artifact_reference]
+  Decisions:
+    primary_key: decision_id
+    foreign_keys: {work_packet_id: WorkPackets.work_packet_id}
+    fields: [decision_text, rationale, evidence_reference, decided_by, decision_date, reversible, review_date, status, superseded_by_decision_id]
+  Artifacts:
+    primary_key: artifact_id
+    foreign_keys: {work_packet_id: WorkPackets.work_packet_id, product_version_id: ProductVersions.product_version_id}
+    fields: [artifact_type, title, version, location, repository, branch, commit_sha, content_hash, media_type, privacy_class, rights_status, status, created_by, created_at, approved_by, approved_at, supersedes_artifact_id]
+  Sources:
+    primary_key: source_id
+    fields: [title, author_or_organization, source_type, publication_date, retrieved_at, canonical_reference, primary_or_secondary, authority_score, relevance_score, currency_score, independence_group, rights_status, privacy_class, content_hash, archived_reference, notes]
+  Claims:
+    primary_key: claim_id
+    fields: [claim_text, truth_label, claim_domain, subject, date_context, geographic_context, status, confidence, publication_status, owner, last_verified_at, freshness_due_at, correction_id]
+  ClaimSourceLinks:
+    primary_key: claim_source_link_id
+    foreign_keys: {claim_id: Claims.claim_id, source_id: Sources.source_id}
+    fields: [support_type, source_location, evidence_summary, reviewer, reviewed_at]
+  Contradictions:
+    primary_key: contradiction_id
+    fields: [claim_id_a, claim_id_b, source_id_a, source_id_b, contradiction_type, materiality, status, resolution_method, resolution_summary, resolved_by, resolved_at]
+  Requirements:
+    primary_key: requirement_id
+    fields: [work_packet_id, product_version_id, requirement_type, requirement_text, priority, critical, source_reference, acceptance_method, status, owner, due_at]
+  Tests:
+    primary_key: test_id
+    foreign_keys: {requirement_id: Requirements.requirement_id}
+    fields: [test_type, test_name, procedure, expected_result, actual_result, status, performed_by, performed_at, evidence_reference, environment, repeatable]
+  Defects:
+    primary_key: defect_id
+    fields: [test_id, artifact_id, product_version_id, severity, title, description, privacy_or_security_impact, status, owner, detected_at, target_fix_date, fixed_at, verification_test_id, release_blocking]
+  Risks:
+    primary_key: risk_id
+    fields: [object_type, object_id, category, description, likelihood, impact, risk_score, risk_gate, mitigation, owner, status, review_due_at, residual_risk, accepted_by]
+  GateResults:
+    primary_key: gate_result_id
+    fields: [object_type, object_id, gate_name, critical, status, evidence_reference, reviewer, reviewed_at, conditions, expires_at, supersedes_gate_result_id]
+  Approvals:
+    primary_key: approval_id
+    fields: [object_type, object_id, approval_type, status, requested_by, requested_at, approver, decided_at, scope, conditions, expires_at, revoked_at, audit_reference]
+    constraints:
+      - ai_identity_cannot_approve_HumanApprovalGate
+  Products:
+    primary_key: product_id
+    fields: [product_family, product_name, description, product_type, ceiu_id, human_owner, privacy_class, status, current_version_id, inventory_status, franchise_eligible, created_at, retirement_id]
+  ProductVersions:
+    primary_key: product_version_id
+    foreign_keys: {product_id: Products.product_id, quality_packet_id: QualityEvidencePackets.quality_packet_id}
+    fields: [version, title, certification_level, risk_gate, status, model_independence_required, source_manifest_reference, release_eligibility, release_block_reason, approved_at, published_at, supersedes_version_id]
+  ModelLineEditions:
+    primary_key: edition_id
+    foreign_keys: {product_version_id: ProductVersions.product_version_id, quality_packet_id: QualityEvidencePackets.quality_packet_id}
+    fields: [model_line, edition_type, status, independent_first_pass, source_manifest_reference, working_location, approved_by, approved_at, comparison_eligible, merged_premium_eligible]
+  Characters:
+    primary_key: character_id
+    fields: [public_name, creator_or_rights_owner, fiction_status, passport_reference, permissions, limitations, voice_likeness_status, rights_status, privacy_class, status]
+  Ecosystems:
+    primary_key: ecosystem_id
+    fields: [ecosystem_name, environment_type, description, affected_groups, dependencies, risks, measures, status]
+  CEIUs:
+    primary_key: ceiu_id
+    fields: [title, character_id, primary_ecosystem_id, truth_boundary, quantum_questions_reference, learning_summary, story_summary, innovation_summary, business_summary, certification_level, risk_gate, status, entry_passport_reference]
+  LearningObjects:
+    primary_key: learning_object_id
+    fields: [ceiu_id, title, object_type, learning_level, audience, prerequisites, objectives, assessment_summary, accessibility_requirements, estimated_duration, status, version]
+  Skills:
+    primary_key: skill_id
+    fields: [skill_name, domain, level, description, evidence_required, prerequisite_skill_id, status]
+  Assessments:
+    primary_key: assessment_id
+    fields: [learning_object_id, assessment_type, instructions, rubric_reference, passing_rule, attempt_limit, human_review_required, privacy_class, status]
+  BuildProjects:
+    primary_key: build_project_id
+    fields: [ceiu_id, learning_object_id, title, problem, requirements, repository, test_plan, security_review, accessibility_review, environmental_review, status, certification_level]
+  MediaAssets:
+    primary_key: media_asset_id
+    fields: [product_version_id, edition_id, media_type, title, file_or_location, duration_or_length, language, accessibility_assets, rights_status, privacy_class, content_hash, status]
+  NFTProvenance:
+    primary_key: nft_provenance_id
+    fields: [product_version_id, media_asset_id, network, contract_reference, token_or_edition_reference, public_metadata_reference, content_hash, license_reference, correction_reference, mint_status, privacy_review_status, rights_review_status, investment_disclaimer_present]
+  Offers:
+    primary_key: offer_id
+    fields: [product_id, offer_name, customer_problem, value_proposition, scope, exclusions, price_assumption, currency, recurring, support_commitment, refund_policy_reference, claims_review_status, status]
+  Campaigns:
+    primary_key: campaign_id
+    fields: [offer_id, campaign_name, audience, channel, budget, start_date, end_date, status, campaign_passport_reference, truth_and_disclosure_status, accessibility_status, correction_plan, stop_conditions]
+  Affiliates:
+    primary_key: affiliate_id
+    fields: [human_or_business_name, agreement_reference, approved_offers, commission_rule, disclosure_requirement, payment_status, privacy_class, status]
+  RevenueEvents:
+    primary_key: revenue_event_id
+    fields: [product_id, offer_id, campaign_id, affiliate_id, event_date, event_type, quantity, gross_amount, discount_amount, refund_amount, fee_amount, net_amount, currency, payment_status, source_reference, privacy_class]
+  CostEvents:
+    primary_key: cost_event_id
+    fields: [program_id, product_id, campaign_id, event_date, cost_category, vendor_or_platform, amount, currency, recurring, source_reference, privacy_class]
+  SupportEvents:
+    primary_key: support_event_id
+    fields: [product_id, customer_or_learner_reference, event_date, event_type, severity, summary, privacy_class, status, owner, resolution_summary, correction_id]
+  Devices:
+    primary_key: device_id
+    fields: [device_type, owner, business_or_personal, operating_system, encryption_status, update_status, backup_status, restore_tested, mfa_capable, approved_privacy_classes, last_security_review, status]
+    prohibited_fields: [password, unlock_code, recovery_code, private_key]
+  Platforms:
+    primary_key: platform_id
+    fields: [platform_name, account_or_workspace_label, human_owner, business_or_personal, primary_role, approved_privacy_classes, recovery_verified, mfa_status, last_permission_review, status]
+  Connectors:
+    primary_key: connector_id
+    fields: [source_platform_id, destination_platform_id, purpose, permission_scope, allowed_data_classes, allowed_actions, prohibited_actions, rate_limit, spend_limit, expiration, revocation_procedure, permission_test_status, functional_test_status, security_test_status, audit_reference, status]
+  Incidents:
+    primary_key: incident_id
+    fields: [detected_at, incident_type, severity, affected_object_type, affected_object_id, privacy_class, summary, status, containment_action, owner, notification_required, recovery_status, root_cause, closed_at]
+  Corrections:
+    primary_key: correction_id
+    fields: [proposed_at, affected_object_type, affected_object_id, materiality, reason, corrected_text_or_action, status, approved_by, approved_at, propagation_scope, propagation_complete_percent, verification_reference, completed_at]
+  Retirements:
+    primary_key: retirement_id
+    fields: [object_type, object_id, reason, requested_at, approved_by, approved_at, effective_at, replacement_object_id, customer_or_learner_impact, archive_id, status]
+  FranchiseNodes:
+    primary_key: franchise_node_id
+    fields: [node_name, human_owner, node_level, jurisdiction, approved_products, data_permissions, brand_permissions, audit_due_at, incident_status, succession_plan_reference, status]
+  Audits:
+    primary_key: audit_id
+    fields: [object_type, object_id, audit_type, auditor, started_at, completed_at, scope, findings_summary, critical_findings, corrective_actions, status, next_audit_due_at]
+  Archives:
+    primary_key: archive_id
+    fields: [object_type, object_id, archive_location, content_hash, privacy_class, retention_class, restore_procedure, restore_tested_at, status]
+  AuditEvents:
+    primary_key: audit_event_id
+    append_only: true
+    fields: [event_timestamp, actor_type, actor_id, action, object_type, object_id, previous_state, new_state, reason, source_platform_id, privacy_class, correlation_id]
+  QualityEvidencePackets:
+    primary_key: quality_packet_id
+    fields: [object_type, object_id, certification_target, requirements_complete_percent, test_pass_percent, critical_defects_open, noncritical_defects_open, risk_gate, critical_gates_pass, quality_score, reviewer_summary, human_approval_status, decision, created_at, supersedes_quality_packet_id]
+
+junction_tables:
+  WorkPacketDependencyLinks: [link_id, work_packet_id, dependency_work_packet_id, relationship_type, effective_at, expires_at, status, audit_reference]
+  ArtifactSourceLinks: [link_id, artifact_id, source_id, relationship_type, effective_at, expires_at, status, audit_reference]
+  ClaimProductVersionLinks: [link_id, claim_id, product_version_id, relationship_type, effective_at, expires_at, status, audit_reference]
+  ProductCharacterLinks: [link_id, product_id, character_id, relationship_type, effective_at, expires_at, status, audit_reference]
+  CEIUEcosystemLinks: [link_id, ceiu_id, ecosystem_id, relationship_type, effective_at, expires_at, status, audit_reference]
+  LearningObjectSkillLinks: [link_id, learning_object_id, skill_id, relationship_type, effective_at, expires_at, status, audit_reference]
+  LearningObjectAssessmentLinks: [link_id, learning_object_id, assessment_id, relationship_type, effective_at, expires_at, status, audit_reference]
+  CampaignAffiliateLinks: [link_id, campaign_id, affiliate_id, relationship_type, effective_at, expires_at, status, audit_reference]
+  CorrectionTargets: [link_id, correction_id, target_type, target_id, required, status, verified_at, audit_reference]
+  FranchiseNodeProductLinks: [link_id, franchise_node_id, product_id, relationship_type, effective_at, expires_at, status, audit_reference]
+  ConnectorWorkPacketLinks: [link_id, connector_id, work_packet_id, relationship_type, effective_at, expires_at, status, audit_reference]
+
+state_machines:
+  work_packet:
+    normal: [backlog, ready, active, under_review, completed, archived]
+    side: [blocked, cancelled, superseded, quarantined]
+  product_ceiu:
+    normal: [idea, structured_draft, evidence_mapped, testable_pilot, certified_product, production_proven, franchise_replicable, continuum_stewarded]
+    side: [quarantined, suspended, superseded, retired]
+  product_version: [draft, under_review, approved, published, paused, withdrawn, superseded, retired]
+  model_line_edition: [not_started, researching, drafting, qa, approved, rejected, superseded]
+  claim: [captured, sourced, corroborated, contradicted, unresolved, approved_for_publication, blocked, corrected, retired]
+  requirement: [proposed, approved, implementing, test_ready, verified, failed, superseded, retired]
+  defect: [new, triaged, assigned, fixing, verification, closed, deferred, duplicate, not_reproducible, accepted_risk, reopened]
+  risk: [identified, analyzed, mitigating, monitored, accepted, avoided, transferred, escalated, closed]
+  gate: [not_started, in_review, pass, conditional, fail, not_applicable, expired, revoked]
+  approval: [not_requested, pending, approved, rejected, expired, revoked]
+  campaign: [draft, review, approved, scheduled, active, paused, corrected, withdrawn, archived]
+  connector: [planned, configured, permission_tested, function_tested, security_reviewed, approved, active, suspended, revoked, retired]
+  incident: [detected, triaged, contained, remediating, recovered, closed]
+  correction: [proposed, reviewed, approved, propagating, completed, verified, rejected, withdrawn, superseded]
+  franchise_node: [N0_proposed, N1_registered, N2_sandbox, N3_pilot, N4_certified, N5_replication_ready, N6_mentor_node, N7_continuum_steward, suspended, quarantined, revoked, retired]
+
+formulas:
+  status_score:
+    backlog: 0.0
+    not_started: 0.0
+    ready: 0.1
+    active: 0.5
+    under_review: 0.85
+    completed: 1.0
+    approved: 1.0
+  weighted_completion: "SUM(weight * status_score) / SUM(active_weight)"
+  requirement_coverage: "verified_requirements / approved_active_requirements"
+  test_pass_rate: "passed_tests / executed_tests"
+  evidence_coverage: "publication_claims_with_reviewed_source / publication_relevant_claims"
+  model_independence: "approved_required_independent_editions / required_independent_editions"
+  critical_gates_pass: "all_applicable_critical_gates in [pass, not_applicable]"
+  release_eligible: "certification>=Q4 AND critical_gates_pass AND risk_gate!=red AND open_critical_defects=0 AND human_approval=approved_in_scope AND rights_privacy_security_accessibility_satisfied"
+  overdue_days: "MAX(0, today - due_date)"
+  checkpoint_age: "today - current_packet_created_date"
+  risk_score: "likelihood * impact"
+  correction_propagation: "verified_corrected_targets / required_correction_targets"
+  net_revenue: "gross_amount - discount_amount - refund_amount - fee_amount"
+  contribution_margin: "net_revenue - direct_variable_costs"
+  probability_weighted_forecast: "expected_amount * stated_probability"
+  budget_variance: "actual - budget"
+  budget_variance_percent: "IF(budget=0, blank, variance/budget)"
+
+quality_score_weights:
+  purpose_and_value: 8
+  evidence_and_truth: 12
+  functional_correctness: 10
+  safety_and_abuse_resistance: 10
+  privacy_and_identity: 8
+  cybersecurity: 8
+  rights_legal_medical: 8
+  accessibility_and_usability: 8
+  environmental_responsibility: 6
+  interoperability_and_maintainability: 6
+  resilience_and_incident_readiness: 6
+  business_and_revenue_integrity: 5
+  provenance_correction_retirement: 5
+
+dashboards:
+  current_checkpoint:
+    - current_packet
+    - status
+    - module_program_workstream_work_packet
+    - highest_priority_unblocked_action
+    - parallel_human_action
+    - blockers
+    - risk_gate
+    - certification
+    - critical_gates
+    - last_update
+    - authoritative_links
+  product_factory:
+    - products_by_certification
+    - inventory_status
+    - release_blocks
+    - media_editions
+    - corrections
+    - retirements
+    - q3_to_q4_queue
+  model_lines:
+    - independent_line_status
+    - source_manifests
+    - quality_packets
+    - approval_status
+    - comparison_eligibility
+    - source_dependence_warnings
+  evidence:
+    - claims_by_truth_label
+    - evidence_coverage
+    - stale_claims
+    - unresolved_contradictions
+    - independence_groups
+    - publication_blocks
+  quality_risk:
+    - failed_critical_gates
+    - red_or_orange_risks
+    - open_critical_defects
+    - overdue_tests
+    - expiring_approvals
+    - incidents
+    - correction_propagation
+  learning:
+    - learning_objects_by_level_and_domain
+    - skill_coverage
+    - assessment_state
+    - accessibility_status
+    - anonymized_learner_evidence
+    - mentor_reviews
+  business:
+    - offers
+    - campaigns
+    - assumptions
+    - revenue
+    - costs
+    - refunds
+    - support_burden
+    - contribution_margin
+    - forecast_vs_actual
+  devices_connectors:
+    - security_review
+    - backup_restore
+    - permission_tests
+    - connector_state
+    - expirations
+    - revocations
+    - incidents
+  franchise:
+    - node_level
+    - approved_products
+    - audit_status
+    - incidents
+    - corrections
+    - succession
+    - certification_blocks
+
+import_export:
+  imports:
+    - csv_per_table
+    - json_bundle_with_stable_ids
+    - prompt11_example_json
+    - github_issue_and_pull_request_metadata
+    - source_manifests
+    - redacted_campaign_and_business_records
+    - device_and_connector_inventory_without_secrets
+  exports:
+    - filtered_csv_per_table
+    - public_json_product_manifest
+    - continuation_packet_json
+    - github_work_packet_markdown
+    - slack_notification_summary
+    - notebooklm_source_manifest
+    - quality_evidence_summary
+    - correction_propagation_report
+    - public_nft_metadata_subset
+    - future_tower_control_payload
+  checks_before_export:
+    - privacy_class
+    - destination_permission
+    - rights_status
+    - approval_scope
+    - redaction_required
+    - correction_status
+
+migration_phases:
+  - inventory_existing_prompt11_assets
+  - crosswalk_fields_and_enumerations
+  - privacy_and_rights_review
+  - stable_identifier_assignment
+  - deduplication_with_review
+  - core_import
+  - extended_import
+  - reconciliation_checks
+  - dashboard_and_q3_review
+  - optional_database_migration
+
+q3_acceptance:
+  - opens_without_repair_warning
+  - required_sheets_and_tables_exist
+  - frozen_headers_filters_and_readable_widths
+  - stable_ids_and_validation_lists
+  - model_lines_separate
+  - release_blocks_visible
+  - current_checkpoint_first_operational_view
+  - sample_prompt11_records
+  - no_secrets_or_restricted_records
+  - dashboard_metrics_trace_to_source_rows
+  - data_dictionary_version_history_and_correction_log
+  - selected_public_csv_or_json_exports
+  - formula_reference_accessibility_privacy_and_visual_qa
+  - quality_evidence_packet
+
+stop_work:
+  - restricted_data_in_public_prototype
+  - secret_or_private_key_exposure
+  - model_line_copy_mislabeled_as_independent
+  - critical_gate_failure_hidden_or_overridden
+  - red_risk_gate_ignored
+  - human_approval_set_by_ai
+  - unsupported_earnings_funding_health_legal_or_environmental_claim
+  - broken_source_lineage_or_correction_propagation
+  - workbook_corruption_or_untraceable_dashboard_metric
+
+completion_boundary:
+  completed:
+    - data_model
+    - field_definitions
+    - state_machines
+    - privacy_model
+    - formulas
+    - dashboards
+    - import_export_contract
+    - migration_plan
+  not_yet_claimed:
+    - xlsx_implementation
+    - production_database
+    - live_api_routes
+    - live_connectors
+    - accounting_or_payment_integration
+    - automated_publication
+    - autonomous_minting
+    - q3_certification
+    - q4_inventory_approval
