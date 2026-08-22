@@ -1,0 +1,18 @@
+{
+  "event_id": "CRM-EVT-0123456789ABCDEF",
+  "correlation_id": "CRM-CORR-SYNTH-001",
+  "timestamp": "2026-08-22T21:00:00+00:00",
+  "actor_type": "system",
+  "actor_id": "crm_demo_seeder",
+  "event_type": "party.registered",
+  "object_type": "party",
+  "object_id": "CRM-PTY-E6BFB7E9F14E9D38",
+  "result": "success",
+  "severity": "info",
+  "summary": "Synthetic Q2 party registered.",
+  "evidence_reference": "examples/P011-CRM-001.sample-party.json",
+  "details": {
+    "synthetic": true,
+    "human_approval_status": "pending"
+  }
+}
