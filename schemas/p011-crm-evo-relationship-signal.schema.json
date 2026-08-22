@@ -1,0 +1,27 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://lippytm.ai/schemas/crm-evo-relationship-signal.schema.json",
+  "title": "CRM Evolution Relationship Signal",
+  "type": "object",
+  "additionalProperties": true,
+  "required": [
+    "signal_id",
+    "correlation_id",
+    "event_type",
+    "object_id",
+    "privacy_class",
+    "risk_gate"
+  ],
+  "properties": {
+    "signal_id": {"type": "string", "minLength": 1},
+    "correlation_id": {"type": "string", "minLength": 1},
+    "event_type": {"type": "string", "minLength": 1},
+    "object_id": {"type": "string", "minLength": 1},
+    "privacy_class": {"enum": ["Public", "Internal", "Confidential", "Restricted"]},
+    "risk_gate": {"enum": ["Green", "Yellow", "Orange", "Red"]},
+    "required_gates": {"type": "array", "items": {"type": "string"}},
+    "assigned_swarm": {"type": "string"},
+    "capability_gap": {"type": "string"},
+    "proposed_mutation": {"type": "string"}
+  }
+}
