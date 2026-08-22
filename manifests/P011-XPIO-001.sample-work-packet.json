@@ -1,0 +1,32 @@
+{
+  "work_packet_id": "WP-XPIO-0001",
+  "correlation_id": "CORR-XPIO-20260822-0001",
+  "title": "Import governed Prompt 11 download vault",
+  "objective": "Register, deduplicate, hash verify, and report the existing Prompt 11 downloads as governed build inputs.",
+  "human_owner": "Charles Earl Lipshay",
+  "source_platform": "ChatGPT",
+  "source_device": "iPhone",
+  "model_line": "chatgpt",
+  "privacy_class": "public",
+  "truth_label": "VF",
+  "status": "review",
+  "acceptance_criteria": [
+    "Every selected download alias is registered",
+    "Exact duplicate content shares one artifact ID",
+    "Every unique artifact has a SHA-256 hash",
+    "No restricted records or secrets are included",
+    "Transparency and diagnostics reports are generated"
+  ],
+  "source_ids": [],
+  "artifact_ids": ["P011-ARTIFACT-VAULT-001"],
+  "permitted_tools": ["local_filesystem", "sqlite", "github"],
+  "permitted_destinations": ["Prompt-11 GitHub repository", "MEPL artifact registry", "private Slack control tower"],
+  "prohibited_actions": ["publish restricted records", "grant financial authority", "auto-approve Q4"],
+  "budget_limit_usd": 0,
+  "timeout_seconds": 3600,
+  "required_gates": ["ArtifactIntegrityGate", "PrivacyGate", "SecurityGate", "DocumentationGate", "HumanApprovalGate"],
+  "human_approval_status": "pending",
+  "next_action": "Run XPIO diagnostics and review the artifact vault report.",
+  "created_at": "2026-08-22T20:30:00-07:00",
+  "updated_at": "2026-08-22T20:30:00-07:00"
+}
