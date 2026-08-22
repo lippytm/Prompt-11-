@@ -1,0 +1,429 @@
+module:
+  id: P-011-OMNI-001
+  name: Omni-Device Multi-AI Broadband Learning, Publishing and Business Continuity Fabric
+  version: 0.4.0
+  status: architecture
+  parent: Prompt-11
+  related_modules:
+    - P-011-E6C-001
+    - P-011-EEBDS-001
+    - P-011-E6C-CHAR-001
+    - P-011-DSF-001
+  governing_law:
+    - Quality and Quality Assurance is Job #1
+    - No proof, no inventory
+    - No certification, no delivery
+    - No human approval, no release
+
+purpose:
+  - preserve project continuity across devices, platforms and AI model lines
+  - support high-variety input and output for education, entertainment and business development
+  - teach programming, blockchain development, AI systems, cybersecurity and entrepreneurship
+  - preserve privacy, provenance, correction, accessibility and environmental responsibility
+  - separate architecture from deployed integrations
+
+canonical_state:
+  repository: lippytm/Prompt-11-
+  primary_record_types:
+    - continuation_packet
+    - work_packet
+    - decision_record
+    - source_manifest
+    - quality_evidence_packet
+    - product_passport
+    - character_passport
+    - encyclopedia_entry_passport
+    - campaign_passport
+    - franchise_node_passport
+  conflict_rule: latest_human_approved_record_wins
+  deletion_rule: supersede_or_retire_do_not_silently_delete
+
+privacy_classes:
+  public:
+    allowed_destinations:
+      - public_github
+      - public_media
+      - public_nft_metadata
+      - approved_social_channels
+  internal:
+    allowed_destinations:
+      - authorized_workspaces
+      - private_github
+      - approved_slack_channels
+  confidential:
+    allowed_destinations:
+      - least_privilege_private_vault
+      - specifically_authorized_reviewers
+  restricted:
+    allowed_destinations:
+      - approved_private_case_vault_only
+    prohibited_destinations:
+      - public_github
+      - general_ai_chat
+      - broad_slack_channels
+      - nft_metadata
+      - blockchain
+      - public_media
+
+truth_labels:
+  VF: verified_fact
+  OA: official_assessment
+  CT: corroborated_testimony
+  AL: allegation
+  WH: working_hypothesis
+  FD: fictional_dramatization
+  CX: contradicted
+
+platform_roles:
+  iphone:
+    role:
+      - capture
+      - voice_dictation
+      - triage
+      - quick_review
+      - human_approval_when_appropriate
+    required_controls:
+      - screen_lock
+      - device_encryption
+      - current_security_updates
+      - no_restricted_data_in_general_notes
+      - end_session_continuation_packet
+  ipad:
+    role:
+      - visual_review
+      - annotation
+      - storyboarding
+      - accessibility_review
+      - presentation_review
+    required_controls:
+      - conflict_check_before_edit
+      - approval_scope_recorded
+      - sync_confirmation
+  asus_laptop:
+    role:
+      - coding
+      - testing
+      - repository_management
+      - media_production
+      - local_builds
+      - backup_verification
+    required_controls:
+      - secrets_not_committed
+      - dependency_and_security_scans
+      - tested_restore_procedure
+      - branch_and_pull_request_workflow
+  zo_computer:
+    role:
+      - authorized_runtime
+      - cloud_workspace
+      - scheduled_jobs
+      - prototype_deployment
+    status_rule: never_assume_connected_until_permission_and_functional_tests_pass
+  chatgpt_business:
+    model_line: chatgpt
+    role:
+      - orchestration
+      - structured_drafting
+      - analysis
+      - qa_planning
+      - continuation_support
+    restrictions:
+      - no_automatic_truth_certification
+      - no_automatic_external_sync
+      - no_human_approval_gate
+  gemini_notebooklm:
+    model_line: gemini_notebooklm
+    role:
+      - independent_source_grounded_research
+      - notebook_organization
+      - source_comparison
+      - audio_overview_planning
+    restrictions:
+      - no_copying_other_model_conclusions_as_independent_work
+      - source_manifest_required
+  claude_fabric_hermes:
+    model_line: claude_hermes
+    role:
+      - independent_architecture
+      - long_context_review
+      - contradiction_analysis
+      - bounded_work_packet_routing
+    restrictions:
+      - no_final_truth_or_liability_decisions
+      - no_contract_or_financial_authority
+      - no_human_approval_gate
+  github:
+    role:
+      - canonical_version_control
+      - issues
+      - pull_requests
+      - schemas
+      - manifests
+      - audit_trail
+      - releases
+    restrictions:
+      - no_secrets
+      - no_private_medical_or_identity_evidence_in_public_repositories
+  slack:
+    role:
+      - collaboration
+      - alerts
+      - handoff_notifications
+      - decision_discussion
+    restrictions:
+      - does_not_replace_canonical_decision_record
+      - no_restricted_data_in_broad_channels
+      - link_to_authoritative_artifacts
+  nft_blockchain:
+    role:
+      - public_provenance
+      - edition_identity
+      - public_license_reference
+      - correction_and_supersession_links
+    restrictions:
+      - hash_does_not_prove_truth
+      - no_private_or_restricted_data
+      - no_guaranteed_investment_value
+
+continuation_packet:
+  schema: schemas/p011-continuation-packet.schema.json
+  template: templates/CONTINUATION_PACKET.md
+  required_at:
+    - end_of_meaningful_session
+    - device_change
+    - platform_change
+    - model_line_handoff
+    - workstream_change
+    - approval_or_rejection
+    - incident_or_correction
+  approval_rule: newest_approved_packet_supersedes_but_does_not_delete_older_packets
+  universal_resume_command: >-
+    Continue Prompt #11 from the latest approved Continuation Packet. Preserve
+    model-line independence, privacy classification, source provenance, Quality
+    and Quality Assurance as Job #1, and begin with the highest-priority
+    unblocked work packet.
+
+work_packet_lifecycle:
+  - capture
+  - normalize
+  - classify
+  - route
+  - independent_research
+  - build
+  - test
+  - compare
+  - quality_assurance
+  - human_review
+  - release
+  - measure
+  - correct
+  - evolve
+  - retire_and_archive
+
+model_line_protocol:
+  independent_lines:
+    - chatgpt
+    - gemini_notebooklm
+    - claude_hermes
+  comparison_allowed_after:
+    - first_pass_complete
+    - source_manifest_complete
+    - privacy_review_complete
+    - internal_qa_complete
+  merged_premium_allowed_after:
+    - comparison_report_complete
+    - contradictions_documented
+    - rights_review_complete
+    - human_approval_gate_pass
+  prohibited:
+    - copying_one_model_output_into_another_and_calling_it_independent
+    - treating_model_agreement_as_source_verification
+    - sharing_restricted_data_without_specific_authorization
+
+learning_ladder:
+  L0:
+    name: orientation
+    evidence: onboarding_and_safety_check
+  L1:
+    name: digital_foundations
+    evidence: secure_project_folder_and_account_checklist
+  L2:
+    name: computational_thinking
+    evidence: logic_and_debugging_exercises
+  L3:
+    name: programming_builder
+    evidence: working_tested_application_or_automation
+  L4:
+    name: blockchain_builder
+    evidence: test_network_project_with_security_review
+  L5:
+    name: ai_systems_builder
+    evidence: bounded_ai_tool_with_evaluation_report
+  L6:
+    name: product_builder
+    evidence: Q3_product_pilot
+  L7:
+    name: entrepreneur
+    evidence: transparent_business_experiment
+  L8:
+    name: contributor_and_mentor
+    evidence: reviewed_contributions_and_learner_outcomes
+  L9:
+    name: franchise_steward
+    evidence: certified_node_evidence_and_stewardship_plan
+  disclaimer: advancement_does_not_guarantee_employment_revenue_funding_or_business_success
+
+curriculum_domains:
+  - programming_foundations
+  - software_engineering
+  - git_github_and_version_control
+  - testing_documentation_ci_cd_and_devops
+  - databases_apis_data_engineering_and_analytics
+  - blockchain_and_smart_contract_development
+  - blockchain_security_governance_nfts_and_provenance
+  - ai_prompting_retrieval_evaluation_agents_and_swarms
+  - cybersecurity_identity_privacy_and_incident_response
+  - robotics_wearables_and_human_machine_interaction
+  - entrepreneurship_customer_discovery_product_and_operations
+  - marketing_sales_affiliates_memberships_and_support
+  - publishing_storytelling_audio_video_and_interactive_media
+  - accessibility_translation_and_inclusive_design
+  - environmental_systems_and_regenerative_innovation
+  - evidence_literacy_whistleblower_safety_and_correction
+  - time_machines_as_versioning_simulation_forecasting_and_recovery
+
+release_gates:
+  - ContinuationGate
+  - SyncGate
+  - DeviceSecurityGate
+  - PlatformPermissionGate
+  - SourceProvenanceGate
+  - ModelIndependenceGate
+  - ConflictResolutionGate
+  - PrivacyRoutingGate
+  - AccessibilityGate
+  - RightsGate
+  - FunctionalGate
+  - LearningOutcomeGate
+  - BusinessIntegrityGate
+  - EnvironmentalGate
+  - HumanApprovalGate
+
+risk_gate:
+  green: ordinary_review_eligible
+  yellow: conditional_or_limited_work
+  orange: sandbox_pilot_or_quarantine_only
+  red: stop_work_and_no_release
+
+stop_work_triggers:
+  - restricted_data_routed_to_unauthorized_destination
+  - secret_or_private_key_exposed
+  - device_or_account_compromise_suspected
+  - model_line_output_mislabeled_as_independent
+  - unresolved_edit_conflict_on_release_artifact
+  - unsupported_medical_legal_financial_or_earnings_claim
+  - rights_or_identity_permission_missing
+  - harmful_intrusion_sabotage_evasion_coercion_or_weaponization
+  - critical_accessibility_or_safety_defect
+  - red_risk_gate
+  - human_approval_missing
+
+pilots:
+  OMNI-PILOT-001:
+    name: Mobile Capture to Certified Learning Object
+    certification_target: Q3
+    sequence:
+      - iphone_capture
+      - continuation_packet
+      - independent_three_model_research
+      - programming_lesson_build
+      - asus_test
+      - ipad_review
+      - github_versioning
+      - slack_handoff_notification
+      - archive
+  OMNI-PILOT-002:
+    name: Cross-Device Code Lab
+    certification_target: Q3
+  OMNI-PILOT-003:
+    name: Business Experiment Passport
+    certification_target: Q3
+
+implementation_phases:
+  phase_0:
+    name: canonical_state
+    work:
+      - approve_architecture
+      - register_schema_template_and_example
+      - create_master_issue_backlog
+  phase_1:
+    name: mobile_first_continuity
+    work:
+      - iphone_capture_template
+      - ipad_review_checklist
+      - asus_build_checklist
+      - offline_reconciliation
+  phase_2:
+    name: learning_system
+    work:
+      - learner_profiles
+      - programming_path
+      - blockchain_path
+      - ai_and_cybersecurity_path
+      - entrepreneurship_path
+  phase_3:
+    name: multi_ai_production
+    work:
+      - independent_work_packets
+      - source_manifests
+      - contradiction_reports
+  phase_4:
+    name: multimedia_outputs
+    work:
+      - ebook
+      - audiobook
+      - video_book
+      - interactive_video
+      - course
+      - game
+      - build_mode
+  phase_5:
+    name: platform_adapters
+    work:
+      - github_adapter
+      - slack_notification_adapter
+      - zo_runtime_adapter
+      - notebooklm_source_manifest_adapter
+      - approved_model_adapters
+  phase_6:
+    name: business_experiments
+    work:
+      - one_dollar_field_guide
+      - two_dollar_affiliate_edition
+      - seven_dollar_master_evidence_and_product_ledger
+      - membership_and_licensing_pilots
+  phase_7:
+    name: certified_replication
+    work:
+      - Q4_product_certification
+      - N4_node_certification
+      - mentor_and_franchise_playbooks
+
+completion_boundary:
+  architecture_completed:
+    - continuity_model
+    - platform_role_matrix
+    - learning_ladder
+    - multi_ai_independence_protocol
+    - security_and_quality_controls
+  not_yet_claimed:
+    - live_device_synchronization
+    - configured_external_connectors
+    - deployed_zo_services
+    - live_slack_automation
+    - created_notebooklm_notebooks
+    - deployed_ai_agents
+    - certified_products
+    - public_launches
+    - nft_minting
+    - franchise_certification
