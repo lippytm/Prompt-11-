@@ -1,0 +1,26 @@
+{
+  "vault_id": "P011-ARTIFACT-VAULT-002",
+  "generated_at": "2026-08-22T22:45:00-07:00",
+  "alias_count": 111,
+  "unique_content_count": 110,
+  "duplicate_alias_count": 1,
+  "total_alias_bytes": 31054421,
+  "unique_content_bytes": 30627714,
+  "new_aliases_since_v001": 62,
+  "parts": [
+    {"part": 1, "category": "architecture_continuity", "file": "P011-ARTIFACT-VAULT-002_PART_1_ARCHITECTURE_CONTINUITY.zip", "sha256": "b598426eaabfba755ffc41f3637541d7473e2179a9a9af555752a80aa10aae3b", "size_bytes": 1405499, "item_count": 19},
+    {"part": 2, "category": "clone_evolution_revenue", "file": "P011-ARTIFACT-VAULT-002_PART_2_CLONE_EVOLUTION_REVENUE.zip", "sha256": "4a272594ea116658a4ac80aef4a6f96085c27509a42af9d026560d02ec9ecf5c", "size_bytes": 1522917, "item_count": 11},
+    {"part": 3, "category": "crm_social_platforms", "file": "P011-ARTIFACT-VAULT-002_PART_3_CRM_SOCIAL_PLATFORMS.zip", "sha256": "3bf7b7981661975c5fe713fe2c9e03fa1fa5be1b3f04a9e3fa159d6f06b2520b", "size_bytes": 8715471, "item_count": 40},
+    {"part": 4, "category": "diagnostics_transparency", "file": "P011-ARTIFACT-VAULT-002_PART_4_DIAGNOSTICS_TRANSPARENCY.zip", "sha256": "9f17c8de62d3c59e0c8d6ec2b93afe1340123fd434ae4e90d88e68247ee8fa84", "size_bytes": 12470939, "item_count": 20},
+    {"part": 5, "category": "mepl_quality_evidence", "file": "P011-ARTIFACT-VAULT-002_PART_5_MEPL_QUALITY_EVIDENCE.zip", "sha256": "9b3486dd1e3585cb14cef61227d30587bcc1710a063f9dcba1208b1c36da97ab", "size_bytes": 2796098, "item_count": 18}
+  ],
+  "governance": {
+    "registration_is_not_factual_certification": true,
+    "registration_is_not_q4_approval": true,
+    "hash_proves_integrity_not_truth": true,
+    "human_approval_required_for_release": true,
+    "restricted_data_prohibited": true,
+    "supersession_and_retirement_required": true
+  },
+  "category_counts": {"crm_social_platforms": 40, "diagnostics_transparency": 22, "clone_evolution_revenue": 11, "architecture_continuity": 19, "mepl_quality_evidence": 19}
+}

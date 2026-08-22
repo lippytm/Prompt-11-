@@ -1,0 +1,23 @@
+{
+  "innovation_id": "INNOV-P011-001",
+  "name": "Consent-Governed Relationship Digital Twin",
+  "domains": ["CRM", "AI Clone", "Fabric Hermes", "Future Tech"],
+  "problem": "Relationship context is fragmented across platforms and can be merged incorrectly.",
+  "signal": "Duplicate candidates, consent conflicts, and conflicting journey state.",
+  "proposal": "A graph-based digital twin that preserves separate identities, source provenance, consent, and correction history.",
+  "stage": "Architecture",
+  "status": "Structured",
+  "risk_gate": "Yellow",
+  "strategic_value": 9,
+  "customer_value": 8,
+  "learning_value": 9,
+  "reuse_value": 9,
+  "feasibility": 6,
+  "evidence_readiness": 5,
+  "risk_penalty": 4,
+  "next_action": "Build a synthetic graph and human-reviewed duplicate-resolution test.",
+  "reality_label": "Speculative Design",
+  "score": 70.2,
+  "recommendation": "STRUCTURE_AND_TEST",
+  "human_approval": "Pending"
+}

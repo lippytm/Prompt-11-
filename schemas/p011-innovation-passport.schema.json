@@ -1,0 +1,31 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://lippytm.ai/schemas/p011-innovation-passport.schema.json",
+  "title": "Prompt #11 Innovation Passport",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["innovation_id", "name", "problem", "proposal", "reality_label", "risk_gate", "human_approval", "next_action"],
+  "properties": {
+    "innovation_id": {"type": "string", "pattern": "^INNOV-[A-Z0-9-]+$"},
+    "name": {"type": "string", "minLength": 3},
+    "domains": {"type": "array", "items": {"type": "string"}, "minItems": 1},
+    "problem": {"type": "string", "minLength": 10},
+    "signal": {"type": "string"},
+    "proposal": {"type": "string", "minLength": 10},
+    "stage": {"enum": ["Research", "Architecture", "Prototype", "Pilot", "Production", "Franchise"]},
+    "status": {"enum": ["Idea", "Structured", "Testing", "Review", "Approved", "Blocked", "Retired"]},
+    "reality_label": {"enum": ["Verified Fact", "Official Assessment", "Working Hypothesis", "Speculative Design", "Fictional Dramatization", "Verified Architecture", "Verified Prototype"]},
+    "risk_gate": {"enum": ["Green", "Yellow", "Orange", "Red"]},
+    "strategic_value": {"type": "integer", "minimum": 0, "maximum": 10},
+    "customer_value": {"type": "integer", "minimum": 0, "maximum": 10},
+    "learning_value": {"type": "integer", "minimum": 0, "maximum": 10},
+    "reuse_value": {"type": "integer", "minimum": 0, "maximum": 10},
+    "feasibility": {"type": "integer", "minimum": 0, "maximum": 10},
+    "evidence_readiness": {"type": "integer", "minimum": 0, "maximum": 10},
+    "risk_penalty": {"type": "integer", "minimum": 0, "maximum": 10},
+    "score": {"type": "number", "minimum": 0, "maximum": 100},
+    "recommendation": {"type": "string"},
+    "human_approval": {"enum": ["Pending", "Approved", "Rejected"]},
+    "next_action": {"type": "string", "minLength": 3}
+  }
+}
