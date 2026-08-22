@@ -1,0 +1,29 @@
+{
+  "module_id": "P-011-XPIO-001",
+  "test": "sqlite_backup_restore",
+  "tested_at": "2026-08-22T20:52:13+00:00",
+  "source_database": "P011_XPIO_Control_Plane_Q2.sqlite",
+  "backup_database": "P011_XPIO_Control_Plane_Q2.backup.sqlite",
+  "backup_sha256": "94d283cf65afc020b460dd45c0ce54b960816eba50ef5437697b6ab0b62adc2a",
+  "integrity_check": "ok",
+  "source_counts": {
+    "artifacts": 51,
+    "artifact_aliases": 54,
+    "platforms": 9,
+    "identities": 1,
+    "work_packets": 1,
+    "documents": 5,
+    "events": 1
+  },
+  "backup_counts": {
+    "artifacts": 51,
+    "artifact_aliases": 54,
+    "platforms": 9,
+    "identities": 1,
+    "work_packets": 1,
+    "documents": 5,
+    "events": 1
+  },
+  "counts_match": true,
+  "status": "PASS"
+}
