@@ -1,0 +1,77 @@
+{
+  "report_id": "QEP-MEPL-Q3-001-V020",
+  "generated_date": "2026-08-22",
+  "status": "PASS_Q3_REVIEW_READY",
+  "certification_boundary": {
+    "current_level": "Q3 Testable Pilot",
+    "q4_approved": false,
+    "risk_gate": "Yellow",
+    "human_approval_gate": "Pending",
+    "commercial_release_approved": false,
+    "nft_minting_approved": false,
+    "franchise_release_approved": false
+  },
+  "workbook": {
+    "file": "P011_Master_Evidence_Product_Ledger_Q3.xlsx",
+    "bytes": 426707,
+    "sha256": "44989c116fea52b858bba7fd85ce66d1f11a50c53e9d72a02cc89563a3abbbd8",
+    "sheet_count": 28,
+    "formula_cells": 6027,
+    "cached_formula_values_nonblank": 126,
+    "cached_formula_values_blank_or_empty_template_rows": 5901,
+    "recognized_cached_formula_errors": [],
+    "data_validation_rules": 95,
+    "charts": 2,
+    "sheets_with_freeze_panes": 28,
+    "sheets_with_filters": 24
+  },
+  "package": {
+    "file": "P011_MEPL_Q3_Prototype_v0.2.zip",
+    "bytes": 1462626,
+    "sha256": "bbc9b4c168039e8622c7808d15b6f5711ec8009101bb18999ebf99b095663cca"
+  },
+  "key_results": {
+    "total_work_packets": 5,
+    "open_work_packets": 3,
+    "products_tracked": 5,
+    "q4_eligible_products": 0,
+    "critical_gates_blocking": 3,
+    "red_risks": 1,
+    "open_defects": 1,
+    "human_approvals_pending": 1,
+    "platform_coverage": 0.2222222222,
+    "device_recovery_verified": 2,
+    "open_continuation_packets": 1,
+    "lessons": 3,
+    "learning_completion_rate": 0,
+    "actual_net_revenue": 0,
+    "illustrative_forecast_net_revenue": 70
+  },
+  "privacy_and_security_scan": {
+    "patterns_checked": [
+      "private_key_marker",
+      "cloud_access_key",
+      "github_token",
+      "slack_token",
+      "seed_phrase_language",
+      "ssn_like",
+      "password_assignment"
+    ],
+    "hits": [],
+    "pass": true
+  },
+  "manual_visual_review": {
+    "dashboard": "Pass in generated preview; physical iPhone and iPad review remains pending.",
+    "current_checkpoint": "Pass in generated preview; checkpoint and gate states are visible.",
+    "gates_and_approvals": "Pass; pending and blocking decisions are explicit and not color-only.",
+    "products_inventory": "Pass; all sample products remain Q4-ineligible."
+  },
+  "known_limitations": [
+    "No production database or live payment or accounting system.",
+    "No independently completed Gemini/NotebookLM or Claude/Fabric Hermes workbook review.",
+    "Device and account recovery inventory issue #9 remains open.",
+    "Zo and other external connectors require separate permission, implementation, and test evidence.",
+    "Slack is used for coordination, not as the canonical source or evidence vault.",
+    "Q4 certification, commercial publication, NFT minting, and franchise release remain prohibited pending later gates."
+  ]
+}
