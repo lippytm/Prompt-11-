@@ -1,0 +1,20 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://lippytm.ai/schemas/p011-innovation-experiment.schema.json",
+  "title": "Prompt #11 Innovation Experiment Passport",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["experiment_id", "innovation_id", "hypothesis", "metrics", "budget_limit", "timeout", "stop_conditions", "human_approval"],
+  "properties": {
+    "experiment_id": {"type": "string", "pattern": "^EXP-[A-Z0-9-]+$"},
+    "innovation_id": {"type": "string"},
+    "hypothesis": {"type": "string", "minLength": 10},
+    "metrics": {"type": "array", "items": {"type": "string"}, "minItems": 1},
+    "budget_limit": {"type": "number", "minimum": 0},
+    "timeout": {"type": "string"},
+    "privacy_class": {"enum": ["Public", "Internal", "Confidential", "Restricted"]},
+    "stop_conditions": {"type": "array", "items": {"type": "string"}, "minItems": 1},
+    "rollback_plan": {"type": "string"},
+    "human_approval": {"enum": ["Pending", "Approved", "Rejected"]}
+  }
+}

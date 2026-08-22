@@ -1,0 +1,12 @@
+{
+  "experiment_id": "EXP-INNOV-001",
+  "innovation_id": "INNOV-P011-004",
+  "hypothesis": "Linking diagnostics to human correction queues will reduce unresolved critical CRM defects.",
+  "metrics": ["unresolved critical defects", "correction time"],
+  "budget_limit": 0,
+  "timeout": "7 days",
+  "privacy_class": "Internal",
+  "stop_conditions": ["restricted data exposure", "critical gate failure", "unapproved outreach"],
+  "rollback_plan": "Restore prior SQLite backup and workbook version.",
+  "human_approval": "Pending"
+}

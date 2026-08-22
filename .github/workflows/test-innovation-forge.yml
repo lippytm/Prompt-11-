@@ -1,0 +1,67 @@
+name: Test Prompt 11 Innovation Forge
+
+on:
+  pull_request:
+    paths:
+      - "docs/P011-INNOV-001-*.md"
+      - "config/p011-innov-001.yaml"
+      - "schemas/p011-innovation-*.json"
+      - "examples/P011-INNOV-001.*.json"
+      - "prototype/innovation/**"
+      - "artifacts/P011-INNOV-001/**"
+      - ".github/workflows/test-innovation-forge.yml"
+  push:
+    branches: [main]
+    paths:
+      - "docs/P011-INNOV-001-*.md"
+      - "config/p011-innov-001.yaml"
+      - "schemas/p011-innovation-*.json"
+      - "examples/P011-INNOV-001.*.json"
+      - "prototype/innovation/**"
+      - "artifacts/P011-INNOV-001/**"
+      - ".github/workflows/test-innovation-forge.yml"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Run unit tests
+        working-directory: prototype/innovation
+        run: python -m unittest -v test_innovation_forge.py
+      - name: Install validators
+        run: python -m pip install --disable-pip-version-check "jsonschema>=4.22,<5" "PyYAML>=6,<7"
+      - name: Validate contracts
+        run: |
+          python - <<'PY'
+          import json, yaml
+          from pathlib import Path
+          from jsonschema import Draft202012Validator
+          root=Path('.')
+          pairs=[
+            ('schemas/p011-innovation-passport.schema.json','examples/P011-INNOV-001.innovation.example.json'),
+            ('schemas/p011-innovation-experiment.schema.json','examples/P011-INNOV-001.experiment.example.json'),
+          ]
+          for schema_path, example_path in pairs:
+              schema=json.loads((root/schema_path).read_text())
+              example=json.loads((root/example_path).read_text())
+              Draft202012Validator.check_schema(schema)
+              Draft202012Validator(schema).validate(example)
+          config=yaml.safe_load((root/'config/p011-innov-001.yaml').read_text())
+          assert config['module_id']=='P-011-INNOV-001'
+          assert config['human_approval_gate']=='Pending'
+          summary=json.loads((root/'artifacts/P011-INNOV-001/P011-ARTIFACT-VAULT-002.summary.json').read_text())
+          assert summary['alias_count']==111
+          assert summary['unique_content_count']==110
+          validation=json.loads((root/'artifacts/P011-INNOV-001/P011_INNOVATION_FINAL_VALIDATION.json').read_text())
+          assert validation['status']=='PASS'
+          print('Prompt #11 Innovation Forge contracts validated')
+          PY

@@ -1,0 +1,16 @@
+{
+  "file": "P011_Master_Evidence_Product_Ledger_Q3_5_Innovation_Forge_Extension.xlsx",
+  "generated_at": "2026-08-22T22:45:00-07:00",
+  "sheet_count": 80,
+  "new_innovation_sheet_count": 11,
+  "formula_count": 9788,
+  "formula_error_count": 0,
+  "formula_errors": [],
+  "data_validation_count": 166,
+  "chart_count": 9,
+  "external_link_count": 0,
+  "secret_pattern_findings": [],
+  "new_sheets": ["Innovation Dashboard", "Artifact Intake 002", "Innovation Portfolio", "Opportunity Signals", "Experiment Backlog", "Prototype Registry", "Model Line Reviews 2", "Learning Product Lab", "Innovation Revenue Lab", "Future Tech Roadmap", "Innovation Gates"],
+  "base_file": "P011_Master_Evidence_Product_Ledger_Q3_4_CRM_Omni_Channel_Extension.recalc.xlsx",
+  "status": "PASS"
+}

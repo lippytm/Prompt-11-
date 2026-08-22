@@ -1,0 +1,15 @@
+{
+  "database": "P011_INNOVATION_FORGE_Q2.sqlite",
+  "integrity": "ok",
+  "counts": {
+    "artifact_inputs": 110,
+    "innovations": 12,
+    "experiments": 4,
+    "prototypes": 3,
+    "model_line_reviews": 18,
+    "learning_products": 4,
+    "revenue_experiments": 2,
+    "gates": 180
+  },
+  "generated_at": "2026-08-22T22:45:00-07:00"
+}
