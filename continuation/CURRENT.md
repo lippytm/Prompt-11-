@@ -7,17 +7,23 @@
 
 ## Current packet
 
-[`P011-CP-OMNI-2026-08-22-v0.4.json`](P011-CP-OMNI-2026-08-22-v0.4.json)
+[`P011-CP-OMNI-2026-08-22-v0.5.json`](P011-CP-OMNI-2026-08-22-v0.5.json)
 
-This is the newest review-ready packet. It is not represented as human-approved until an identified human approver records the approval scope and audit reference.
+This is the newest review-ready packet and supersedes v0.4. It is not represented as human-approved until an identified human approver records the exact approval scope and audit reference.
 
-## Current module
+## Current modules
 
-**P-011-OMNI-001 — Omni-Device Multi-AI Broadband Learning, Publishing & Business Continuity Fabric**
+- **P-011-OMNI-001 — Omni-Device Multi-AI Broadband Learning, Publishing & Business Continuity Fabric**
+- **P-011-EEBDS-001 — Encyclopedia Educational Entertainment and Business of Businesses Delivery System**
+- **P-011-E6C-001 — Eternal Environmental Ecosystems of Evolutionary Evolutions Eternity Continuum**
+- **P-011-E6C-CHAR-001 — Lippy Killjoy and the Nineteenfold Character Continuum**
+- **P-011-DSF-001 — DARPA–Snowden Disclosure, Privacy & Human Resilience Fabric**
 
-Merged through Prompt #11 pull request **#7** at merge commit:
+Key merged checkpoints:
 
-`736fb358c7025921aa041f08281af0731f7b3492`
+- OMNI architecture: pull request **#7**, merge commit `736fb358c7025921aa041f08281af0731f7b3492`
+- Current Checkpoint implementation: pull request **#13**, merge commit `b576f66f200b8ab779d631ecf031678b8093bfb9`
+- Issue **#8 / WP-OMNI-0002** is completed.
 
 ## Current operating objective
 
@@ -31,32 +37,34 @@ Build a durable, mobile-first, cross-device and multi-AI delivery system for the
 - move work safely among iPhone, iPad, ASUS laptop, authorized Zo workspace, GitHub, Slack, and approved future platforms;
 - enforce privacy, security, accessibility, environmental responsibility, rights, correction, and human approval.
 
-## Highest-priority unblocked action
+## Highest-priority unblocked build action
 
-### Issue #8 — Establish the Current Checkpoint and mobile session routine
+### Issue #10 — Design the $7 Master Evidence and Product Ledger data model
 
-Complete and merge:
+Create the entity model, field dictionary, identifiers, state machines, privacy and access model, formulas, import/export contract, audit system, correction model, dashboard requirements, and migration path for the first working OMNI and EEBDS Control Tower.
 
-- this Current Checkpoint pointer;
-- the versioned Continuation Packet;
-- iPhone, iPad, ASUS, Zo, AI-platform, GitHub, and Slack session checklists;
-- offline, synchronization, edit-conflict, recovery, correction, and supersession procedures.
+## Parallel human safety action
 
-## Next work packets
+### Issue #9 — Inventory devices, accounts, workspaces and recovery controls
 
-1. **Issue #9 / WP-OMNI-0003:** inventory devices, accounts, workspaces, recovery, backup, permission, and revocation state without recording secrets.
-2. **Issue #10 / WP-OMNI-0005:** design the $7 Master Evidence and Product Ledger data model.
-3. **Issue #11 / WP-OMNI-0006:** build the accessible Q3 ledger prototype.
-4. **Issue #12 / OMNI-PILOT-001:** prove mobile capture to a Q3 beginner programming lesson using independent model lines and cross-device handoffs.
+Record security, recovery, backup, role, permission, and revocation status without recording passwords, private keys, recovery codes, identity documents, medical records, or other restricted information.
+
+## Dependent work packets
+
+1. **Issue #11 / WP-OMNI-0006:** build the accessible Q3 $7 ledger prototype after the issue #10 data model is review-ready.
+2. **Issue #12 / OMNI-PILOT-001:** prove mobile capture to a Q3 beginner programming lesson after the Current Checkpoint, device safety, and temporary or full ledger tracking are ready.
+3. Platform adapters: define and test GitHub, Slack, Zo, NotebookLM, Gemini, Claude/Hermes, ChatGPT Business, and device handoff contracts one connector at a time.
 
 ## Current quality state
 
 - **Certification:** Q2 — Evidence-Mapped Architecture
 - **RiskGate:** Yellow
-- **ContinuationGate:** Conditional; implementation in progress
-- **DeviceSecurityGate:** Not started
+- **ContinuationGate:** Pass for review-ready continuity; HumanApprovalGate remains pending
+- **SyncGate:** Conditional; procedures exist, bounded cross-device test pending
+- **DeviceSecurityGate:** Not started; issue #9
 - **PlatformPermissionGate:** Not started
 - **ModelIndependenceGate:** Conditional; rules exist, pilot evidence does not
+- **ConflictResolutionGate:** Conditional; procedure exists, simulation pending
 - **HumanApprovalGate:** Pending
 
 ## Critical boundaries
@@ -65,13 +73,13 @@ Complete and merge:
 - No claim that Zo, Gemini, NotebookLM, Claude, Fabric Hermes, or Slack automations are deployed merely because the architecture names them.
 - No passwords, API keys, private keys, recovery codes, Social Security numbers, medical records, private evidence, or confidential witness data belong in this public checkpoint.
 - ChatGPT, Gemini/NotebookLM, and Claude/Hermes agreement is not independent verification when they rely on the same source.
-- Documentation is not deployment; a schema, issue, branch, manifest, or mockup is not a live service.
+- Documentation is not deployment; a schema, issue, branch, manifest, mockup, or architecture contract is not a live service.
 - No product enters approved inventory below Q4.
 - No AI agent may pass HumanApprovalGate.
 
 ## Resume command
 
-> **Continue Prompt #11 from `continuation/P011-CP-OMNI-2026-08-22-v0.4.json`. Preserve model-line independence, public privacy classification, source provenance, Yellow RiskGate, and Quality and Quality Assurance as Job #1. Confirm the referenced repository, merge commit, issues, and artifacts. Begin with the highest-priority unblocked work packet, Issue #8, and do not assume that external synchronization, platform connectors, deployments, approvals, or private data access already exist.**
+> **Continue Prompt #11 from `continuation/P011-CP-OMNI-2026-08-22-v0.5.json`. Preserve model-line independence, public privacy classification, source provenance, Yellow RiskGate, and Quality and Quality Assurance as Job #1. Confirm pull requests #7 and #13, merge commits `736fb358c7025921aa041f08281af0731f7b3492` and `b576f66f200b8ab779d631ecf031678b8093bfb9`, completed issue #8, and open issues #9 through #12. Begin with the highest-priority unblocked build action, issue #10, while treating issue #9 as the parallel human device-and-account safety task. Do not assume that external synchronization, platform connectors, deployments, private-data access, or human approval already exist.**
 
 ## When this pointer must change
 
