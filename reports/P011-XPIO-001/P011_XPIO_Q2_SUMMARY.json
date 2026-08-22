@@ -1,0 +1,88 @@
+{
+  "module_id": "P-011-XPIO-001",
+  "generated_at": "2026-08-22T20:52:14+00:00",
+  "q_stage": "Q2",
+  "risk_gate": "Yellow",
+  "human_approval_gate": "pending",
+  "counts": {
+    "artifacts": 51,
+    "aliases": 54,
+    "platforms": 9,
+    "identities": 1,
+    "work_packets": 1,
+    "documents": 5,
+    "events": 2,
+    "defects": 0,
+    "decisions": 0,
+    "diagnostics": 69
+  },
+  "diagnostic_summary": {
+    "PASS": 60,
+    "WARN": 8,
+    "FAIL": 0,
+    "NOT_TESTED": 1
+  },
+  "release_boundary": {
+    "q3_approved": false,
+    "q4_inventory_approved": false,
+    "production_deployment_approved": false,
+    "financial_action_approved": false,
+    "autonomous_mutation_approved": false
+  },
+  "warnings": [
+    {
+      "check_name": "model_line_independence",
+      "object_id": "P-011-XPIO-001",
+      "summary": "Independent Gemini/NotebookLM and Claude/Hermes reviews remain pending",
+      "evidence": "Q3 dependency"
+    },
+    {
+      "check_name": "platform_operational_claim",
+      "object_id": "PLAT-CHATGPT",
+      "summary": "ChatGPT Business status is partially verified",
+      "evidence": "connected conversation only"
+    },
+    {
+      "check_name": "platform_operational_claim",
+      "object_id": "PLAT-CLAUDE",
+      "summary": "Claude status is not tested",
+      "evidence": "handoff contract only"
+    },
+    {
+      "check_name": "platform_operational_claim",
+      "object_id": "PLAT-GEMINI",
+      "summary": "Gemini status is not tested",
+      "evidence": "handoff contract only"
+    },
+    {
+      "check_name": "platform_operational_claim",
+      "object_id": "PLAT-HERMES",
+      "summary": "Fabric Hermes status is architecture only",
+      "evidence": "architecture and repository mirror"
+    },
+    {
+      "check_name": "platform_operational_claim",
+      "object_id": "PLAT-MEPL",
+      "summary": "MEPL status is a Q3 workbook artifact",
+      "evidence": "Q3 workbook artifact"
+    },
+    {
+      "check_name": "platform_operational_claim",
+      "object_id": "PLAT-NOTEBOOKLM",
+      "summary": "NotebookLM status is not tested",
+      "evidence": "handoff contract only"
+    },
+    {
+      "check_name": "platform_operational_claim",
+      "object_id": "PLAT-ZO",
+      "summary": "Zo status is not tested",
+      "evidence": "runtime contract only"
+    },
+    {
+      "check_name": "release_boundary",
+      "object_id": "WP-XPIO-0001",
+      "summary": "Release remains blocked or review-only",
+      "evidence": "minimum Q4 certification not met; critical gates remain untested; HumanApprovalGate is pending"
+    }
+  ]
+}
