@@ -1,0 +1,200 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://lippytm.ai/schemas/p011-evidence-claim.schema.json",
+  "title": "Prompt 11 Evidence Claim Record",
+  "description": "A source, privacy, review, and publication-control record for factual, testimonial, analytical, and fictional claims.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "claim_id",
+    "module_id",
+    "claim_text",
+    "status",
+    "subject",
+    "source_ids",
+    "privacy_class",
+    "publication_safe",
+    "review_state",
+    "model_line"
+  ],
+  "properties": {
+    "claim_id": {
+      "type": "string",
+      "pattern": "^CLM-[0-9]{6}$"
+    },
+    "module_id": {
+      "type": "string",
+      "minLength": 1
+    },
+    "claim_text": {
+      "type": "string",
+      "minLength": 1
+    },
+    "status": {
+      "type": "string",
+      "enum": ["VF", "OA", "CT", "AL", "WH", "FD", "CX"]
+    },
+    "direct_observation": {
+      "type": ["string", "null"]
+    },
+    "interpretation": {
+      "type": ["string", "null"]
+    },
+    "subject": {
+      "type": "string",
+      "minLength": 1
+    },
+    "source_ids": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "pattern": "^S-[0-9]{3}$"
+      },
+      "uniqueItems": true
+    },
+    "source_locations": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["source_id", "location"],
+        "properties": {
+          "source_id": {
+            "type": "string",
+            "pattern": "^S-[0-9]{3}$"
+          },
+          "location": {
+            "type": "string",
+            "description": "Page, section, paragraph, timestamp, table, line range, or other precise locator."
+          }
+        }
+      }
+    },
+    "event_date": {
+      "type": ["string", "null"],
+      "format": "date"
+    },
+    "publication_date": {
+      "type": ["string", "null"],
+      "format": "date"
+    },
+    "accessed_at": {
+      "type": ["string", "null"],
+      "format": "date-time"
+    },
+    "current_status_check_required": {
+      "type": "boolean",
+      "default": false
+    },
+    "counterevidence": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["summary"],
+        "properties": {
+          "summary": {
+            "type": "string",
+            "minLength": 1
+          },
+          "source_ids": {
+            "type": "array",
+            "items": {
+              "type": "string",
+              "pattern": "^S-[0-9]{3}$"
+            },
+            "uniqueItems": true
+          }
+        }
+      }
+    },
+    "privacy_class": {
+      "type": "string",
+      "enum": ["PUBLIC", "INTERNAL", "CONFIDENTIAL", "RESTRICTED"]
+    },
+    "publication_safe": {
+      "type": "boolean"
+    },
+    "redactions_required": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "uniqueItems": true
+    },
+    "rights_status": {
+      "type": "string",
+      "enum": [
+        "ORIGINAL",
+        "PUBLIC_DOMAIN",
+        "LICENSED",
+        "FAIR_USE_REVIEW_REQUIRED",
+        "PERMISSION_REQUIRED",
+        "DO_NOT_PUBLISH"
+      ],
+      "default": "FAIR_USE_REVIEW_REQUIRED"
+    },
+    "review_state": {
+      "type": "string",
+      "enum": ["DRAFT", "VERIFIED", "DISPUTED", "REJECTED", "PUBLISHED"]
+    },
+    "model_line": {
+      "type": "string",
+      "enum": [
+        "CHATGPT_BUSINESS",
+        "GEMINI_NOTEBOOKLM",
+        "CLAUDE_HERMES",
+        "HUMAN",
+        "MERGED_PREMIUM"
+      ]
+    },
+    "reviewer": {
+      "type": ["string", "null"]
+    },
+    "reviewed_at": {
+      "type": ["string", "null"],
+      "format": "date-time"
+    },
+    "human_approval_required": {
+      "type": "boolean",
+      "default": true
+    },
+    "notes": {
+      "type": ["string", "null"]
+    }
+  },
+  "allOf": [
+    {
+      "if": {
+        "properties": {
+          "privacy_class": {
+            "const": "RESTRICTED"
+          }
+        }
+      },
+      "then": {
+        "properties": {
+          "publication_safe": {
+            "const": false
+          }
+        }
+      }
+    },
+    {
+      "if": {
+        "properties": {
+          "status": {
+            "const": "FD"
+          }
+        }
+      },
+      "then": {
+        "properties": {
+          "source_ids": {
+            "maxItems": 0
+          }
+        }
+      }
+    }
+  ]
+}
