@@ -1,0 +1,33 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://lippytm.ai/schemas/crm-evo-evolution-proposal.schema.json",
+  "title": "CRM Evolution Proposal",
+  "type": "object",
+  "additionalProperties": true,
+  "required": [
+    "proposal_id",
+    "signal_id",
+    "mission_id",
+    "capability_gap",
+    "proposed_mutation",
+    "risk_gate",
+    "sandbox_only",
+    "tests_required",
+    "human_approval",
+    "auto_deploy",
+    "state"
+  ],
+  "properties": {
+    "proposal_id": {"type": "string", "minLength": 1},
+    "signal_id": {"type": "string", "minLength": 1},
+    "mission_id": {"type": "string", "minLength": 1},
+    "capability_gap": {"type": "string", "minLength": 1},
+    "proposed_mutation": {"type": "string", "minLength": 1},
+    "risk_gate": {"enum": ["Green", "Yellow", "Orange", "Red"]},
+    "sandbox_only": {"const": true},
+    "tests_required": {"type": "array", "items": {"type": "string"}, "minItems": 1},
+    "human_approval": {"enum": ["Pending", "Approved", "Rejected"]},
+    "auto_deploy": {"const": false},
+    "state": {"enum": ["Proposed", "Sandbox", "Testing", "Review", "Blocked", "Quarantined", "Approved", "Rejected", "Retired"]}
+  }
+}
