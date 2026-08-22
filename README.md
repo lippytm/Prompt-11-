@@ -144,6 +144,41 @@ Immediate OMNI milestone:
 
 - complete `WP-OMNI-0001` through `WP-OMNI-0006`: merge the architecture, establish the Current Checkpoint, inventory devices and accounts without recording secrets, create the mobile end-of-session routine, design the $7 Master Evidence and Product Ledger, and build its Q3 prototype.
 
+### P-011-MEPL-001 — $7 Prompt #11 Master Evidence and Product Ledger
+
+The canonical operating data model for the first working OMNI, E6C, and EEBDS Control Tower. MEPL connects continuity, sources, claims, contradictions, requirements, tests, defects, risks, release gates, human approvals, products, model-line editions, characters, ecosystems, CEIUs, learning objects, Build Mode projects, media, NFT provenance, offers, campaigns, revenue, devices, connectors, incidents, corrections, franchises, audits, and archives.
+
+MEPL establishes:
+
+- stable identifiers that are never reused;
+- forty-six core entities plus explicit junction tables;
+- normalized relationships and lifecycle state machines;
+- public, internal, confidential, and restricted access and export rules;
+- independent ChatGPT Business, Gemini/NotebookLM, and Claude/Fabric Hermes records;
+- Q0–Q7 certification and Green/Yellow/Orange/Red RiskGate controls;
+- release eligibility that cannot be overridden by a score;
+- a twenty-eight-sheet Q3 workbook map and mobile-readable views;
+- formulas for weighted completion, evidence coverage, test pass rate, model independence, release eligibility, overdue work, correction propagation, revenue, costs, variance, forecast, and quality score;
+- dashboards for checkpoints, products, evidence, model lines, quality, learning, business, devices, connectors, and franchise nodes;
+- privacy-aware CSV, JSON, GitHub, Slack, NotebookLM, Quality Evidence, correction, NFT metadata, and future Tower Control exports;
+- migration from existing Prompt #11 files into an accessible spreadsheet and later optional database.
+
+Core files:
+
+- [`docs/P011-MEPL-001-master-evidence-product-ledger-data-model.md`](docs/P011-MEPL-001-master-evidence-product-ledger-data-model.md)
+- [`config/p011-mepl-001-data-model.yaml`](config/p011-mepl-001-data-model.yaml)
+- [`schemas/p011-mepl-manifest.schema.json`](schemas/p011-mepl-manifest.schema.json)
+- [`examples/P011-MEPL-001.manifest.example.json`](examples/P011-MEPL-001.manifest.example.json)
+
+Current completion boundary:
+
+- the data model, workbook specification, formulas, dashboards, access controls, import/export contract, migration plan, manifest schema, and example are defined;
+- the actual `.xlsx` Q3 prototype, production database, live APIs, connectors, accounting or payment integrations, automated publication, autonomous minting, Q3 certification, and Q4 inventory approval are not yet completed.
+
+Immediate MEPL milestone:
+
+- execute `WP-OMNI-0006 / issue #11` and build `P011_Master_Evidence_Product_Ledger_Q3.xlsx` with public or synthetic sample records, accessible formatting, traceable formulas, validation, dashboards, exports, and a Quality Evidence Packet.
+
 ### P-011-E6C-CHAR-001 — Lippy Killjoy and the Nineteenfold Character Continuum
 
 The canonical Prompt #11 character, mutation, story, product, quality, and franchise system connecting:

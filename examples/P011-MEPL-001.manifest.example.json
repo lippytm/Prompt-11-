@@ -1,0 +1,359 @@
+{
+  "schema_version": "0.1.0",
+  "ledger_id": "PROD-P011-MEPL-001",
+  "ledger_version": "v0.1.0",
+  "title": "$7 Prompt #11 Master Evidence and Product Ledger — Q3 Prototype Manifest",
+  "status": "architecture",
+  "implementation_type": "xlsx",
+  "created_at": "2026-08-22T19:10:00Z",
+  "updated_at": "2026-08-22T19:10:00Z",
+  "human_owner": "Charles Earl Lipshay",
+  "privacy_profile": {
+    "highest_data_class": "public",
+    "restricted_data_included": false,
+    "public_export_enabled": false,
+    "redaction_required": false,
+    "notes": "The architecture example contains only public project metadata and synthetic or publication-safe sample identifiers."
+  },
+  "canonical_references": {
+    "repository": "lippytm/Prompt-11-",
+    "branch_or_tag": "feature/wp-omni-0005-mepl-data-model",
+    "commit_sha": null,
+    "data_model_document": "docs/P011-MEPL-001-master-evidence-product-ledger-data-model.md",
+    "data_model_contract": "config/p011-mepl-001-data-model.yaml",
+    "manifest_schema": "schemas/p011-mepl-manifest.schema.json",
+    "continuation_packet": "continuation/P011-CP-OMNI-2026-08-22-v0.5.json",
+    "issue_reference": 10,
+    "pull_request_reference": null
+  },
+  "current_checkpoint": {
+    "packet_id": "P011-CP-OMNI-2026-08-22",
+    "packet_version": "v0.5",
+    "status": "under_review",
+    "highest_priority_action": "Design the $7 Master Evidence and Product Ledger data model in issue #10.",
+    "parallel_human_action": "Complete the device, account and workspace inventory in issue #9 without recording secrets.",
+    "risk_gate": "yellow",
+    "certification_level": "Q2",
+    "human_approval_status": "pending"
+  },
+  "model_lines": {
+    "chatgpt_business": {
+      "required": true,
+      "status": "drafting",
+      "edition_id": "ED-MEPL-CHATGPT-V010",
+      "independent_first_pass": true,
+      "source_manifest": "Prompt #11 canonical modules and GitHub records",
+      "quality_packet": null,
+      "comparison_eligible": false,
+      "merged_premium_eligible": false
+    },
+    "gemini_notebooklm": {
+      "required": true,
+      "status": "not_started",
+      "edition_id": null,
+      "independent_first_pass": false,
+      "source_manifest": null,
+      "quality_packet": null,
+      "comparison_eligible": false,
+      "merged_premium_eligible": false
+    },
+    "claude_fabric_hermes": {
+      "required": true,
+      "status": "not_started",
+      "edition_id": null,
+      "independent_first_pass": false,
+      "source_manifest": null,
+      "quality_packet": null,
+      "comparison_eligible": false,
+      "merged_premium_eligible": false
+    },
+    "human_editorial": {
+      "required": true,
+      "status": "not_started",
+      "edition_id": null,
+      "independent_first_pass": false,
+      "source_manifest": null,
+      "quality_packet": null,
+      "comparison_eligible": false,
+      "merged_premium_eligible": false
+    },
+    "comparison": {
+      "required": false,
+      "status": "not_started",
+      "edition_id": null,
+      "independent_first_pass": false,
+      "source_manifest": null,
+      "quality_packet": null,
+      "comparison_eligible": false,
+      "merged_premium_eligible": false
+    },
+    "merged_premium": {
+      "required": false,
+      "status": "not_started",
+      "edition_id": null,
+      "independent_first_pass": false,
+      "source_manifest": null,
+      "quality_packet": null,
+      "comparison_eligible": false,
+      "merged_premium_eligible": false
+    }
+  },
+  "workbook": {
+    "file_name": "P011_Master_Evidence_Product_Ledger_Q3.xlsx",
+    "file_hash": null,
+    "sheet_count": 28,
+    "sheets": [
+      {"name": "00_README", "purpose": "Instructions, scope, boundaries and navigation", "implemented": false, "table_names": []},
+      {"name": "01_CURRENT_CHECKPOINT", "purpose": "Current packet, next action, quality and blockers", "implemented": false, "table_names": []},
+      {"name": "02_DASHBOARD", "purpose": "Executive operating dashboard", "implemented": false, "table_names": []},
+      {"name": "03_MODULES_PROGRAMS", "purpose": "Module and program registries", "implemented": false, "table_names": ["Modules", "Programs"]},
+      {"name": "04_WORKSTREAMS_PACKETS", "purpose": "Workstream, work packet and dependency registries", "implemented": false, "table_names": ["Workstreams", "WorkPackets", "WorkPacketDependencyLinks"]},
+      {"name": "05_CONTINUATION_DECISIONS", "purpose": "Continuation packets, decisions and artifacts", "implemented": false, "table_names": ["ContinuationPackets", "Decisions", "Artifacts"]},
+      {"name": "06_PRODUCTS_VERSIONS", "purpose": "Products and product versions", "implemented": false, "table_names": ["Products", "ProductVersions"]},
+      {"name": "07_MODEL_LINE_EDITIONS", "purpose": "Independent and combined model-line editions", "implemented": false, "table_names": ["ModelLineEditions"]},
+      {"name": "08_SOURCES_CLAIMS", "purpose": "Sources, claims and claim-source links", "implemented": false, "table_names": ["Sources", "Claims", "ClaimSourceLinks"]},
+      {"name": "09_CONTRADICTIONS", "purpose": "Contradiction register and resolution state", "implemented": false, "table_names": ["Contradictions"]},
+      {"name": "10_REQUIREMENTS_TESTS", "purpose": "Requirements and tests", "implemented": false, "table_names": ["Requirements", "Tests"]},
+      {"name": "11_DEFECTS_RISKS", "purpose": "Defects and risks", "implemented": false, "table_names": ["Defects", "Risks"]},
+      {"name": "12_GATES_APPROVALS", "purpose": "Gates, approvals and Quality Evidence Packets", "implemented": false, "table_names": ["GateResults", "Approvals", "QualityEvidencePackets"]},
+      {"name": "13_CHARACTERS_ECOSYSTEMS", "purpose": "Character and ecosystem registries", "implemented": false, "table_names": ["Characters", "Ecosystems"]},
+      {"name": "14_CEIUS", "purpose": "Character–Ecosystem Innovation Units and links", "implemented": false, "table_names": ["CEIUs", "CEIUEcosystemLinks", "ProductCharacterLinks"]},
+      {"name": "15_LEARNING_SKILLS", "purpose": "Learning objects, skills, assessments and links", "implemented": false, "table_names": ["LearningObjects", "Skills", "Assessments", "LearningObjectSkillLinks", "LearningObjectAssessmentLinks"]},
+      {"name": "16_BUILD_MEDIA_NFT", "purpose": "Build projects, media assets and NFT provenance", "implemented": false, "table_names": ["BuildProjects", "MediaAssets", "NFTProvenance"]},
+      {"name": "17_OFFERS_CAMPAIGNS", "purpose": "Offers, campaigns, affiliates and assignments", "implemented": false, "table_names": ["Offers", "Campaigns", "Affiliates", "CampaignAffiliateLinks"]},
+      {"name": "18_REVENUE_COSTS", "purpose": "Revenue, cost and support events", "implemented": false, "table_names": ["RevenueEvents", "CostEvents", "SupportEvents"]},
+      {"name": "19_DEVICES_PLATFORMS", "purpose": "Device and platform inventory without secrets", "implemented": false, "table_names": ["Devices", "Platforms"]},
+      {"name": "20_CONNECTORS", "purpose": "Connector permissions, tests and work-packet links", "implemented": false, "table_names": ["Connectors", "ConnectorWorkPacketLinks"]},
+      {"name": "21_INCIDENTS_CORRECTIONS", "purpose": "Incidents, corrections, targets and retirements", "implemented": false, "table_names": ["Incidents", "Corrections", "CorrectionTargets", "Retirements"]},
+      {"name": "22_FRANCHISE_AUDITS", "purpose": "Franchise nodes, product links and audits", "implemented": false, "table_names": ["FranchiseNodes", "FranchiseNodeProductLinks", "Audits"]},
+      {"name": "23_ARCHIVE_AUDIT_EVENTS", "purpose": "Archives and append-only audit events", "implemented": false, "table_names": ["Archives", "AuditEvents"]},
+      {"name": "24_DATA_DICTIONARY", "purpose": "Canonical field definitions and relationships", "implemented": false, "table_names": []},
+      {"name": "25_ENUMS_VALIDATION", "purpose": "Validation lists and state machines", "implemented": false, "table_names": []},
+      {"name": "26_IMPORT_EXPORT", "purpose": "Import/export contract, queues and logs", "implemented": false, "table_names": []},
+      {"name": "27_VERSION_HISTORY", "purpose": "Workbook structure, formulas, versions and corrections", "implemented": false, "table_names": []}
+    ],
+    "mobile_views": [
+      "MOBILE_CURRENT",
+      "MOBILE_NEXT_ACTIONS",
+      "MOBILE_RELEASE_BLOCKS",
+      "MOBILE_PRODUCT_STATUS",
+      "MOBILE_INCIDENTS",
+      "MOBILE_REVENUE_SUMMARY"
+    ],
+    "formula_engine": "excel",
+    "validation_enabled": true,
+    "conditional_formatting_enabled": true,
+    "version_history_enabled": true,
+    "public_export_formats": ["xlsx", "csv", "json"]
+  },
+  "required_tables": [
+    "Modules",
+    "Programs",
+    "Workstreams",
+    "WorkPackets",
+    "ContinuationPackets",
+    "Decisions",
+    "Artifacts",
+    "Sources",
+    "Claims",
+    "ClaimSourceLinks",
+    "Contradictions",
+    "Requirements",
+    "Tests",
+    "Defects",
+    "Risks",
+    "GateResults",
+    "Approvals",
+    "Products",
+    "ProductVersions",
+    "ModelLineEditions",
+    "Characters",
+    "Ecosystems",
+    "CEIUs",
+    "LearningObjects",
+    "Skills",
+    "Assessments",
+    "BuildProjects",
+    "MediaAssets",
+    "NFTProvenance",
+    "Offers",
+    "Campaigns",
+    "Affiliates",
+    "RevenueEvents",
+    "CostEvents",
+    "SupportEvents",
+    "Devices",
+    "Platforms",
+    "Connectors",
+    "Incidents",
+    "Corrections",
+    "Retirements",
+    "FranchiseNodes",
+    "Audits",
+    "Archives",
+    "AuditEvents",
+    "QualityEvidencePackets",
+    "WorkPacketDependencyLinks",
+    "ArtifactSourceLinks",
+    "ClaimProductVersionLinks",
+    "ProductCharacterLinks",
+    "CEIUEcosystemLinks",
+    "LearningObjectSkillLinks",
+    "LearningObjectAssessmentLinks",
+    "CampaignAffiliateLinks",
+    "CorrectionTargets",
+    "FranchiseNodeProductLinks",
+    "ConnectorWorkPacketLinks"
+  ],
+  "sample_records": [
+    {
+      "table": "Modules",
+      "record_id": "MOD-P011-OMNI-001",
+      "synthetic_or_public": true,
+      "description": "Public canonical OMNI module record."
+    },
+    {
+      "table": "WorkPackets",
+      "record_id": "WP-OMNI-0005",
+      "synthetic_or_public": true,
+      "description": "Public ledger data-model work packet."
+    },
+    {
+      "table": "ContinuationPackets",
+      "record_id": "CP-OMNI-20260822-005",
+      "synthetic_or_public": true,
+      "description": "Review-ready public Continuation Packet v0.5."
+    },
+    {
+      "table": "Products",
+      "record_id": "PROD-P011-MEPL-001",
+      "synthetic_or_public": true,
+      "description": "The $7 Master Evidence and Product Ledger product record."
+    },
+    {
+      "table": "CEIUs",
+      "record_id": "CEIU-LK9-QUANTUM-INNOVATION-001",
+      "synthetic_or_public": true,
+      "description": "Public fictional and educational CEIU pilot."
+    },
+    {
+      "table": "Characters",
+      "record_id": "CHAR-E6C-009-019",
+      "synthetic_or_public": true,
+      "description": "Lippy Killjoy — Nexus Nine fictional character record."
+    },
+    {
+      "table": "Offers",
+      "record_id": "OFFER-P011-7-LEDGER-001",
+      "synthetic_or_public": true,
+      "description": "Draft price-assumption record; not a sales guarantee."
+    },
+    {
+      "table": "Devices",
+      "record_id": "DEV-IPHONEX-001",
+      "synthetic_or_public": true,
+      "description": "Synthetic device example containing no serial number, credential or recovery secret."
+    }
+  ],
+  "exports": [
+    {
+      "export_type": "continuation_packet_json",
+      "enabled": true,
+      "privacy_check_required": true,
+      "rights_check_required": false,
+      "approval_required": false,
+      "destination": "Prompt #11 continuation directory"
+    },
+    {
+      "export_type": "github_work_packet_markdown",
+      "enabled": true,
+      "privacy_check_required": true,
+      "rights_check_required": true,
+      "approval_required": false,
+      "destination": "GitHub issue or pull request"
+    },
+    {
+      "export_type": "slack_handoff_summary",
+      "enabled": false,
+      "privacy_check_required": true,
+      "rights_check_required": false,
+      "approval_required": true,
+      "destination": null
+    },
+    {
+      "export_type": "notebooklm_source_manifest",
+      "enabled": false,
+      "privacy_check_required": true,
+      "rights_check_required": true,
+      "approval_required": true,
+      "destination": null
+    },
+    {
+      "export_type": "public_nft_metadata_subset",
+      "enabled": false,
+      "privacy_check_required": true,
+      "rights_check_required": true,
+      "approval_required": true,
+      "destination": null
+    },
+    {
+      "export_type": "public_csv_bundle",
+      "enabled": false,
+      "privacy_check_required": true,
+      "rights_check_required": true,
+      "approval_required": true,
+      "destination": null
+    }
+  ],
+  "quality": {
+    "certification_target": "Q3",
+    "certification_level": "Q2",
+    "risk_gate": "yellow",
+    "quality_score": null,
+    "critical_gates_pass": false,
+    "open_critical_defects": 0,
+    "tests_completed": [
+      "Data-model completeness review",
+      "Stable-ID prefix review",
+      "Privacy and export-boundary review",
+      "Model-line separation review",
+      "Workbook sheet-to-table cross-check"
+    ],
+    "known_limitations": [
+      "The XLSX workbook is not yet implemented.",
+      "Automated schema validation has not yet run in CI.",
+      "Device and account inventory remains incomplete.",
+      "No live connectors, production database, accounting integration, payment integration or public exports are configured.",
+      "Human approval is pending."
+    ],
+    "human_approval_status": "pending",
+    "decision": "continue_building"
+  },
+  "completion_boundary": {
+    "implemented": [
+      "canonical data-model document",
+      "machine-readable YAML data-model contract",
+      "manifest JSON Schema",
+      "manifest example",
+      "workbook sheet map",
+      "entity and relationship definitions",
+      "state machines",
+      "privacy and access model",
+      "formula specification",
+      "dashboard specification",
+      "import/export contract",
+      "migration plan"
+    ],
+    "not_implemented": [
+      "XLSX workbook",
+      "production database",
+      "live API routes",
+      "live connectors",
+      "accounting or payment integration",
+      "automated publication",
+      "autonomous minting",
+      "Q3 certification",
+      "Q4 inventory approval"
+    ]
+  }
+}
