@@ -1,0 +1,49 @@
+name: Test Prompt 11 CRM Evolution Q2
+
+on:
+  pull_request:
+    paths:
+      - "prototype/crm_evo/**"
+      - "schemas/p011-crm-evo-*.json"
+      - "config/p011-crm-evo-002.yaml"
+      - ".github/workflows/test-crm-evo-q2.yml"
+  push:
+    branches: [main]
+    paths:
+      - "prototype/crm_evo/**"
+      - "schemas/p011-crm-evo-*.json"
+      - "config/p011-crm-evo-002.yaml"
+      - ".github/workflows/test-crm-evo-q2.yml"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Run CRM Evolution unit tests
+        working-directory: prototype/crm_evo
+        run: python -m unittest -v test_crm_evolution_engine.py
+      - name: Validate JSON Schemas and YAML
+        run: |
+          python -m pip install --disable-pip-version-check "jsonschema>=4.22,<5" "PyYAML>=6,<7"
+          python - <<'PY'
+          import json, yaml
+          from pathlib import Path
+          from jsonschema import Draft202012Validator
+          root=Path('.')
+          for p in sorted((root/'schemas').glob('p011-crm-evo-*.schema.json')):
+              schema=json.loads(p.read_text())
+              Draft202012Validator.check_schema(schema)
+          config=yaml.safe_load((root/'config/p011-crm-evo-002.yaml').read_text())
+          assert config['module_id']=='P-011-CRM-EVO-002'
+          assert config['human_approval']=='Pending'
+          print('CRM Evolution schema and configuration validation passed')
+          PY
