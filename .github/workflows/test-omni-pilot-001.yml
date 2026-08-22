@@ -1,0 +1,49 @@
+name: Test OMNI Pilot 001
+
+on:
+  pull_request:
+    paths:
+      - "pilots/OMNI-PILOT-001/**"
+      - ".github/workflows/test-omni-pilot-001.yml"
+  push:
+    branches:
+      - main
+    paths:
+      - "pilots/OMNI-PILOT-001/**"
+      - ".github/workflows/test-omni-pilot-001.yml"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  beginner-evidence-passport-tests:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Run unit tests
+        working-directory: pilots/OMNI-PILOT-001
+        run: python -m unittest -v
+
+      - name: Validate safe sample output
+        working-directory: pilots/OMNI-PILOT-001
+        run: |
+          python evidence_passport.py sample_passport.json | tee sample-report.json
+          python - <<'PY'
+          import json
+          from pathlib import Path
+
+          report = json.loads(Path("sample-report.json").read_text(encoding="utf-8"))
+          assert report["validation_issues"] == []
+          assert report["release"]["decision"] == "REVIEW_ONLY"
+          print("Q3 sample remains review-only as required.")
+          PY

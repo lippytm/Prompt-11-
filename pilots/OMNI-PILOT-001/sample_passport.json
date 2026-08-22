@@ -1,0 +1,13 @@
+{
+  "passport_id": "PASS-LK9-LESSON-001",
+  "title": "Lippy Killjoy and the Evidence Passport",
+  "truth_label": "FD",
+  "fiction_disclosure": true,
+  "privacy_class": "Public",
+  "risk_gate": "Yellow",
+  "product_stage": "Q3",
+  "human_approval": "Pending",
+  "critical_gates_passed": false,
+  "publish_requested": true,
+  "learning_goal": "Practice Python validation and responsible release logic"
+}
