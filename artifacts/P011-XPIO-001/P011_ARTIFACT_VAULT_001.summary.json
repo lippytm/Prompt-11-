@@ -1,0 +1,44 @@
+{
+  "vault_id": "P011-ARTIFACT-VAULT-001",
+  "generated_at": "2026-08-22T20:30:00-07:00",
+  "alias_count": 54,
+  "unique_content_count": 51,
+  "exact_duplicate_alias_count": 3,
+  "total_alias_bytes": 7410524,
+  "unique_content_bytes": 6450794,
+  "register_file": "P011_ARTIFACT_VAULT_001.alias-register.csv",
+  "register_sha256": "1c60544ebac7cc0e7bebda3e0e5dee3d0d42cb6d63a0f01d1c9b3548f8404bb2",
+  "parts": [
+    {
+      "part": 1,
+      "category": "architecture_continuity",
+      "file": "P011_ARTIFACT_VAULT_001_PART_1_ARCHITECTURE_CONTINUITY.zip",
+      "sha256": "d3305ac880ece313042e8d4458f4e6ecd4c05e4c03f3192350103ea3fc4e15a0",
+      "size_bytes": 1130023,
+      "item_count": 17
+    },
+    {
+      "part": 2,
+      "category": "mepl_data_quality",
+      "file": "P011_ARTIFACT_VAULT_001_PART_2_MEPL_DATA_QUALITY.zip",
+      "sha256": "a5c0161056e040ac5d8ac36a328eb712ac0e8011e554195ac120d073afde91f6",
+      "size_bytes": 3358650,
+      "item_count": 24
+    },
+    {
+      "part": 3,
+      "category": "clone_evolution_revenue",
+      "file": "P011_ARTIFACT_VAULT_001_PART_3_CLONE_EVOLUTION_REVENUE.zip",
+      "sha256": "68a29e425c7fb8906f40b9823d483fccbfd258f82d8ba02eee50b33c42a3d767",
+      "size_bytes": 1222449,
+      "item_count": 10
+    }
+  ],
+  "binary_storage": "Q2 delivery package; hashes and register are canonical in GitHub",
+  "governance": {
+    "exact_duplicates": "Aliases share one artifact_id and are not duplicated inside vault parts.",
+    "truth_boundary": "A hash proves content integrity, not factual truth or operational deployment.",
+    "release_boundary": "Registry status does not grant Q4, commercial release, financial action, NFT minting, or franchise approval.",
+    "privacy": "Only public/synthetic artifacts are included; secrets and restricted personal records are excluded."
+  }
+}

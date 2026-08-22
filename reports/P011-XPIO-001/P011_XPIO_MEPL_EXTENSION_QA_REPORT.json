@@ -1,0 +1,29 @@
+{
+  "file": "P011_Master_Evidence_Product_Ledger_Q3_2_XPIO_Transparency_Extension.xlsx",
+  "sha256": "91b436d256182d8c69182f8998e803a0379593bbd0f682ae6dd74549a6348ac8",
+  "size_bytes": 613569,
+  "sheet_count": 42,
+  "new_sheets": {
+    "XPIO Dashboard": {"max_row": 27, "max_column": 4, "freeze_panes": "A5", "charts": 1, "gridlines": false},
+    "XPIO Artifact Vault": {"max_row": 58, "max_column": 17, "freeze_panes": "A5", "auto_filter": "A4:O58", "data_validations": 2, "gridlines": false},
+    "XPIO Diagnostics": {"max_row": 73, "max_column": 14, "freeze_panes": "A5", "auto_filter": "A4:N73", "gridlines": false},
+    "XPIO Platforms": {"max_row": 13, "max_column": 14, "freeze_panes": "A5", "auto_filter": "A4:N13", "gridlines": false},
+    "XPIO Identity": {"max_row": 5, "max_column": 22, "freeze_panes": "A5", "auto_filter": "A4:V5", "gridlines": false},
+    "XPIO Transparency": {"max_row": 6, "max_column": 22, "freeze_panes": "A5", "auto_filter": "A4:V6", "gridlines": false},
+    "XPIO Documentation": {"max_row": 9, "max_column": 15, "freeze_panes": "A5", "auto_filter": "A4:O9", "gridlines": false}
+  },
+  "formula_count": 9661,
+  "formula_parse_errors": [],
+  "error_strings": [],
+  "ref_errors": [],
+  "artifact_counts": {"aliases": 54, "unique": 51, "duplicates": 3, "verified": 54},
+  "diagnostic_counts": {"PASS": 60, "WARN": 8, "FAIL": 0, "NOT_TESTED": 1},
+  "calculation": {"calcMode": "auto", "fullCalcOnLoad": true, "forceFullCalc": true},
+  "external_links": 0,
+  "issues": [],
+  "status": "PASS",
+  "limitations": [
+    "Openpyxl cannot store recalculated cached formula values; the workbook is configured for automatic full recalculation on open.",
+    "Visual previews were generated from cell values and styles, not by Excel itself."
+  ]
+}
