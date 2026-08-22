@@ -1,0 +1,311 @@
+{
+  "schema_version": "0.3",
+  "entry_id": "CEIU-LK9-QUANTUM-INNOVATION-001",
+  "title": "Lippy Killjoy and the Marketplace of Unfinished Futures",
+  "status": "testable_pilot",
+  "truth_boundary": [
+    "VF_verified_fact",
+    "WH_working_hypothesis",
+    "FD_fictional_dramatization"
+  ],
+  "privacy_class": "public",
+  "characters": [
+    {
+      "character_id": "CHAR-E6C-009-019",
+      "public_name": "Lippy Killjoy — Nexus Nine of the Nineteenfold Continuum",
+      "role": "Cross-domain guide, whistleblower, comedian, red-team critic, and Time Machines Management Systems builder",
+      "fiction_status": "FD_fictional_dramatization",
+      "passport_reference": "examples/CHAR-E6C-009-019.example.json",
+      "permissions": [
+        "Teach evidence literacy through original fiction",
+        "Guide defensive cybersecurity and product-quality exercises",
+        "Present clearly labeled speculative technologies"
+      ],
+      "limitations": [
+        "Cannot impersonate Charles Earl Lipshay or any other real person",
+        "Cannot present fictional powers as verified biography or science",
+        "Cannot authorize publication, minting, contracts, medical actions, or financial actions"
+      ]
+    }
+  ],
+  "ecosystems": [
+    "natural",
+    "human",
+    "knowledge",
+    "digital_cyber",
+    "business_economic",
+    "cosmic_speculative"
+  ],
+  "domains": [
+    "artificial_intelligence",
+    "cybersecurity",
+    "blockchain",
+    "business_of_businesses",
+    "creative_innovation",
+    "media_and_entertainment",
+    "space_and_futures"
+  ],
+  "quantum_questions": {
+    "if": {
+      "questions": [
+        "If a technology is described as operational, what evidence and testing should exist?",
+        "If the marketplace fails, which people, ecosystems, accounts, and businesses are harmed?"
+      ],
+      "outputs": [
+        "Evidence requirements matrix",
+        "Consequence and failure-radius map"
+      ]
+    },
+    "maybe": {
+      "questions": [
+        "Maybe an unsupported claim resulted from misunderstanding rather than intentional fraud?",
+        "Maybe the technology works in one timeline or environment but not another?"
+      ],
+      "outputs": [
+        "Alternative-hypothesis matrix",
+        "Uncertainty and contradiction report"
+      ]
+    },
+    "why_not": {
+      "questions": [
+        "Why not require a versioned Innovation Passport before public sale?",
+        "Why not pilot the educational toolkit before franchising the marketplace?"
+      ],
+      "outputs": [
+        "Innovation Passport prototype",
+        "Small-scale business experiment plan"
+      ]
+    },
+    "dont_do_that": {
+      "questions": [
+        "Which actions would expose private data, bypass testing, or mislead customers?",
+        "Which claims would create unsafe medical, financial, security, or environmental risks?"
+      ],
+      "outputs": [
+        "Prohibited-actions register",
+        "Stop-work triggers and safe alternatives"
+      ]
+    }
+  },
+  "learning": {
+    "audiences": [
+      "Beginning programmers",
+      "Creators and educators",
+      "Entrepreneurs and affiliate partners",
+      "AI and blockchain learners"
+    ],
+    "prerequisites": [
+      "Basic digital literacy",
+      "Willingness to distinguish fact, hypothesis, and fiction"
+    ],
+    "objectives": [
+      "Separate a product claim from the evidence supporting it",
+      "Create requirements, tests, risks, and correction records",
+      "Explain why an NFT hash does not prove narrative truth",
+      "Design a safer and more accessible pilot offer"
+    ],
+    "assessment": [
+      "Complete an Innovation Passport",
+      "Identify five unsupported claims in a fictional marketplace listing",
+      "Produce a passing red-team and privacy review"
+    ],
+    "accessibility": [
+      "Plain-language edition",
+      "Captioned video",
+      "Transcript and audio-description plan",
+      "Keyboard-accessible interactive branch map"
+    ]
+  },
+  "story": {
+    "universe": "CryptoCybersecurity and CryptoClockworks",
+    "premise": "A planetary marketplace sells dazzling future technologies before their timelines, security, rights, environmental effects, or operational evidence have been validated.",
+    "conflict": "Nexus Nine must decide whether to shut the marketplace down, expose it through comedy, or rebuild it as a transparent educational pilot without becoming the permanent ruler of innovation.",
+    "stakes": [
+      "Customers may lose money or safety",
+      "Unsecured inventions may damage digital and natural ecosystems",
+      "Legitimate creators may lose public trust",
+      "An absolute regulator could suppress useful experimentation"
+    ],
+    "fact_fiction_markers": [
+      "All shape-shifting, relativistic, and intergalactic abilities are labeled fictional",
+      "Real-world cybersecurity and product-validation lessons use sourced Reality Mode explanations",
+      "Speculative devices are never marketed as operational products"
+    ],
+    "humor_boundary": "Satire targets unsupported claims, bureaucratic certainty, and reckless systems rather than victims or protected groups."
+  },
+  "innovation": {
+    "problem": "Creative technology projects often mix attractive claims, incomplete prototypes, unclear rights, weak testing, and premature sales language.",
+    "build_challenge": "Create a versioned Innovation Passport and pilot marketplace record that makes evidence, limitations, tests, accessibility, environmental impact, pricing, and corrections visible.",
+    "requirements": [
+      "Fact and fiction labels",
+      "Requirements and test ledger",
+      "Risk and stop-work register",
+      "Privacy and security review",
+      "Accessibility and environmental review",
+      "Customer-value hypothesis",
+      "NFT-safe public metadata"
+    ],
+    "validation_plan": [
+      "Schema validation",
+      "Peer review",
+      "User comprehension test",
+      "Security and privacy checklist",
+      "HumanApprovalGate review"
+    ],
+    "environmental_review": [
+      "Estimate media-production and blockchain resource use",
+      "Prefer low-resource provenance methods where practical",
+      "Avoid unsupported sustainability claims"
+    ],
+    "prototype_repository": null
+  },
+  "business": {
+    "customer_problem": "Creators and customers need a simple way to distinguish tested products, educational prototypes, speculative ideas, and fiction.",
+    "value_proposition": "A transparent, educational Innovation Passport helps creators improve quality and helps customers understand evidence, limitations, price, rights, and risk.",
+    "offer": "$1 pilot field guide followed by an optional $2 affiliate learning edition and integration into the $7 Master Evidence and Product Ledger",
+    "revenue_pathways": [
+      "Direct educational product sales",
+      "Affiliate commissions with compliance controls",
+      "Workshops and implementation support",
+      "Future licensing after Q4 certification"
+    ],
+    "integrity_controls": [
+      "No guaranteed income or investment claims",
+      "No representation that a fictional or prototype technology is operational",
+      "Clear pricing, license, refund, and support terms",
+      "Affiliate materials must preserve all disclosures"
+    ],
+    "pricing_note": "Prices are pilot design inputs and may change after testing.",
+    "franchise_eligible": false
+  },
+  "delivery": {
+    "media": [
+      "ebook",
+      "audiobook",
+      "interactive_video",
+      "workbook",
+      "simulation",
+      "code_repository",
+      "toolkit"
+    ],
+    "model_lines": {
+      "chatgpt": {
+        "status": "drafting",
+        "edition_id": "PROD-CHATGPT-CEIU-LK9-001",
+        "independent_first_pass": true,
+        "source_manifest": null,
+        "quality_packet": null
+      },
+      "gemini_notebooklm": {
+        "status": "not_started",
+        "edition_id": "PROD-GEMINI-CEIU-LK9-001",
+        "independent_first_pass": true,
+        "source_manifest": null,
+        "quality_packet": null
+      },
+      "claude_hermes": {
+        "status": "not_started",
+        "edition_id": "PROD-CLAUDE-CEIU-LK9-001",
+        "independent_first_pass": true,
+        "source_manifest": null,
+        "quality_packet": null
+      },
+      "comparison": {
+        "status": "not_started",
+        "edition_id": null,
+        "independent_first_pass": false,
+        "source_manifest": null,
+        "quality_packet": null
+      },
+      "merged_premium": {
+        "status": "not_started",
+        "edition_id": null,
+        "independent_first_pass": false,
+        "source_manifest": null,
+        "quality_packet": null
+      }
+    },
+    "nft_provenance": {
+      "enabled": true,
+      "public_metadata_only": true,
+      "edition_id": null,
+      "content_hash": null,
+      "license_reference": null,
+      "correction_reference": null,
+      "investment_guarantee_prohibited": true
+    }
+  },
+  "quality": {
+    "certification_level": "Q3",
+    "risk_gate": "yellow",
+    "critical_gates": [
+      {
+        "gate": "FictionBoundaryGate",
+        "status": "pass",
+        "evidence_reference": "docs/P011-EEBDS-001-encyclopedia-delivery-system.md",
+        "reviewer": "Prompt #11 QA"
+      },
+      {
+        "gate": "EducationalOutcomeGate",
+        "status": "in_review",
+        "evidence_reference": null,
+        "reviewer": null
+      },
+      {
+        "gate": "RightsGate",
+        "status": "conditional",
+        "evidence_reference": "Use preferred original public name and rights review before commercial release",
+        "reviewer": "Human rights reviewer required"
+      },
+      {
+        "gate": "HumanApprovalGate",
+        "status": "not_started",
+        "evidence_reference": null,
+        "reviewer": null
+      }
+    ],
+    "requirements": [
+      "Complete three independent model-line drafts",
+      "Pass comprehension, accessibility, security, and privacy tests",
+      "Complete product and NFT metadata review"
+    ],
+    "tests": [
+      "Schema-validation test planned",
+      "Fact-versus-fiction comprehension test planned",
+      "Affiliate disclosure preservation test planned"
+    ],
+    "defects": [
+      "Independent Gemini and Claude/Hermes editions not started",
+      "No final rights review",
+      "No approved NFT metadata or license"
+    ],
+    "quality_score": null
+  },
+  "stewardship": {
+    "measures": [
+      "Learning-objective completion",
+      "Fact-versus-fiction comprehension",
+      "Accessibility defects",
+      "Security and privacy incidents",
+      "Customer satisfaction, refunds, and support burden",
+      "Corrections and supersession quality"
+    ],
+    "feedback_channels": [
+      "GitHub issues",
+      "Course feedback",
+      "Customer-support records"
+    ],
+    "correction_plan": "Publish material corrections with version numbers, correction records, and updated public provenance references.",
+    "retirement_plan": "Retire or quarantine the product when critical disclosures cannot be preserved, rights are revoked, or safety defects remain unresolved.",
+    "archive_plan": "Preserve the final approved edition, source manifest, Quality Evidence Packet, correction history, and retirement decision in the canonical archive.",
+    "supersedes": null,
+    "superseded_by": null
+  },
+  "human_approval": {
+    "required": true,
+    "status": "pending",
+    "approver": null,
+    "approved_at": null,
+    "scope": "Q3 pilot review only; not approval for commercial publication, franchising, or NFT minting"
+  }
+}
