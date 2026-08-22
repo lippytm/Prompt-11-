@@ -1,0 +1,22 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://lippytm.ai/schemas/p011-crm-consent-record.schema.json",
+  "title": "Prompt 11 CRM Consent Record",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["consent_id", "party_id", "purpose", "channel_type", "status", "lawful_basis", "source_reference", "captured_at", "captured_by_type", "evidence_hash"],
+  "properties": {
+    "consent_id": {"type": "string", "pattern": "^CRM-CNS-[A-F0-9]{16}$"},
+    "party_id": {"type": "string", "pattern": "^CRM-PTY-[A-F0-9]{16}$"},
+    "purpose": {"type": "string", "minLength": 1},
+    "channel_type": {"type": "string", "minLength": 1},
+    "status": {"enum": ["granted", "denied", "revoked", "expired", "not_required", "unknown"]},
+    "lawful_basis": {"type": "string", "minLength": 1},
+    "source_reference": {"type": "string", "minLength": 1},
+    "captured_at": {"type": "string", "format": "date-time"},
+    "expires_at": {"type": ["string", "null"]},
+    "revoked_at": {"type": ["string", "null"]},
+    "captured_by_type": {"enum": ["human_owner", "authorized_human_reviewer", "system_import"]},
+    "evidence_hash": {"type": "string", "pattern": "^[a-f0-9]{64}$"}
+  }
+}

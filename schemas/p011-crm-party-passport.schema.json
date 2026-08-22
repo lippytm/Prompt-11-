@@ -1,0 +1,22 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://lippytm.ai/schemas/p011-crm-party-passport.schema.json",
+  "title": "Prompt 11 CRM Party Passport",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["party_id", "party_type", "display_name", "privacy_class", "data_source", "provenance_reference", "status", "synthetic"],
+  "properties": {
+    "party_id": {"type": "string", "pattern": "^CRM-PTY-[A-F0-9]{16}$"},
+    "party_type": {"enum": ["person", "organization", "synthetic_test"]},
+    "display_name": {"type": "string", "minLength": 1},
+    "organization_name": {"type": ["string", "null"]},
+    "external_reference": {"type": ["string", "null"]},
+    "privacy_class": {"enum": ["public", "internal", "confidential", "restricted"]},
+    "data_source": {"type": "string", "minLength": 1},
+    "provenance_reference": {"type": "string", "minLength": 1},
+    "status": {"enum": ["proposed", "active", "review", "suppressed", "archived", "quarantined", "deletion_pending", "retired"]},
+    "suppression_status": {"type": "string"},
+    "retention_review_at": {"type": ["string", "null"]},
+    "synthetic": {"type": "boolean"}
+  }
+}

@@ -1,0 +1,23 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://lippytm.ai/schemas/p011-crm-audit-event.schema.json",
+  "title": "Prompt 11 CRM Audit Event",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["event_id", "correlation_id", "timestamp", "actor_type", "actor_id", "event_type", "object_type", "object_id", "result", "severity", "summary", "details"],
+  "properties": {
+    "event_id": {"type": "string", "pattern": "^CRM-EVT-[A-F0-9]{16}$"},
+    "correlation_id": {"type": "string", "minLength": 1},
+    "timestamp": {"type": "string", "format": "date-time"},
+    "actor_type": {"type": "string"},
+    "actor_id": {"type": "string"},
+    "event_type": {"type": "string"},
+    "object_type": {"type": "string"},
+    "object_id": {"type": "string"},
+    "result": {"type": "string"},
+    "severity": {"enum": ["info", "low", "medium", "high", "critical"]},
+    "summary": {"type": "string"},
+    "evidence_reference": {"type": ["string", "null"]},
+    "details": {"type": "object"}
+  }
+}

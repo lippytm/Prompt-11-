@@ -1,0 +1,45 @@
+{
+  "module_id": "P-011-CRM-001",
+  "date": "2026-08-22",
+  "q_stage": "Q2",
+  "risk_gate": "Yellow",
+  "human_approval": "Pending",
+  "artifacts": {
+    "package": {
+      "filename": "P011-CRM-001_Continuum_Relationship_Quality_Fabric_Q2_v0.1.zip",
+      "size_bytes": 1448871,
+      "sha256": "57af107916ef89f7ed6df63effd8e3ef6f1e40e5b277d4751dd9fbbb5ebf8a12"
+    },
+    "workbook": {
+      "filename": "P011_Master_Evidence_Product_Ledger_Q3_3_CRM_Quality_Extension.xlsx",
+      "size_bytes": 659096,
+      "sha256": "d8ce8b289758590d54d505ed747f1e0bcf75c814a3aefd4791f999a86408152b"
+    },
+    "qep": {
+      "filename": "QEP-CRM-Q2-001.md",
+      "size_bytes": 2616,
+      "sha256": "a3ca00d3c7b0b2c064428f2e4c8a2c27392d530846be0513770d8509fa798c4d"
+    },
+    "continuation": {
+      "filename": "CP-CRM-20260822-001.md",
+      "size_bytes": 2121,
+      "sha256": "8240d02e3e66847c9b30351fa94a168da9b32a46dfec48494b81f488a02332cd"
+    },
+    "database": {
+      "filename": "P011_CRM_Control_Plane_Q2.sqlite",
+      "size_bytes": 172032,
+      "sha256": "f46ec2e76d997abd907082a15963e6cde3bb23497bb8fd99dfc4d1cdb8e13e50"
+    },
+    "full_prototype": {
+      "filename": "crm_control_plane.py",
+      "size_bytes": 61754,
+      "sha256": "ef7eda86ffe9fa051a608e4ef1b6b64882e5fe1f37f0afed771c0526f66cf390"
+    },
+    "full_tests": {
+      "filename": "test_crm_control_plane.py",
+      "size_bytes": 13781,
+      "sha256": "df0ecc6d2f7e405849282c4ca0138f40b9342a274dce35ff64e6b2cc1edec47b"
+    }
+  },
+  "integrity_boundary": "Hashes prove file integrity, not factual truth, ownership, production deployment, financial authority, or commercial value."
+}

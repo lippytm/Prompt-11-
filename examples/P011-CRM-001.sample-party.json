@@ -1,0 +1,14 @@
+{
+  "party_id": "CRM-PTY-E6BFB7E9F14E9D38",
+  "party_type": "synthetic_test",
+  "display_name": "Synthetic Learner Alpha",
+  "organization_name": "Prompt 11 Learning Lab",
+  "external_reference": null,
+  "privacy_class": "internal",
+  "data_source": "synthetic_q2",
+  "provenance_reference": "examples/P011-CRM-001.sample-party.json",
+  "status": "active",
+  "suppression_status": "not_suppressed",
+  "retention_review_at": null,
+  "synthetic": true
+}
