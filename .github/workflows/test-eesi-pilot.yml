@@ -1,0 +1,63 @@
+name: Test EESI Pilot 001
+
+on:
+  pull_request:
+    paths:
+      - "pilots/EESI-PILOT-001/**"
+      - "schemas/p011-eesi-*.schema.json"
+      - ".github/workflows/test-eesi-pilot.yml"
+  push:
+    branches: [main]
+    paths:
+      - "pilots/EESI-PILOT-001/**"
+      - "schemas/p011-eesi-*.schema.json"
+      - ".github/workflows/test-eesi-pilot.yml"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Run unit tests
+        working-directory: pilots/EESI-PILOT-001
+        run: python -m unittest -v test_evolution_engine.py
+      - name: Generate mutation proposals
+        working-directory: pilots/EESI-PILOT-001
+        run: |
+          python evolution_engine.py \
+            --passport clone_passport.json \
+            --evaluations evaluations.json \
+            --output proposed_mutations.json
+          python -m json.tool proposed_mutations.json > /dev/null
+      - name: Validate schemas and examples
+        run: |
+          python -m pip install --disable-pip-version-check "jsonschema>=4.22,<5"
+          python - <<'PY'
+          import json
+          from pathlib import Path
+          from jsonschema import Draft202012Validator
+
+          pairs = [
+              ("schemas/p011-eesi-clone-passport.schema.json", "pilots/EESI-PILOT-001/clone_passport.json"),
+              ("schemas/p011-eesi-mutation-proposal.schema.json", "pilots/EESI-PILOT-001/proposed_mutations.json"),
+          ]
+          for schema_path, example_path in pairs:
+              schema = json.loads(Path(schema_path).read_text())
+              example = json.loads(Path(example_path).read_text())
+              Draft202012Validator.check_schema(schema)
+              validator = Draft202012Validator(schema)
+              if example_path.endswith("proposed_mutations.json"):
+                  for proposal in example["proposals"]:
+                      validator.validate(proposal)
+              else:
+                  validator.validate(example)
+          print("EESI schema validation passed")
+          PY

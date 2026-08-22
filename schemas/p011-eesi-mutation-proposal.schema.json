@@ -1,0 +1,54 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://lippytm.ai/schemas/p011-eesi-mutation-proposal.schema.json",
+  "title": "Prompt #11 EESI Mutation Proposal",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "mutation_id",
+    "clone_id",
+    "capability",
+    "current_score",
+    "target_score",
+    "gap",
+    "proposed_change",
+    "evidence_ids",
+    "risk_gate",
+    "required_gates",
+    "status",
+    "human_approval_status",
+    "created_at",
+    "content_hash"
+  ],
+  "properties": {
+    "mutation_id": {"type": "string", "pattern": "^MUT-[A-Z0-9-]+$"},
+    "clone_id": {"type": "string", "pattern": "^CLONE-[A-Z0-9-]+$"},
+    "capability": {"type": "string", "minLength": 3},
+    "current_score": {"type": "number", "minimum": 0, "maximum": 100},
+    "target_score": {"type": "number", "minimum": 0, "maximum": 100},
+    "gap": {"type": "number", "exclusiveMinimum": 0, "maximum": 100},
+    "proposed_change": {"type": "string", "minLength": 10},
+    "evidence_ids": {
+      "type": "array",
+      "minItems": 1,
+      "uniqueItems": true,
+      "items": {"type": "string", "minLength": 3}
+    },
+    "risk_gate": {"enum": ["green", "yellow", "orange", "red"]},
+    "required_gates": {
+      "type": "array",
+      "minItems": 1,
+      "uniqueItems": true,
+      "items": {"type": "string", "minLength": 3},
+      "contains": {"const": "HumanApprovalGate"}
+    },
+    "status": {
+      "enum": ["proposed", "changes_requested", "approved_for_bounded_pilot", "rejected", "quarantined", "revoked", "retired"]
+    },
+    "human_approval_status": {"enum": ["pending", "approved", "rejected", "revoked"]},
+    "human_approver": {"type": ["string", "null"]},
+    "approval_conditions": {"type": "array", "items": {"type": "string"}},
+    "created_at": {"type": "string", "format": "date-time"},
+    "content_hash": {"type": "string", "pattern": "^[a-f0-9]{64}$"}
+  }
+}

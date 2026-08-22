@@ -1,0 +1,61 @@
+{
+  "clone_id": "CLONE-CEL-001",
+  "generated_at": "2026-08-22T20:05:55+00:00",
+  "proposals": [
+    {
+      "approval_conditions": [],
+      "capability": "python_testing",
+      "clone_id": "CLONE-CEL-001",
+      "content_hash": "32d043fe8b2cc9f9be8c0d283b7b327593825261cbcfdc3b635ce9fdeb1e3f0b",
+      "created_at": "2026-08-22T20:05:55+00:00",
+      "current_score": 62.0,
+      "evidence_ids": ["TST-EESI-001", "TST-EESI-002"],
+      "gap": 23.0,
+      "human_approval_status": "pending",
+      "human_approver": null,
+      "mutation_id": "MUT-6DA7A39C9AEA",
+      "proposed_change": "Create a bounded training, evaluation, and documentation experiment for python_testing; do not auto-deploy or modify the clone runtime.",
+      "required_gates": ["IdentityGate", "ConsentGate", "EvaluationGate", "MutationSafetyGate", "PrivacyGate", "SecurityGate", "HumanApprovalGate"],
+      "risk_gate": "green",
+      "status": "proposed",
+      "target_score": 85.0
+    },
+    {
+      "approval_conditions": [],
+      "capability": "source_provenance",
+      "clone_id": "CLONE-CEL-001",
+      "content_hash": "1097679c45f5039657b11412eb9aa4490bad1be460cbe1ea93f95775f38a1fa5",
+      "created_at": "2026-08-22T20:05:55+00:00",
+      "current_score": 74.0,
+      "evidence_ids": ["SRC-EESI-001"],
+      "gap": 18.0,
+      "human_approval_status": "pending",
+      "human_approver": null,
+      "mutation_id": "MUT-7B1004355E6F",
+      "proposed_change": "Create a bounded training, evaluation, and documentation experiment for source_provenance; do not auto-deploy or modify the clone runtime.",
+      "required_gates": ["IdentityGate", "ConsentGate", "EvaluationGate", "MutationSafetyGate", "PrivacyGate", "SecurityGate", "HumanApprovalGate"],
+      "risk_gate": "green",
+      "status": "proposed",
+      "target_score": 92.0
+    },
+    {
+      "approval_conditions": [],
+      "capability": "beginner_instruction",
+      "clone_id": "CLONE-CEL-001",
+      "content_hash": "18e35c44bf3fd4e0c540f4a919214f7d430568083edb03048a8c402028ad8e4c",
+      "created_at": "2026-08-22T20:05:55+00:00",
+      "current_score": 78.0,
+      "evidence_ids": ["LO-EESI-001", "ASM-EESI-001"],
+      "gap": 12.0,
+      "human_approval_status": "pending",
+      "human_approver": null,
+      "mutation_id": "MUT-8681E094B28B",
+      "proposed_change": "Create a bounded training, evaluation, and documentation experiment for beginner_instruction; do not auto-deploy or modify the clone runtime.",
+      "required_gates": ["IdentityGate", "ConsentGate", "EvaluationGate", "MutationSafetyGate", "PrivacyGate", "SecurityGate", "HumanApprovalGate"],
+      "risk_gate": "green",
+      "status": "proposed",
+      "target_score": 90.0
+    }
+  ],
+  "release_authority": "human_only"
+}
