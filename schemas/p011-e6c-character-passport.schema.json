@@ -1,0 +1,213 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://lippytm.ai/schemas/p011-e6c-character-passport.schema.json",
+  "title": "P-011-E6C Character Continuum Passport",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "character_id",
+    "canonical_name",
+    "version",
+    "fiction_status",
+    "human_origin_boundary",
+    "original_ip_boundary",
+    "aliases",
+    "node",
+    "archetypes",
+    "capabilities",
+    "limitations",
+    "universe_forms",
+    "mutation_permissions",
+    "governance",
+    "quality_controls",
+    "publication_status"
+  ],
+  "properties": {
+    "character_id": {
+      "type": "string",
+      "pattern": "^E6C-CHAR-[0-9]{3}-[0-9]{3}$"
+    },
+    "canonical_name": {
+      "type": "string",
+      "minLength": 3
+    },
+    "version": {
+      "type": "string",
+      "pattern": "^[0-9]+\\.[0-9]+\\.[0-9]+$"
+    },
+    "fiction_status": {
+      "const": "FD"
+    },
+    "human_origin_boundary": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "inspired_by",
+        "not_a_factual_biography",
+        "prohibited_real_world_claims"
+      ],
+      "properties": {
+        "inspired_by": {
+          "type": "array",
+          "minItems": 1,
+          "items": {"type": "string", "minLength": 1},
+          "uniqueItems": true
+        },
+        "not_a_factual_biography": {
+          "const": true
+        },
+        "prohibited_real_world_claims": {
+          "type": "array",
+          "minItems": 1,
+          "items": {"type": "string", "minLength": 3},
+          "uniqueItems": true
+        }
+      }
+    },
+    "original_ip_boundary": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "preferred_public_name",
+        "acronym_expansion",
+        "third_party_affiliation",
+        "commercial_review_required"
+      ],
+      "properties": {
+        "preferred_public_name": {"type": "string", "minLength": 3},
+        "internal_homage_label": {"type": "string"},
+        "acronym_expansion": {"type": "string", "minLength": 3},
+        "third_party_affiliation": {"const": false},
+        "commercial_review_required": {"type": "boolean"},
+        "excluded_expression": {
+          "type": "array",
+          "items": {"type": "string", "minLength": 3},
+          "uniqueItems": true
+        }
+      }
+    },
+    "aliases": {
+      "type": "array",
+      "minItems": 1,
+      "items": {"type": "string", "minLength": 1},
+      "uniqueItems": true
+    },
+    "node": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["active_node", "council_size", "role"],
+      "properties": {
+        "active_node": {"const": 9},
+        "council_size": {"const": 19},
+        "role": {"type": "string", "minLength": 3}
+      }
+    },
+    "archetypes": {
+      "type": "array",
+      "minItems": 1,
+      "items": {"type": "string", "minLength": 3},
+      "uniqueItems": true
+    },
+    "capabilities": {
+      "type": "array",
+      "minItems": 1,
+      "items": {"type": "string", "minLength": 3},
+      "uniqueItems": true
+    },
+    "limitations": {
+      "type": "array",
+      "minItems": 3,
+      "items": {"type": "string", "minLength": 3},
+      "uniqueItems": true
+    },
+    "universe_forms": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["universe", "form", "mission"],
+        "properties": {
+          "universe": {"type": "string", "minLength": 3},
+          "form": {"type": "string", "minLength": 3},
+          "mission": {"type": "string", "minLength": 5}
+        }
+      }
+    },
+    "mutation_permissions": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "consent_required",
+        "passport_required",
+        "revocation_required",
+        "right_to_disconnect",
+        "self_certification_allowed"
+      ],
+      "properties": {
+        "consent_required": {"const": true},
+        "passport_required": {"const": true},
+        "revocation_required": {"const": true},
+        "right_to_disconnect": {"const": true},
+        "self_certification_allowed": {"const": false}
+      }
+    },
+    "governance": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "distributed_stewardship_required",
+        "absolute_control_prohibited",
+        "forced_assimilation_prohibited",
+        "human_approval_required"
+      ],
+      "properties": {
+        "distributed_stewardship_required": {"const": true},
+        "absolute_control_prohibited": {"const": true},
+        "forced_assimilation_prohibited": {"const": true},
+        "human_approval_required": {"const": true},
+        "dissent_mechanism": {"type": "string", "minLength": 5}
+      }
+    },
+    "quality_controls": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "enum": [
+          "FictionGate",
+          "RealityBoundaryGate",
+          "IdentityGate",
+          "RightsGate",
+          "OriginalityGate",
+          "ContinuityGate",
+          "PowerBalanceGate",
+          "ConsentGate",
+          "PrivacyGate",
+          "SecurityGate",
+          "ScienceClaimGate",
+          "HumorGate",
+          "MutationGate",
+          "AccessibilityGate",
+          "EnvironmentalGate",
+          "FranchiseGate",
+          "HumanApprovalGate"
+        ]
+      },
+      "uniqueItems": true
+    },
+    "publication_status": {
+      "enum": [
+        "IDEA_ONLY",
+        "INTERNAL_DRAFT",
+        "EVIDENCE_MAPPED",
+        "PILOT_ONLY",
+        "APPROVED_INVENTORY",
+        "CONDITIONALLY_APPROVED",
+        "QUARANTINED",
+        "WITHDRAWN",
+        "SUPERSEDED",
+        "RETIRED"
+      ]
+    }
+  }
+}
