@@ -1,0 +1,33 @@
+{
+  "module_id": "P-011-INNOV-001",
+  "platform": "Airtable",
+  "base_name": "Prompt #11 CRM Control Tower",
+  "base_id": "appMIt4BeKa0NOPEZ",
+  "privacy_boundary": "synthetic, staged, or public architecture data only",
+  "innovation_table": {
+    "name": "AI Innovation Backlog",
+    "table_id": "tblYgtG3SUAw6oWuy",
+    "canonical_records_created": 12,
+    "record_range": "INNOV-P011-001 through INNOV-P011-012"
+  },
+  "mission_table": {
+    "name": "CRM Missions",
+    "table_id": "tbl8ZxVThqAH5LPt1",
+    "records_created": 5,
+    "missions": [
+      "INNOV-MISSION-VAULT-002",
+      "INNOV-MISSION-004-Q3",
+      "INNOV-MISSION-003-Q3",
+      "INNOV-MISSION-011-Q3",
+      "INNOV-MISSION-Q3-001"
+    ]
+  },
+  "first_q3_candidates": [
+    "INNOV-P011-004",
+    "INNOV-P011-003",
+    "INNOV-P011-011"
+  ],
+  "human_approval_gate": "pending",
+  "production_contact_permission": false,
+  "financial_authority": false
+}
