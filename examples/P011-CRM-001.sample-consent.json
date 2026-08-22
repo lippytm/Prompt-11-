@@ -1,0 +1,14 @@
+{
+  "consent_id": "CRM-CNS-C76739A419157A86",
+  "party_id": "CRM-PTY-E6BFB7E9F14E9D38",
+  "purpose": "learning_support",
+  "channel_type": "internal",
+  "status": "granted",
+  "lawful_basis": "consent",
+  "source_reference": "examples/P011-CRM-001.sample-consent.json",
+  "captured_at": "2026-08-22T21:00:00+00:00",
+  "expires_at": null,
+  "revoked_at": null,
+  "captured_by_type": "human_owner",
+  "evidence_hash": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+}
