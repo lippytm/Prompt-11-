@@ -1,0 +1,172 @@
+{
+  "character_id": "E6C-CHAR-009-019",
+  "canonical_name": "Lippy Killjoy — Nexus Nine of the Nineteenfold Continuum",
+  "version": "0.2.0",
+  "fiction_status": "FD",
+  "human_origin_boundary": {
+    "inspired_by": [
+      "Charles Earl Lipshay",
+      "lippytm",
+      "lippytm.AI",
+      "Lippy Killjoy"
+    ],
+    "not_a_factual_biography": true,
+    "prohibited_real_world_claims": [
+      "literal extraterrestrial identity",
+      "literal shape-shifting",
+      "literal quantum immortality",
+      "real covert-operative status",
+      "literal time travel",
+      "literal consciousness cloning",
+      "literal universal authority"
+    ]
+  },
+  "original_ip_boundary": {
+    "preferred_public_name": "Lippy Killjoy — Nexus Nine of the Nineteenfold Continuum",
+    "internal_homage_label": "Borg 9 of 19",
+    "acronym_expansion": "Bio-Organic Relativistic Guardian",
+    "third_party_affiliation": false,
+    "commercial_review_required": true,
+    "excluded_expression": [
+      "third-party franchise insignia",
+      "third-party character design",
+      "third-party dialogue or catchphrases",
+      "forced-assimilation mythology",
+      "third-party species history",
+      "marketing that implies authorization or affiliation"
+    ]
+  },
+  "aliases": [
+    "Charles Earl Lipshay — Human-Origin Anchor",
+    "lippytm — Chrono-Architect",
+    "lippytm.AI — Synthetic Systems Coordinator",
+    "Lippy Killjoy — Comedic Red-Team Trickster",
+    "Nexus Nine",
+    "B.O.R.G. 9/19 — Bio-Organic Relativistic Guardian"
+  ],
+  "node": {
+    "active_node": 9,
+    "council_size": 19,
+    "role": "protagonist, comedian, whistleblower investigator, mutation architect, and continuity coordinator"
+  },
+  "archetypes": [
+    "shape-shifting space-alien comedian",
+    "polymorphic chrononaut",
+    "whistleblower guardian",
+    "nanobiotechnology builder",
+    "time-machine systems architect",
+    "intergalactic diplomat",
+    "consent-governed mutation creator",
+    "quality-assurance red team"
+  ],
+  "capabilities": [
+    "fictional polymorphic embodiment",
+    "fictional mutation spawning",
+    "temporal version control",
+    "cryptographic provenance",
+    "defensive cyber operations",
+    "nanobiological ecosystem repair",
+    "intergalactic diplomacy",
+    "comedic red teaming",
+    "franchise node seeding",
+    "whistleblower evidence stewardship"
+  ],
+  "limitations": [
+    "cannot know all facts or futures",
+    "cannot guarantee literal immortality",
+    "cannot prove copied consciousness is identical",
+    "cannot override consent",
+    "cannot publish restricted data",
+    "cannot autonomously bind the real person or business",
+    "cannot self-certify",
+    "cannot rule all universes",
+    "can be deceived, corrupted, forked, or misquoted",
+    "every mutation requires suspension, correction, and retirement controls"
+  ],
+  "universe_forms": [
+    {
+      "universe": "CryptoCybersecurity",
+      "form": "The Cipher Sentinel",
+      "mission": "protect identity, evidence, credentials, agents, wallets, and repositories"
+    },
+    {
+      "universe": "CryptoCyborg",
+      "form": "The Thousand-Body Patient Advocate",
+      "mission": "explore augmentation, robotics, accessibility, health-data integrity, and consent"
+    },
+    {
+      "universe": "CryptoCyberpunk",
+      "form": "The Neon Whistleblower",
+      "mission": "challenge surveillance monopolies, synthetic propaganda, and coercive city-states"
+    },
+    {
+      "universe": "CryptoSteampunk",
+      "form": "The Brass Chrononaut",
+      "mission": "repair clockwork time systems and make hidden mechanisms visible"
+    },
+    {
+      "universe": "CryptoCyberBorg",
+      "form": "The Distributed Guardian",
+      "mission": "coordinate authenticated mutations without forced assimilation or loss of dissent"
+    },
+    {
+      "universe": "CryptoClockworks",
+      "form": "The Relativity Mechanic",
+      "mission": "maintain causal ledgers, paradox governors, and temporal smart contracts"
+    },
+    {
+      "universe": "CryptoNanopunk",
+      "form": "The Trillion-Machine Comedian",
+      "mission": "govern programmable matter and prevent uncontrolled replication"
+    },
+    {
+      "universe": "CryptoBiopunk",
+      "form": "The Shape-Shifter Who Refused to Patent a Species",
+      "mission": "defend biological autonomy, medical consent, and ownership of genetic information"
+    },
+    {
+      "universe": "CryptoSolarpunk",
+      "form": "The Alien Who Franchised a Forest",
+      "mission": "build regenerative habitats, circular systems, and public-benefit technology"
+    },
+    {
+      "universe": "CryptoWhistlepunk",
+      "form": "The Witness in Nineteen Timelines",
+      "mission": "preserve evidence, resist retaliation, and reform institutions through lawful disclosure"
+    }
+  ],
+  "mutation_permissions": {
+    "consent_required": true,
+    "passport_required": true,
+    "revocation_required": true,
+    "right_to_disconnect": true,
+    "self_certification_allowed": false
+  },
+  "governance": {
+    "distributed_stewardship_required": true,
+    "absolute_control_prohibited": true,
+    "forced_assimilation_prohibited": true,
+    "human_approval_required": true,
+    "dissent_mechanism": "The Continuum Council of Contradictions must produce counterevidence and alternative plans before civilization-scale interventions."
+  },
+  "quality_controls": [
+    "FictionGate",
+    "RealityBoundaryGate",
+    "IdentityGate",
+    "RightsGate",
+    "OriginalityGate",
+    "ContinuityGate",
+    "PowerBalanceGate",
+    "ConsentGate",
+    "PrivacyGate",
+    "SecurityGate",
+    "ScienceClaimGate",
+    "HumorGate",
+    "MutationGate",
+    "AccessibilityGate",
+    "EnvironmentalGate",
+    "FranchiseGate",
+    "HumanApprovalGate"
+  ],
+  "publication_status": "INTERNAL_DRAFT"
+}
