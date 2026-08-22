@@ -1,0 +1,357 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://lippytm.ai/schemas/p011-encyclopedia-entry-passport.schema.json",
+  "title": "Prompt #11 Encyclopedia Entry Passport",
+  "description": "Machine-readable contract for a Character–Ecosystem Innovation Unit in the Encyclopedia Educational Entertainment and Business of Businesses Delivery System.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schema_version",
+    "entry_id",
+    "title",
+    "status",
+    "truth_boundary",
+    "privacy_class",
+    "characters",
+    "ecosystems",
+    "domains",
+    "quantum_questions",
+    "learning",
+    "story",
+    "innovation",
+    "business",
+    "delivery",
+    "quality",
+    "stewardship",
+    "human_approval"
+  ],
+  "properties": {
+    "schema_version": {
+      "type": "string",
+      "const": "0.3"
+    },
+    "entry_id": {
+      "type": "string",
+      "pattern": "^(EEA|CEIU)-[A-Z0-9-]+$"
+    },
+    "title": {
+      "type": "string",
+      "minLength": 3,
+      "maxLength": 240
+    },
+    "status": {
+      "type": "string",
+      "enum": [
+        "idea",
+        "structured_draft",
+        "evidence_mapped",
+        "testable_pilot",
+        "certified_product",
+        "production_proven",
+        "franchise_replicable",
+        "continuum_stewarded",
+        "quarantined",
+        "superseded",
+        "retired"
+      ]
+    },
+    "truth_boundary": {
+      "type": "array",
+      "minItems": 1,
+      "uniqueItems": true,
+      "items": {
+        "type": "string",
+        "enum": [
+          "VF_verified_fact",
+          "OA_official_assessment",
+          "CT_corroborated_testimony",
+          "AL_allegation",
+          "WH_working_hypothesis",
+          "FD_fictional_dramatization",
+          "CX_contradicted"
+        ]
+      }
+    },
+    "privacy_class": {
+      "type": "string",
+      "enum": ["public", "internal", "confidential", "restricted"]
+    },
+    "characters": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["character_id", "public_name", "role", "fiction_status", "passport_reference"],
+        "properties": {
+          "character_id": {"type": "string", "minLength": 3},
+          "public_name": {"type": "string", "minLength": 2},
+          "role": {"type": "string", "minLength": 3},
+          "fiction_status": {"type": "string", "const": "FD_fictional_dramatization"},
+          "passport_reference": {"type": "string", "minLength": 3},
+          "permissions": {
+            "type": "array",
+            "items": {"type": "string"}
+          },
+          "limitations": {
+            "type": "array",
+            "minItems": 1,
+            "items": {"type": "string"}
+          }
+        }
+      }
+    },
+    "ecosystems": {
+      "type": "array",
+      "minItems": 1,
+      "uniqueItems": true,
+      "items": {
+        "type": "string",
+        "enum": [
+          "natural",
+          "human",
+          "social_political",
+          "knowledge",
+          "digital_cyber",
+          "business_economic",
+          "cosmic_speculative"
+        ]
+      }
+    },
+    "domains": {
+      "type": "array",
+      "minItems": 1,
+      "uniqueItems": true,
+      "items": {
+        "type": "string",
+        "enum": [
+          "life_sciences",
+          "health_and_human_systems",
+          "physical_sciences",
+          "environmental_sciences",
+          "information_sciences",
+          "engineering",
+          "artificial_intelligence",
+          "cybersecurity",
+          "blockchain",
+          "robotics",
+          "social_sciences",
+          "political_science",
+          "law_and_rights",
+          "ethics",
+          "business_of_businesses",
+          "creative_innovation",
+          "media_and_entertainment",
+          "space_and_futures"
+        ]
+      }
+    },
+    "quantum_questions": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["if", "maybe", "why_not", "dont_do_that"],
+      "properties": {
+        "if": {"$ref": "#/$defs/question_set"},
+        "maybe": {"$ref": "#/$defs/question_set"},
+        "why_not": {"$ref": "#/$defs/question_set"},
+        "dont_do_that": {"$ref": "#/$defs/question_set"}
+      }
+    },
+    "learning": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["audiences", "prerequisites", "objectives", "assessment", "accessibility"],
+      "properties": {
+        "audiences": {"type": "array", "minItems": 1, "items": {"type": "string"}},
+        "prerequisites": {"type": "array", "items": {"type": "string"}},
+        "objectives": {"type": "array", "minItems": 1, "items": {"type": "string"}},
+        "assessment": {"type": "array", "minItems": 1, "items": {"type": "string"}},
+        "accessibility": {"type": "array", "minItems": 1, "items": {"type": "string"}}
+      }
+    },
+    "story": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["universe", "premise", "conflict", "stakes", "fact_fiction_markers"],
+      "properties": {
+        "universe": {"type": "string", "minLength": 2},
+        "premise": {"type": "string", "minLength": 20},
+        "conflict": {"type": "string", "minLength": 20},
+        "stakes": {"type": "array", "minItems": 1, "items": {"type": "string"}},
+        "fact_fiction_markers": {"type": "array", "minItems": 1, "items": {"type": "string"}},
+        "humor_boundary": {"type": "string"}
+      }
+    },
+    "innovation": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["problem", "build_challenge", "requirements", "validation_plan", "environmental_review"],
+      "properties": {
+        "problem": {"type": "string", "minLength": 10},
+        "build_challenge": {"type": "string", "minLength": 10},
+        "requirements": {"type": "array", "minItems": 1, "items": {"type": "string"}},
+        "validation_plan": {"type": "array", "minItems": 1, "items": {"type": "string"}},
+        "environmental_review": {"type": "array", "minItems": 1, "items": {"type": "string"}},
+        "prototype_repository": {"type": ["string", "null"]}
+      }
+    },
+    "business": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["customer_problem", "value_proposition", "offer", "revenue_pathways", "integrity_controls"],
+      "properties": {
+        "customer_problem": {"type": "string", "minLength": 10},
+        "value_proposition": {"type": "string", "minLength": 10},
+        "offer": {"type": "string", "minLength": 3},
+        "revenue_pathways": {"type": "array", "minItems": 1, "items": {"type": "string"}},
+        "integrity_controls": {"type": "array", "minItems": 1, "items": {"type": "string"}},
+        "pricing_note": {"type": "string"},
+        "franchise_eligible": {"type": "boolean"}
+      }
+    },
+    "delivery": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["media", "model_lines", "nft_provenance"],
+      "properties": {
+        "media": {
+          "type": "array",
+          "minItems": 1,
+          "uniqueItems": true,
+          "items": {
+            "type": "string",
+            "enum": [
+              "ebook",
+              "audiobook",
+              "video_book",
+              "interactive_video",
+              "documentary",
+              "fictional_film",
+              "animation",
+              "comic",
+              "music_film",
+              "podcast",
+              "game",
+              "course",
+              "workbook",
+              "chatbot",
+              "simulation",
+              "code_repository",
+              "toolkit",
+              "franchise_kit"
+            ]
+          }
+        },
+        "model_lines": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": ["chatgpt", "gemini_notebooklm", "claude_hermes"],
+          "properties": {
+            "chatgpt": {"$ref": "#/$defs/model_line"},
+            "gemini_notebooklm": {"$ref": "#/$defs/model_line"},
+            "claude_hermes": {"$ref": "#/$defs/model_line"},
+            "comparison": {"$ref": "#/$defs/model_line"},
+            "merged_premium": {"$ref": "#/$defs/model_line"}
+          }
+        },
+        "nft_provenance": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": ["enabled", "public_metadata_only", "investment_guarantee_prohibited"],
+          "properties": {
+            "enabled": {"type": "boolean"},
+            "public_metadata_only": {"type": "boolean", "const": true},
+            "edition_id": {"type": ["string", "null"]},
+            "content_hash": {"type": ["string", "null"]},
+            "license_reference": {"type": ["string", "null"]},
+            "correction_reference": {"type": ["string", "null"]},
+            "investment_guarantee_prohibited": {"type": "boolean", "const": true}
+          }
+        }
+      }
+    },
+    "quality": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["certification_level", "risk_gate", "critical_gates", "requirements", "tests", "defects"],
+      "properties": {
+        "certification_level": {
+          "type": "string",
+          "enum": ["Q0", "Q1", "Q2", "Q3", "Q4", "Q5", "Q6", "Q7"]
+        },
+        "risk_gate": {
+          "type": "string",
+          "enum": ["green", "yellow", "orange", "red"]
+        },
+        "critical_gates": {
+          "type": "array",
+          "minItems": 1,
+          "items": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": ["gate", "status"],
+            "properties": {
+              "gate": {"type": "string", "minLength": 3},
+              "status": {"type": "string", "enum": ["not_started", "in_review", "pass", "conditional", "fail", "not_applicable"]},
+              "evidence_reference": {"type": ["string", "null"]},
+              "reviewer": {"type": ["string", "null"]}
+            }
+          }
+        },
+        "requirements": {"type": "array", "items": {"type": "string"}},
+        "tests": {"type": "array", "items": {"type": "string"}},
+        "defects": {"type": "array", "items": {"type": "string"}},
+        "quality_score": {"type": ["number", "null"], "minimum": 0, "maximum": 100}
+      }
+    },
+    "stewardship": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["measures", "feedback_channels", "correction_plan", "retirement_plan", "archive_plan"],
+      "properties": {
+        "measures": {"type": "array", "minItems": 1, "items": {"type": "string"}},
+        "feedback_channels": {"type": "array", "minItems": 1, "items": {"type": "string"}},
+        "correction_plan": {"type": "string", "minLength": 10},
+        "retirement_plan": {"type": "string", "minLength": 10},
+        "archive_plan": {"type": "string", "minLength": 10},
+        "supersedes": {"type": ["string", "null"]},
+        "superseded_by": {"type": ["string", "null"]}
+      }
+    },
+    "human_approval": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["required", "status"],
+      "properties": {
+        "required": {"type": "boolean", "const": true},
+        "status": {"type": "string", "enum": ["not_requested", "pending", "approved", "rejected", "expired", "revoked"]},
+        "approver": {"type": ["string", "null"]},
+        "approved_at": {"type": ["string", "null"], "format": "date-time"},
+        "scope": {"type": ["string", "null"]}
+      }
+    }
+  },
+  "$defs": {
+    "question_set": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["questions", "outputs"],
+      "properties": {
+        "questions": {"type": "array", "minItems": 1, "items": {"type": "string"}},
+        "outputs": {"type": "array", "minItems": 1, "items": {"type": "string"}}
+      }
+    },
+    "model_line": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["status", "edition_id", "independent_first_pass"],
+      "properties": {
+        "status": {"type": "string", "enum": ["not_started", "researching", "drafting", "qa", "approved", "rejected", "superseded"]},
+        "edition_id": {"type": ["string", "null"]},
+        "independent_first_pass": {"type": "boolean"},
+        "source_manifest": {"type": ["string", "null"]},
+        "quality_packet": {"type": ["string", "null"]}
+      }
+    }
+  }
+}
