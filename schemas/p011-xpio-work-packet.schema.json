@@ -1,0 +1,52 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://lippytm.ai/schemas/p011-xpio-work-packet.schema.json",
+  "title": "Prompt 11 XPIO Work Packet",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "work_packet_id",
+    "correlation_id",
+    "title",
+    "objective",
+    "human_owner",
+    "source_platform",
+    "model_line",
+    "privacy_class",
+    "status",
+    "acceptance_criteria",
+    "permitted_destinations",
+    "required_gates",
+    "human_approval_status"
+  ],
+  "properties": {
+    "work_packet_id": {"type": "string", "pattern": "^WP-XPIO-[0-9]{4,}$"},
+    "correlation_id": {"type": "string", "minLength": 8},
+    "title": {"type": "string", "minLength": 3},
+    "objective": {"type": "string", "minLength": 10},
+    "human_owner": {"type": "string", "minLength": 3},
+    "source_platform": {"type": "string", "minLength": 2},
+    "source_device": {"type": ["string", "null"]},
+    "model_line": {
+      "enum": ["human", "chatgpt", "gemini_notebooklm", "claude_hermes", "fable5", "comparison", "merged_premium", "not_applicable"]
+    },
+    "privacy_class": {"enum": ["public", "internal", "confidential", "restricted"]},
+    "truth_label": {"enum": ["VF", "OA", "CT", "AL", "WH", "FD", "CX", "not_applicable"]},
+    "status": {
+      "enum": ["captured", "triaged", "assigned", "in_progress", "review", "blocked", "quarantined", "approved", "released", "corrected", "retired", "archived"]
+    },
+    "acceptance_criteria": {"type": "array", "minItems": 1, "items": {"type": "string"}},
+    "source_ids": {"type": "array", "items": {"type": "string"}},
+    "artifact_ids": {"type": "array", "items": {"type": "string"}},
+    "permitted_tools": {"type": "array", "items": {"type": "string"}},
+    "permitted_destinations": {"type": "array", "minItems": 1, "items": {"type": "string"}},
+    "prohibited_actions": {"type": "array", "items": {"type": "string"}},
+    "budget_limit_usd": {"type": ["number", "null"], "minimum": 0},
+    "timeout_seconds": {"type": ["integer", "null"], "minimum": 1},
+    "required_gates": {"type": "array", "minItems": 1, "items": {"type": "string"}},
+    "human_approval_status": {"enum": ["not_required", "pending", "approved", "rejected", "revoked"]},
+    "next_action": {"type": ["string", "null"]},
+    "created_at": {"type": "string", "format": "date-time"},
+    "updated_at": {"type": "string", "format": "date-time"}
+  }
+}
