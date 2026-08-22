@@ -1,0 +1,35 @@
+[
+  {
+    "evaluation_id": "EVAL-CEL-001",
+    "clone_id": "CLONE-CEL-001",
+    "capability": "python_testing",
+    "score": 62,
+    "target_score": 85,
+    "evidence_ids": ["TST-EESI-001", "TST-EESI-002"],
+    "evaluator": "human-reviewer",
+    "evaluated_at": "2026-08-22T20:00:00+00:00",
+    "notes": "Synthetic pilot score for test coverage planning."
+  },
+  {
+    "evaluation_id": "EVAL-CEL-002",
+    "clone_id": "CLONE-CEL-001",
+    "capability": "source_provenance",
+    "score": 74,
+    "target_score": 92,
+    "evidence_ids": ["SRC-EESI-001"],
+    "evaluator": "human-reviewer",
+    "evaluated_at": "2026-08-22T20:01:00+00:00",
+    "notes": "Synthetic pilot score for source-linking practice."
+  },
+  {
+    "evaluation_id": "EVAL-CEL-003",
+    "clone_id": "CLONE-CEL-001",
+    "capability": "beginner_instruction",
+    "score": 78,
+    "target_score": 90,
+    "evidence_ids": ["LO-EESI-001", "ASM-EESI-001"],
+    "evaluator": "human-reviewer",
+    "evaluated_at": "2026-08-22T20:02:00+00:00",
+    "notes": "Synthetic pilot score pending learner testing."
+  }
+]
