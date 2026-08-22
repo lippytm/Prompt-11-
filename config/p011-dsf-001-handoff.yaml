@@ -1,0 +1,282 @@
+module:
+  id: P-011-DSF-001
+  name: DARPA-Snowden Disclosure, Privacy and Human Resilience Fabric
+  version: 0.1
+  status: draft
+  canonical_repository: lippytm/Prompt-11-
+  canonical_branch: feature/p011-darpa-snowden-v0-1
+  canonical_document: docs/P011-DSF-001-darpa-snowden-disclosure-fabric.md
+  source_register: docs/P011-DSF-001-source-register.md
+  reviewed_at: 2026-08-22
+
+purpose:
+  - create source-governed NFT ebooks
+  - create source-governed NFT audiobooks
+  - create source-governed NFT video books
+  - create source-governed NFT interactive videos
+  - create educational workbooks and simulations
+  - create original science-fiction stories and future-project concepts
+  - teach programming, blockchain, AI, cybersecurity, robotics, privacy and evidence literacy
+
+truth_labels:
+  VF: Verified Fact
+  OA: Official Assessment
+  CT: Corroborated Testimony
+  AL: Allegation
+  WH: Working Hypothesis
+  FD: Fictional Dramatization
+  CX: Contradicted
+
+privacy_classes:
+  PUBLIC:
+    description: Approved for public repositories and published products.
+  INTERNAL:
+    description: Business planning and model handoffs without sensitive personal data.
+  CONFIDENTIAL:
+    description: Redacted case, legal, contractual or unpublished product information.
+  RESTRICTED:
+    description: Identity documents, medical records, account data, private evidence, credentials or security secrets.
+    public_repository_allowed: false
+    public_ai_workspace_allowed: false
+    blockchain_allowed: false
+
+platform_lines:
+  chatgpt_business:
+    independence: required
+    responsibilities:
+      - canonical product architecture
+      - Prompt 11 orchestration
+      - structured drafting and media conversion
+      - evidence-label enforcement
+      - product, revenue, affiliate and release planning
+      - final comparison only after independent model-line QA
+    prohibited:
+      - importing another model line's conclusion as verified without review
+      - publishing restricted data
+      - making autonomous legal or medical findings
+
+  gemini_notebooklm:
+    independence: required
+    responsibilities:
+      - source-grounded notebooks by subject
+      - claim-to-source traceability
+      - independent summaries
+      - contradiction and missing-source detection
+      - separate Gemini editions
+    required_outputs:
+      - notebook_source_manifest
+      - claim_source_matrix
+      - unresolved_questions
+      - independent_draft
+
+  claude_fabric_hermes:
+    independence: required
+    responsibilities:
+      - long-context policy and narrative review
+      - red-team critique
+      - privacy, ethics and defamation-risk analysis
+      - separate Claude-Hermes editions
+      - documented disagreements with other model lines
+    required_outputs:
+      - review_memorandum
+      - contradiction_report
+      - narrative_coherence_report
+      - independent_draft
+
+  synthetic_intelligence_clone_fabric_hermes:
+    role: dispatcher_and_auditor
+    responsibilities:
+      - create bounded work packets
+      - verify Agent Passports and permissions
+      - maintain deadlines, status and audit trails
+      - route conflicts to human review
+      - preserve model-line separation
+    prohibited:
+      - declaring allegations true
+      - diagnosing medical conditions
+      - determining criminal guilt or civil liability
+      - publishing without HumanApprovalGate
+      - acquiring or processing nonpublic classified material
+
+  github:
+    responsibilities:
+      - version control
+      - issues and pull requests
+      - schemas, manifests and source registers
+      - public-private repository separation
+      - correction and release history
+    prohibited_content:
+      - API keys and secrets
+      - full medical records
+      - government identification numbers
+      - banking or tax account data
+      - unredacted private evidence
+      - confidential witness identities
+      - nonpublic classified information
+
+work_packets:
+  - id: WP-DSF-001
+    title: DARPA and Total Information Awareness history
+    source_tier_minimum: 1
+    outputs:
+      - date-stamped fact chronology
+      - institutional-boundary analysis
+      - civil-liberties issue map
+
+  - id: WP-DSF-002
+    title: Snowden disclosure chronology and legal status
+    source_tier_minimum: 1
+    outputs:
+      - documented disclosure chronology
+      - criminal-charge status note
+      - civil-judgment status note
+      - policy-consequence map
+
+  - id: WP-DSF-003
+    title: Section 215 and Section 702 comparison
+    source_tier_minimum: 1
+    outputs:
+      - authority comparison
+      - collection-method comparison
+      - oversight and reform chronology
+      - current-status verification
+
+  - id: WP-DSF-004
+    title: Identity, medicine and human resilience
+    source_tier_minimum: 1
+    outputs:
+      - identity-theft harm map
+      - medical-record integrity map
+      - medication-safety distinction table
+      - privacy-preserving future projects
+
+  - id: WP-DSF-005
+    title: Information warfare and conspiracy-resistance
+    source_tier_minimum: 2
+    outputs:
+      - influence-operation taxonomy
+      - attribution checklist
+      - alternative-explanation protocol
+      - misinformation-resistant story design
+
+  - id: WP-DSF-006
+    title: UAP disclosure evidence architecture
+    source_tier_minimum: 1
+    outputs:
+      - official-record chronology
+      - advocacy and testimony lane
+      - scientific-evidence standard
+      - fact-claim-fiction boundary map
+
+  - id: WP-DSF-007
+    title: The Transparent Republics of Time story bible
+    source_tier_minimum: 0
+    outputs:
+      - setting and character bible
+      - nine-volume arc
+      - Reality Story Decision and Build modes
+      - human-advancement project catalog
+
+  - id: WP-DSF-008
+    title: NFT product and license architecture
+    source_tier_minimum: 1
+    outputs:
+      - edition manifest
+      - copyright and license matrix
+      - on-chain off-chain data map
+      - correction and supersession protocol
+
+output_variants:
+  ebook:
+    required:
+      - manuscript
+      - citations
+      - fact_fiction_labels
+      - accessibility_check
+      - edition_manifest
+  audiobook:
+    required:
+      - narration_script
+      - pronunciation_guide
+      - spoken_fact_fiction_transitions
+      - chapter_metadata
+      - transcript
+  video_book:
+    required:
+      - screenplay
+      - storyboard
+      - source_cards
+      - captions
+      - audio_description_plan
+  interactive_video:
+    required:
+      - branch_map
+      - decision_rules
+      - evidence_challenges
+      - build_mode_projects
+      - safety_fallbacks
+  nft:
+    required:
+      - public_metadata
+      - edition_identifier
+      - content_hash
+      - license_reference
+      - supersession_link
+    forbidden:
+      - personal_records
+      - private_allegations
+      - unpublished_classified_material
+      - credentials
+      - copyrighted_source_material_without_permission
+
+release_gates:
+  SourceGate:
+    condition: Material claims have traceable sources.
+  TruthGate:
+    condition: Every claim has an evidence label.
+  DateGate:
+    condition: Current law, wars, programs and officeholders are freshly verified.
+  PrivacyGate:
+    condition: No prohibited personal or medical data is exposed.
+  SecurityGate:
+    condition: No secrets, exploit instructions or sensitive operational details are present.
+  RightsGate:
+    condition: Copyright, publicity, license and NFT terms are documented.
+  MedicalGate:
+    condition: Medical explanations are reviewed and do not direct unsafe medication changes.
+  LegalGate:
+    condition: Identifiable allegations receive legal-risk review.
+  FictionGate:
+    condition: Composite and invented material is clearly labeled.
+  AccessibilityGate:
+    condition: Text, audio, captions, transcripts and interaction controls are accessible.
+  RevenueGate:
+    condition: Pricing, affiliate and benefit claims are accurate and non-exploitative.
+  HumanApprovalGate:
+    condition: A responsible human authorizes release.
+
+repository_mirrors:
+  - repository: lippytm/The-Encyclopedia-of-Everything-Applied-ChatAIBots
+    purpose: education_and_build_mode
+  - repository: lippytm/Hermes-AI-Hermes
+    purpose: orchestration_and_agent_passports
+  - repository: lippytm/AI-Clone-of-Charles-Earl-Lipshay-lippytm-lippytm.AI-lippytmai-
+    purpose: clone_identity_consent_and_revocation
+  - repository: lippytm/Gemini-NotebookLM-s-AI-Agnostic-Clone-Engine-Fabric-
+    purpose: independent_gemini_notebooklm_line
+  - repository: lippytm/lippytm-lippytm.ai-tower-control-ai
+    purpose: connectors_audit_and_dispatch
+  - repository: lippytm/The-Encyclopedia-of-Law-Civilian-Law-Military-Law-Business-Law-AI-Law.-
+    purpose: date_and_jurisdiction_controlled_legal_research
+
+mirror_rule: Mirrors reference the canonical module version and may not silently change factual claims.
+
+human_review:
+  required_for:
+    - publication
+    - named allegations
+    - medical explanations
+    - legal conclusions
+    - blockchain minting
+    - affiliate claims
+    - handling confidential or restricted data
