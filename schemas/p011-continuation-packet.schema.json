@@ -1,0 +1,434 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://lippytm.ai/schemas/p011-continuation-packet.schema.json",
+  "title": "Prompt #11 Continuation Packet",
+  "description": "Portable, cross-device, multi-platform project checkpoint for Prompt #11.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "packet_id",
+    "packet_version",
+    "status",
+    "created_at",
+    "human_owner",
+    "project_hierarchy",
+    "session_environment",
+    "objective",
+    "work_completed",
+    "artifacts",
+    "quality_status",
+    "next_actions",
+    "resume_prompt",
+    "privacy_class"
+  ],
+  "properties": {
+    "packet_id": {
+      "type": "string",
+      "pattern": "^P011-CP-[A-Z0-9-]+$"
+    },
+    "packet_version": {
+      "type": "string",
+      "pattern": "^v[0-9]+(\\.[0-9]+){0,2}$"
+    },
+    "supersedes_packet": {
+      "type": ["string", "null"]
+    },
+    "status": {
+      "type": "string",
+      "enum": ["draft", "under_review", "approved", "superseded", "quarantined", "retired"]
+    },
+    "created_at": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "session_start": {
+      "type": ["string", "null"],
+      "format": "date-time"
+    },
+    "session_end": {
+      "type": ["string", "null"],
+      "format": "date-time"
+    },
+    "human_owner": {
+      "type": "string",
+      "minLength": 1
+    },
+    "responsible_reviewer": {
+      "type": ["string", "null"]
+    },
+    "privacy_class": {
+      "type": "string",
+      "enum": ["public", "internal", "confidential", "restricted"]
+    },
+    "project_hierarchy": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["prompt_stack", "canonical_module", "program", "workstream", "work_packet"],
+      "properties": {
+        "prompt_stack": {
+          "const": "Prompt #11"
+        },
+        "canonical_module": {
+          "type": "string",
+          "minLength": 1
+        },
+        "program": {
+          "type": "string",
+          "minLength": 1
+        },
+        "workstream": {
+          "type": "string",
+          "minLength": 1
+        },
+        "work_packet": {
+          "type": "string",
+          "minLength": 1
+        },
+        "pilot_or_product_id": {
+          "type": ["string", "null"]
+        },
+        "ceiu_id": {
+          "type": ["string", "null"]
+        },
+        "franchise_node": {
+          "type": ["string", "null"]
+        }
+      }
+    },
+    "session_environment": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["device", "platform", "model_line", "connectivity"],
+      "properties": {
+        "device": {
+          "type": "string",
+          "enum": ["iphone", "ipad", "asus_laptop", "zo_computer", "other"]
+        },
+        "device_detail": {
+          "type": ["string", "null"]
+        },
+        "platform": {
+          "type": "string",
+          "enum": [
+            "chatgpt_business",
+            "gemini",
+            "notebooklm",
+            "claude",
+            "fabric_hermes",
+            "github",
+            "slack",
+            "zo",
+            "local",
+            "other"
+          ]
+        },
+        "platform_detail": {
+          "type": ["string", "null"]
+        },
+        "model_line": {
+          "type": "string",
+          "enum": [
+            "chatgpt",
+            "gemini_notebooklm",
+            "claude_hermes",
+            "human",
+            "comparison",
+            "merged_premium",
+            "not_applicable"
+          ]
+        },
+        "connectivity": {
+          "type": "string",
+          "enum": ["online", "intermittent", "offline_queued"]
+        },
+        "account_or_workspace_label": {
+          "type": ["string", "null"]
+        }
+      }
+    },
+    "objective": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["session_objective", "in_scope", "out_of_scope", "acceptance_criteria"],
+      "properties": {
+        "session_objective": {
+          "type": "string",
+          "minLength": 1
+        },
+        "in_scope": {
+          "type": "array",
+          "items": {"type": "string"}
+        },
+        "out_of_scope": {
+          "type": "array",
+          "items": {"type": "string"}
+        },
+        "acceptance_criteria": {
+          "type": "array",
+          "minItems": 1,
+          "items": {"type": "string"}
+        }
+      }
+    },
+    "work_completed": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["summary", "status"],
+        "properties": {
+          "summary": {"type": "string", "minLength": 1},
+          "status": {
+            "type": "string",
+            "enum": ["completed", "partial", "blocked", "not_started"]
+          },
+          "evidence_reference": {"type": ["string", "null"]}
+        }
+      }
+    },
+    "decisions": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["decision_id", "decision", "rationale", "reversible"],
+        "properties": {
+          "decision_id": {"type": "string", "minLength": 1},
+          "decision": {"type": "string", "minLength": 1},
+          "rationale": {"type": "string", "minLength": 1},
+          "evidence_or_source": {"type": ["string", "null"]},
+          "human_approver": {"type": ["string", "null"]},
+          "reversible": {"type": "boolean"}
+        }
+      }
+    },
+    "artifacts": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["artifact_id", "title_or_path", "artifact_type", "version", "location", "status", "privacy_class"],
+        "properties": {
+          "artifact_id": {"type": "string", "minLength": 1},
+          "title_or_path": {"type": "string", "minLength": 1},
+          "artifact_type": {"type": "string", "minLength": 1},
+          "version": {"type": "string", "minLength": 1},
+          "location": {"type": "string", "minLength": 1},
+          "status": {
+            "type": "string",
+            "enum": ["draft", "under_review", "approved", "published", "superseded", "quarantined", "retired"]
+          },
+          "privacy_class": {
+            "type": "string",
+            "enum": ["public", "internal", "confidential", "restricted"]
+          },
+          "content_hash": {"type": ["string", "null"]}
+        }
+      }
+    },
+    "system_references": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "repository": {"type": ["string", "null"]},
+        "branch": {"type": ["string", "null"]},
+        "commits": {
+          "type": "array",
+          "items": {"type": "string"}
+        },
+        "pull_request": {"type": ["string", "integer", "null"]},
+        "issues": {
+          "type": "array",
+          "items": {"type": ["string", "integer"]}
+        },
+        "release_or_tag": {"type": ["string", "null"]},
+        "slack_reference": {"type": ["string", "null"]},
+        "notebook_reference": {"type": ["string", "null"]},
+        "zo_reference": {"type": ["string", "null"]},
+        "other_authoritative_reference": {"type": ["string", "null"]}
+      }
+    },
+    "claims": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["claim_id", "summary", "truth_label", "publication_status"],
+        "properties": {
+          "claim_id": {"type": "string", "minLength": 1},
+          "summary": {"type": "string", "minLength": 1},
+          "truth_label": {
+            "type": "string",
+            "enum": ["VF", "OA", "CT", "AL", "WH", "FD", "CX"]
+          },
+          "source_ids": {
+            "type": "array",
+            "items": {"type": "string"}
+          },
+          "date_verified": {"type": ["string", "null"], "format": "date"},
+          "contradictions": {
+            "type": "array",
+            "items": {"type": "string"}
+          },
+          "publication_status": {
+            "type": "string",
+            "enum": ["private_only", "internal_only", "publication_safe", "requires_review", "blocked"]
+          }
+        }
+      }
+    },
+    "quality_status": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["certification_level", "risk_gate", "gate_status"],
+      "properties": {
+        "certification_level": {
+          "type": "string",
+          "enum": ["Q0", "Q1", "Q2", "Q3", "Q4", "Q5", "Q6", "Q7"]
+        },
+        "node_level": {
+          "type": ["string", "null"],
+          "enum": ["N0", "N1", "N2", "N3", "N4", "N5", "N6", "N7", null]
+        },
+        "risk_gate": {
+          "type": "string",
+          "enum": ["green", "yellow", "orange", "red"]
+        },
+        "quality_score": {
+          "type": ["number", "null"],
+          "minimum": 0,
+          "maximum": 100
+        },
+        "tests_completed": {
+          "type": "array",
+          "items": {"type": "string"}
+        },
+        "tests_failed": {
+          "type": "array",
+          "items": {"type": "string"}
+        },
+        "critical_defects": {
+          "type": "array",
+          "items": {"type": "string"}
+        },
+        "noncritical_defects": {
+          "type": "array",
+          "items": {"type": "string"}
+        },
+        "required_reviewers": {
+          "type": "array",
+          "items": {"type": "string"}
+        },
+        "gate_status": {
+          "type": "array",
+          "minItems": 1,
+          "items": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": ["gate", "status", "owner", "next_action"],
+            "properties": {
+              "gate": {
+                "type": "string",
+                "enum": [
+                  "ContinuationGate",
+                  "SyncGate",
+                  "DeviceSecurityGate",
+                  "PlatformPermissionGate",
+                  "SourceProvenanceGate",
+                  "ModelIndependenceGate",
+                  "ConflictResolutionGate",
+                  "PrivacyRoutingGate",
+                  "AccessibilityGate",
+                  "RightsGate",
+                  "FunctionalGate",
+                  "LearningOutcomeGate",
+                  "BusinessIntegrityGate",
+                  "EnvironmentalGate",
+                  "HumanApprovalGate"
+                ]
+              },
+              "status": {
+                "type": "string",
+                "enum": ["not_started", "pass", "conditional", "fail", "not_applicable"]
+              },
+              "evidence": {"type": ["string", "null"]},
+              "owner": {"type": "string", "minLength": 1},
+              "next_action": {"type": "string", "minLength": 1}
+            }
+          }
+        }
+      }
+    },
+    "blockers_and_questions": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["id", "summary", "severity", "owner", "resolution_condition"],
+        "properties": {
+          "id": {"type": "string", "minLength": 1},
+          "summary": {"type": "string", "minLength": 1},
+          "severity": {
+            "type": "string",
+            "enum": ["low", "medium", "high", "critical"]
+          },
+          "owner": {"type": "string", "minLength": 1},
+          "dependency": {"type": ["string", "null"]},
+          "resolution_condition": {"type": "string", "minLength": 1}
+        }
+      }
+    },
+    "next_actions": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["priority", "action", "owner", "device_or_platform", "definition_of_done"],
+        "properties": {
+          "priority": {"type": "integer", "minimum": 1},
+          "action": {"type": "string", "minLength": 1},
+          "owner": {"type": "string", "minLength": 1},
+          "device_or_platform": {"type": "string", "minLength": 1},
+          "required_input": {"type": ["string", "null"]},
+          "definition_of_done": {"type": "string", "minLength": 1},
+          "blocked": {"type": "boolean", "default": false}
+        }
+      }
+    },
+    "resume_prompt": {
+      "type": "string",
+      "minLength": 20
+    },
+    "correction_and_retirement": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "known_correction_required": {"type": ["string", "null"]},
+        "supersession_target": {"type": ["string", "null"]},
+        "affected_products_or_channels": {
+          "type": "array",
+          "items": {"type": "string"}
+        },
+        "retirement_condition": {"type": ["string", "null"]},
+        "archive_location": {"type": ["string", "null"]}
+      }
+    },
+    "human_approval": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "approved_by": {"type": ["string", "null"]},
+        "approval_date": {"type": ["string", "null"], "format": "date-time"},
+        "approval_scope": {"type": ["string", "null"]},
+        "conditions": {
+          "type": "array",
+          "items": {"type": "string"}
+        },
+        "audit_reference": {"type": ["string", "null"]}
+      }
+    }
+  }
+}

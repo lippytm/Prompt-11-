@@ -101,6 +101,49 @@ First CEIU pilot:
 
 The pilot teaches evidence literacy, requirements, testing, cybersecurity, customer discovery, accessibility, environmental review, responsible innovation, transparent marketing, and NFT provenance. It remains a Q3 pilot and is not approved for commercial launch, franchising, or NFT minting.
 
+### P-011-OMNI-001 — Omni-Device Multi-AI Broadband Learning, Publishing & Business Continuity Fabric
+
+The portable continuity and orchestration architecture that allows authorized Prompt #11 work to begin on an iPhone, continue on an iPad, move into implementation on an ASUS computer or lippytmai.zo.computer, be independently researched in Gemini/NotebookLM, reviewed in Claude/Fabric Hermes, versioned in GitHub, coordinated through Slack, and resumed without losing decisions, sources, privacy, permissions, quality state, or next actions.
+
+“Broadband” means high-variety, high-volume, multi-directional input and output across ideas, voice notes, sources, files, code, datasets, meetings, stories, lessons, media, products, campaigns, tests, incidents, corrections, and archives. It does not claim that every platform connector is already configured or synchronized.
+
+OMNI establishes:
+
+- device and platform role boundaries;
+- one canonical project hierarchy;
+- a Continuation Packet required at every meaningful handoff;
+- a universal resume command;
+- privacy-aware and least-privilege work-packet routing;
+- independent ChatGPT, Gemini/NotebookLM, and Claude/Hermes production lines;
+- an L0–L9 Learning-to-Earning and Entrepreneurship Ladder;
+- programming, blockchain, AI, cybersecurity, robotics, publishing, accessibility, environmental, and business curriculum domains;
+- mobile, offline, synchronization, conflict-resolution, backup, and recovery rules;
+- OMNI-specific release gates and stop-work triggers;
+- a master implementation backlog spanning devices, accounts, the $7 ledger, learning, media, business, platform adapters, quality, community, incidents, corrections, and franchise stewardship.
+
+Core files:
+
+- [`docs/P011-OMNI-001-omni-device-multi-ai-continuity-fabric.md`](docs/P011-OMNI-001-omni-device-multi-ai-continuity-fabric.md)
+- [`docs/P011-OMNI-001-master-implementation-backlog.md`](docs/P011-OMNI-001-master-implementation-backlog.md)
+- [`config/p011-omni-001-handoff.yaml`](config/p011-omni-001-handoff.yaml)
+- [`schemas/p011-continuation-packet.schema.json`](schemas/p011-continuation-packet.schema.json)
+- [`templates/CONTINUATION_PACKET.md`](templates/CONTINUATION_PACKET.md)
+- [`examples/P011-CP-OMNI-2026-08-22.example.json`](examples/P011-CP-OMNI-2026-08-22.example.json)
+
+Initial OMNI pilots:
+
+- `OMNI-PILOT-001 — Mobile Capture to Certified Learning Object`
+- `OMNI-PILOT-002 — Cross-Device Code Lab`
+- `OMNI-PILOT-003 — Business Experiment Passport`
+
+Universal resume command:
+
+> **Continue Prompt #11 from the latest approved Continuation Packet. Preserve model-line independence, privacy classification, source provenance, Quality and Quality Assurance as Job #1, and begin with the highest-priority unblocked work packet.**
+
+Immediate OMNI milestone:
+
+- complete `WP-OMNI-0001` through `WP-OMNI-0006`: merge the architecture, establish the Current Checkpoint, inventory devices and accounts without recording secrets, create the mobile end-of-session routine, design the $7 Master Evidence and Product Ledger, and build its Q3 prototype.
+
 ### P-011-E6C-CHAR-001 — Lippy Killjoy and the Nineteenfold Character Continuum
 
 The canonical Prompt #11 character, mutation, story, product, quality, and franchise system connecting:
@@ -165,7 +208,7 @@ The mature Continuum Covenant is:
 1. Keep factual claims, official assessments, testimony, allegations, hypotheses, contradictions, and fiction visibly separated.
 2. Keep ChatGPT, Gemini, and Claude/Hermes product lines independent until each passes its own QA.
 3. Keep sensitive identity, medical, legal, financial, witness, credential, and security information out of public repositories, AI prompts, NFT metadata, and blockchains.
-4. Use GitHub commits, issues, pull requests, manifests, schemas, Character Passports, Encyclopedia Entry Passports, correction logs, and retirement records to preserve traceability.
+4. Use GitHub commits, issues, pull requests, manifests, schemas, Character Passports, Encyclopedia Entry Passports, Continuation Packets, correction logs, and retirement records to preserve traceability.
 5. Require human approval before publication, minting, medical statements, legal conclusions, named allegations, identity cloning, voice or likeness use, financial actions, or franchise certification.
 6. Treat clones and mutations as consent-governed identities inside the fiction; prohibit forced assimilation, unauthorized impersonation, and unrevocable clone systems.
 7. Give powerful characters meaningful limits, costs, failure modes, dissent mechanisms, sunset clauses, and the right of worlds or mutations to leave the network.
@@ -174,3 +217,4 @@ The mature Continuum Covenant is:
 10. Convert research and creative universes into constructive educational products and future projects for the advancement of humanity and other forms of intelligence.
 11. Require every major character and ecosystem to deliver learning, entertainment, innovation, business value, accessibility, environmental responsibility, and quality evidence.
 12. Measure human and community benefit alongside content volume, engagement, and revenue.
+13. End every meaningful work session with an approved or review-ready Continuation Packet so the project can move safely among devices, platforms, people, and model lines.
