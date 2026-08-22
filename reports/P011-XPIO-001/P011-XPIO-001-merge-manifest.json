@@ -1,0 +1,76 @@
+{
+  "manifest_id": "P011-XPIO-001-MERGES-Q2-001",
+  "generated_at": "2026-08-22T21:05:00-07:00",
+  "module_id": "P-011-XPIO-001",
+  "issue": {"repository": "lippytm/Prompt-11-", "number": 25},
+  "ci": {
+    "repository": "lippytm/Prompt-11-",
+    "workflow": "Test XPIO Q2",
+    "run_id": 32598182359,
+    "conclusion": "success",
+    "unit_tests": 14,
+    "schema_and_config_validation": "pass"
+  },
+  "repositories": {
+    "Prompt-11": {
+      "repository": "lippytm/Prompt-11-",
+      "pr": 26,
+      "merge_sha": "284120d9806e286ea4218017ceefb84d86d8e71d",
+      "role": "canonical XPIO module and prototype"
+    },
+    "AI-Clone": {
+      "repository": "lippytm/AI-Clone-of-Charles-Earl-Lipshay-lippytm-lippytm.AI-lippytmai-",
+      "pr": 5,
+      "merge_sha": "d9b2893cbbf548b67a8f666cf9e65dd0ce6502a6",
+      "role": "clone runtime, identity, memory, consent, and revocation"
+    },
+    "Hermes": {
+      "repository": "lippytm/Hermes-AI-Hermes",
+      "pr": 7,
+      "merge_sha": "10614f8e6da85450e5594e8fbb962832f995cd04",
+      "role": "orchestration, audit, quarantine, QA, and correction"
+    },
+    "Gemini-NotebookLM": {
+      "repository": "lippytm/Gemini-NotebookLM-s-AI-Agnostic-Clone-Engine-Fabric-",
+      "pr": 5,
+      "merge_sha": "78aa156efe82167ebf53519a78c09657f58aaaf5",
+      "role": "independent source-grounded research line"
+    },
+    "Factory": {
+      "repository": "lippytm/Factory.ai",
+      "pr": 10,
+      "merge_sha": "158675f62aa0ab007c411768f36fc189c5ff245c",
+      "role": "bounded diagnostics, debugging, database, transparency, and identity swarms"
+    },
+    "Tower-Control": {
+      "repository": "lippytm/lippytm-lippytm.ai-tower-control-ai",
+      "pr": 87,
+      "merge_sha": "250b50b5edf69b0b0f5b3d3c72636228de14ad78",
+      "role": "database and transparency registries and proposed services"
+    },
+    "Zo": {
+      "repository": "lippytm/lippytmai.zo.computer-",
+      "pr": 9,
+      "merge_sha": "8d4e3b39cb9927691692231f79554de5a47a032a",
+      "role": "bounded sandbox runtime contract"
+    },
+    "Encyclopedia": {
+      "repository": "lippytm/The-Encyclopedia-of-Everything-Applied-ChatAIBots",
+      "pr": 11,
+      "merge_sha": "44d432cd903d260da226b1e60b8cb5cf1e92ec32",
+      "role": "transparency engineering learning and Educational Entertainment"
+    },
+    "Transparency-Time-Machine": {
+      "repository": "lippytm/Transparency-Logic-Time-Machine-Bots-",
+      "pr": 20,
+      "merge_sha": "f68f3d6c5698f6f045d5f95df423223f1d91a236",
+      "role": "event, correlation, rollback, correction, and Time Machine audit system"
+    }
+  },
+  "repository_count": 9,
+  "q_stage": "Q2",
+  "risk_gate": "Yellow",
+  "human_approval_gate": "pending",
+  "q3_approved": false,
+  "q4_approved": false
+}
