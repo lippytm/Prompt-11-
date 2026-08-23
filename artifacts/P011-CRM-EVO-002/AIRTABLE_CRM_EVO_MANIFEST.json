@@ -1,0 +1,25 @@
+{
+  "module_id": "P-011-CRM-EVO-002",
+  "base_id": "appMIt4BeKa0NOPEZ",
+  "base_name": "Prompt #11 CRM Control Tower",
+  "state": "verified_bounded_q2",
+  "privacy_boundary": "synthetic, staged, or public architecture data only",
+  "tables": [
+    {"name": "Business Ecosystems", "table_id": "tbl1omCF0XG52Nu22", "records": 15},
+    {"name": "Quality Telemetry", "table_id": "tbl5bWubQFRrS6yxW", "records": 14},
+    {"name": "Evolution Proposals", "table_id": "tbldip22RPHj7ysu0", "records": 10},
+    {"name": "Provider Certification", "table_id": "tblhmH9MNdK21fZj3", "records": 12},
+    {"name": "Release Decisions", "table_id": "tbl2UgwyNPIRuK85D", "records": 8},
+    {"name": "CRM Missions", "table_id": "tbl8ZxVThqAH5LPt1", "new_crm_evo_records": 14}
+  ],
+  "actions": {
+    "quality_telemetry": "actS7SfFYRfzIcZfF",
+    "evolution_proposals": "actB3wcq8tpduEYap",
+    "provider_certification": "actMJoXZiBzs0uxbE",
+    "release_decisions": "actwCpsZGQ475X4YZ",
+    "hermes_missions": "act0YnkiirK7FwEdP"
+  },
+  "human_approval_gate": "pending",
+  "production_contact_permission": false,
+  "financial_authority": false
+}
