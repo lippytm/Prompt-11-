@@ -1,0 +1,23 @@
+{
+  "module_id": "P-011-CRM-EVO-002",
+  "platform": "Airtable",
+  "base_name": "Prompt #11 CRM Control Tower",
+  "base_id": "appMIt4BeKa0NOPEZ",
+  "state": "verified_bounded_q2",
+  "privacy_boundary": "synthetic, staged, public architecture, or approved minimum-necessary records only",
+  "tables": [
+    {"name":"Business Ecosystems","table_id":"tbl1omCF0XG52Nu22","records":15,"purpose":"Business-of-Businesses ecosystem passports, owners, privacy, Q-stage, risk, quality, and next actions"},
+    {"name":"Quality Telemetry","table_id":"tbl5bWubQFRrS6yxW","records":14,"purpose":"correlated consent, identity, service, learning, provider, correction, revenue, environmental, AI, security, and quality signals"},
+    {"name":"CRM Missions","table_id":"tbl8ZxVThqAH5LPt1","new_crm_evo_records":14,"purpose":"Fabric Hermes bounded mission and human-review queue"},
+    {"name":"Evolution Proposals","table_id":"tbldip22RPHj7ysu0","records":10,"purpose":"review-only and reversible capability mutations"},
+    {"name":"Provider Certification","table_id":"tblhmH9MNdK21fZj3","records":12,"purpose":"provider state, privacy maximum, permitted scope, evidence, rollback, revocation, tests, and approval"},
+    {"name":"Release Decisions","table_id":"tbl2UgwyNPIRuK85D","records":8,"purpose":"Q-stage, RiskGate, quality, blocking gates, scope, and human release decisions"}
+  ],
+  "total_crm_evo_records_loaded": 73,
+  "human_approval_gate": "Pending",
+  "production_contact_permission": false,
+  "provider_production_certification": false,
+  "financial_authority": false,
+  "q3_approved": false,
+  "q4_approved": false
+}
