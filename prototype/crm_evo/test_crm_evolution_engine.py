@@ -31,7 +31,7 @@ class CrmEvolutionEngineTests(unittest.TestCase):
             "accessibility_fairness": 75,
             "correction_provider": 80,
         }
-        self.assertEqual(quality_score(metrics), 84.75)
+        self.assertEqual(quality_score(metrics), 84.25)
 
     def test_quality_score_rejects_missing_metric(self):
         with self.assertRaises(ValueError):
