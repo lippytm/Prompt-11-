@@ -61,6 +61,9 @@ platforms:
   chatgpt_business:
     role: orchestration_and_chatgpt_line
     connector_status: bounded_manual_and_available_tools_only
+  github_copilot:
+    role: ai_copilot_assistance_with_governed_human_approval
+    connector_status: bounded_manual_and_available_tools_only
   github:
     role: canonical_source_control_and_audit
     connector_status: active

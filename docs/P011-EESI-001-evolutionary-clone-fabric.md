@@ -20,6 +20,7 @@ The architecture connects:
 - ChatGPT Business;
 - Gemini and NotebookLM;
 - Claude and Fabric Hermes;
+- GitHub Copilot;
 - GitHub;
 - Slack;
 - lippytmai.zo.computer;
