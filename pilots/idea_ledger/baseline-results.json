@@ -1,0 +1,63 @@
+{
+  "benchmark_id": "IDEA-LEDGER-BASELINE-V1",
+  "implementation": "deterministic",
+  "validation_context": "local reference validation run; results are environment-specific and should be regenerated in CI and on target hardware",
+  "ai_calls": 0,
+  "ai_cost_usd": 0.0,
+  "seed_size": 100,
+  "test_summary": {
+    "tests_run": 8,
+    "tests_passed": 8,
+    "tests_failed": 0,
+    "success_rate": 1.0
+  },
+  "measurements": [
+    {
+      "name": "create",
+      "iterations": 200,
+      "failures": 0,
+      "success_rate": 1.0,
+      "median_latency_ms": 0.0066625,
+      "p95_latency_ms": 0.020801
+    },
+    {
+      "name": "get",
+      "iterations": 200,
+      "failures": 0,
+      "success_rate": 1.0,
+      "median_latency_ms": 0.000099,
+      "p95_latency_ms": 0.000167
+    },
+    {
+      "name": "list_filtered",
+      "iterations": 200,
+      "failures": 0,
+      "success_rate": 1.0,
+      "median_latency_ms": 0.047066,
+      "p95_latency_ms": 0.108795
+    },
+    {
+      "name": "update",
+      "iterations": 200,
+      "failures": 0,
+      "success_rate": 1.0,
+      "median_latency_ms": 0.00648,
+      "p95_latency_ms": 0.010373
+    },
+    {
+      "name": "health_check",
+      "iterations": 200,
+      "failures": 0,
+      "success_rate": 1.0,
+      "median_latency_ms": 4.15203,
+      "p95_latency_ms": 6.721833
+    }
+  ],
+  "overall_success_rate": 1.0,
+  "notes": [
+    "Synthetic/public data only.",
+    "No AI provider or network call is involved.",
+    "Latency values are not universal performance claims; regenerate them in each comparison environment.",
+    "This snapshot establishes the correctness and cost-zero reference path for later AI-assisted and hybrid variants."
+  ]
+}
