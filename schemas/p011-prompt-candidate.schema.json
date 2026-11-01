@@ -14,11 +14,10 @@
     "acceptance_criteria",
     "quantum_questions",
     "evidence",
-    "evaluation",
     "human_approval"
   ],
   "properties": {
-    "prompt_id": {"type": "string", "pattern": "^P11-[A-Z0-9-]+$"},
+    "prompt_id": {"type": "string", "pattern": "^P11-[A-Z0-9-]+$", "minLength": 5},
     "version": {"type": "string", "pattern": "^[0-9]+\\.[0-9]+\\.[0-9]+$"},
     "state": {
       "type": "string",
@@ -28,11 +27,11 @@
     "owner": {"type": "string", "minLength": 1},
     "parent_prompt_id": {"type": ["string", "null"]},
     "parent_version": {"type": ["string", "null"]},
-    "target_repositories": {"type": "array", "items": {"type": "string"}, "uniqueItems": true},
-    "inputs": {"type": "array", "items": {"type": "string"}, "minItems": 1},
-    "agents": {"type": "array", "items": {"type": "string"}, "uniqueItems": true},
-    "tools": {"type": "array", "items": {"type": "string"}, "uniqueItems": true},
-    "acceptance_criteria": {"type": "array", "items": {"type": "string"}, "minItems": 1},
+    "target_repositories": {"type": "array", "items": {"type": "string", "minLength": 1}, "uniqueItems": true},
+    "inputs": {"type": "array", "items": {"type": "string", "minLength": 1}, "minItems": 1},
+    "agents": {"type": "array", "items": {"type": "string", "minLength": 1}, "uniqueItems": true},
+    "tools": {"type": "array", "items": {"type": "string", "minLength": 1}, "uniqueItems": true},
+    "acceptance_criteria": {"type": "array", "items": {"type": "string", "minLength": 1}, "minItems": 1},
     "quantum_questions": {
       "type": "object",
       "additionalProperties": false,
@@ -63,7 +62,7 @@
       "properties": {
         "score": {"type": "integer", "minimum": 0, "maximum": 100},
         "critical_gates_passed": {"type": "boolean"},
-        "evaluator": {"type": "string"},
+        "evaluator": {"type": "string", "minLength": 1},
         "notes": {"type": "string"}
       }
     },
@@ -81,11 +80,34 @@
   },
   "allOf": [
     {
-      "if": {"properties": {"state": {"const": "approved"}}},
-      "then": {
+      "if": {
         "properties": {
+          "state": {"enum": ["evaluated", "review_ready", "approved", "superseded"]}
+        },
+        "required": ["state"]
+      },
+      "then": {"required": ["evaluation"]}
+    },
+    {
+      "if": {
+        "properties": {"state": {"const": "approved"}},
+        "required": ["state"]
+      },
+      "then": {
+        "required": ["evaluation"],
+        "properties": {
+          "evaluation": {
+            "properties": {
+              "critical_gates_passed": {"const": true}
+            }
+          },
           "human_approval": {
-            "properties": {"approved": {"const": true}}
+            "properties": {
+              "approved": {"const": true},
+              "approver": {"type": "string", "minLength": 1},
+              "audit_reference": {"type": "string", "minLength": 1}
+            },
+            "required": ["approver", "audit_reference"]
           }
         }
       }
