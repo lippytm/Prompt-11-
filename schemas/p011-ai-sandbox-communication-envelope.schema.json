@@ -1,0 +1,30 @@
+{
+  "$schema":"https://json-schema.org/draft/2020-12/schema",
+  "$id":"https://github.com/lippytm/Prompt-11-/schemas/p011-ai-sandbox-communication-envelope.schema.json",
+  "title":"Prompt #11 AI Sandbox Communication Envelope",
+  "type":"object",
+  "additionalProperties":false,
+  "required":["message_id","work_packet_id","sender_id","sender_type","recipients","phase","prompt_module_id","prompt_version","payload_type","payload_summary","claim_refs","evidence_refs","independence_preserved","production_activation"],
+  "properties":{
+    "message_id":{"type":"string","minLength":1},
+    "work_packet_id":{"type":"string","minLength":1},
+    "sender_id":{"type":"string","minLength":1},
+    "sender_type":{"type":"string","enum":["CHATGPT","CHATGPT_BUSINESS","CLAUDE","GEMINI","GITHUB","JARVIS_SPECIALIST","DETERMINISTIC_TOOL"]},
+    "recipients":{"type":"array","minItems":1,"uniqueItems":true,"items":{"type":"string","minLength":1}},
+    "phase":{"type":"string","enum":["FIRST_PASS","EVIDENCE_EXCHANGE","REBUTTAL","ARBITRATION","REVIEW"]},
+    "prompt_module_id":{"type":"string","minLength":1},
+    "prompt_version":{"type":"string","pattern":"^[0-9]+\\.[0-9]+\\.[0-9]+$"},
+    "payload_type":{"type":"string","enum":["POSITION","CLAIM","EVIDENCE","QUESTION","REBUTTAL","TEST_RESULT","REVIEW_NOTE"]},
+    "payload_summary":{"type":"string","minLength":1},
+    "claim_refs":{"type":"array","items":{"type":"string"}},
+    "evidence_refs":{"type":"array","items":{"type":"string"}},
+    "independence_preserved":{"type":"boolean"},
+    "production_activation":{"const":false}
+  },
+  "allOf":[
+    {
+      "if":{"properties":{"phase":{"const":"FIRST_PASS"}},"required":["phase"]},
+      "then":{"properties":{"independence_preserved":{"const":true}}}
+    }
+  ]
+}
