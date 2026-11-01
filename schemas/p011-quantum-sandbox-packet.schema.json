@@ -1,0 +1,73 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/lippytm/Prompt-11-/schemas/p011-quantum-sandbox-packet.schema.json",
+  "title": "Prompt #11 Quantum Sandbox Packet",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "packet_id","sandbox","state","objective","inputs","outputs",
+    "evidence","unresolved_gaps","production_activation","human_approval"
+  ],
+  "properties": {
+    "packet_id": {"type":"string","minLength":1},
+    "sandbox": {
+      "type":"string",
+      "enum":["IF","MAYBE","WHY_NOT","DONT_DO_THAT","I_TOLD_YOU_NOT_TO_DO_THAT"]
+    },
+    "state": {
+      "type":"string",
+      "enum":["draft","tested","review_ready","approved","rejected","quarantined"]
+    },
+    "objective":{"type":"string","minLength":1},
+    "inputs":{"type":"array","items":{"type":"string"},"minItems":1},
+    "outputs":{"type":"array","items":{"type":"string"}},
+    "evidence":{
+      "type":"object",
+      "additionalProperties":false,
+      "required":["sources","tests"],
+      "properties":{
+        "sources":{"type":"array","items":{"type":"string"}},
+        "tests":{"type":"array","items":{"type":"string"}}
+      }
+    },
+    "unresolved_gaps":{"type":"array","items":{"type":"string"}},
+    "handoff_to":{
+      "type":["string","null"],
+      "enum":["IF","MAYBE","WHY_NOT","DONT_DO_THAT","I_TOLD_YOU_NOT_TO_DO_THAT",null]
+    },
+    "regression_requirement":{"type":["string","null"]},
+    "production_activation":{"const":false},
+    "human_approval":{
+      "type":"object",
+      "additionalProperties":false,
+      "required":["required","approved"],
+      "properties":{
+        "required":{"const":true},
+        "approved":{"type":"boolean"},
+        "approver":{"type":["string","null"]},
+        "audit_reference":{"type":["string","null"]}
+      }
+    }
+  },
+  "allOf":[
+    {
+      "if":{"properties":{"sandbox":{"const":"I_TOLD_YOU_NOT_TO_DO_THAT"}},"required":["sandbox"]},
+      "then":{"required":["regression_requirement"]}
+    },
+    {
+      "if":{"properties":{"state":{"const":"approved"}},"required":["state"]},
+      "then":{
+        "properties":{
+          "human_approval":{
+            "properties":{
+              "approved":{"const":true},
+              "approver":{"type":"string","minLength":1},
+              "audit_reference":{"type":"string","minLength":1}
+            },
+            "required":["approver","audit_reference"]
+          }
+        }
+      }
+    }
+  ]
+}
