@@ -1,0 +1,28 @@
+{
+  "prompt_id": "P11-PEE-002",
+  "version": "0.1.0",
+  "state": "draft",
+  "purpose": "Compose governed Jarvis prompts without activating production injection.",
+  "owner": "authorized-human-owner",
+  "inputs": ["task", "approved_prompt_modules"],
+  "acceptance_criteria": ["Draft records validate without fabricated evaluation results."],
+  "quantum_questions": {
+    "if": "Can modular composition preserve governance?",
+    "maybe": "Some tasks may need fewer modules.",
+    "why_not": "Use explicit module selection instead of one giant prompt.",
+    "dont_do_that": "Do not activate unapproved prompt modules.",
+    "i_told_you_not_to_do_that": ""
+  },
+  "evidence": {
+    "sources": [],
+    "tests": [],
+    "artifacts": [],
+    "unresolved_gaps": ["Evaluation not yet performed."]
+  },
+  "human_approval": {
+    "required": true,
+    "approved": false,
+    "approver": null,
+    "audit_reference": null
+  }
+}
