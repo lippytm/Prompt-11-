@@ -5,8 +5,8 @@
   "type": "object",
   "additionalProperties": false,
   "required": [
-    "packet_id","sandbox","state","objective","inputs","outputs",
-    "evidence","unresolved_gaps","production_activation","human_approval"
+    "packet_id","sandbox","state","objective","prompt_module_id","prompt_version",
+    "inputs","outputs","evidence","unresolved_gaps","production_activation","human_approval"
   ],
   "properties": {
     "packet_id": {"type":"string","minLength":1},
@@ -19,7 +19,9 @@
       "enum":["draft","tested","review_ready","approved","rejected","quarantined"]
     },
     "objective":{"type":"string","minLength":1},
-    "inputs":{"type":"array","items":{"type":"string"},"minItems":1},
+    "prompt_module_id":{"type":"string","minLength":1},
+    "prompt_version":{"type":"string","pattern":"^[0-9]+\\.[0-9]+\\.[0-9]+$"},
+    "inputs":{"type":"array","items":{"type":"string","minLength":1},"minItems":1},
     "outputs":{"type":"array","items":{"type":"string"}},
     "evidence":{
       "type":"object",
@@ -52,15 +54,20 @@
   "allOf":[
     {
       "if":{"properties":{"sandbox":{"const":"I_TOLD_YOU_NOT_TO_DO_THAT"}},"required":["sandbox"]},
-      "then":{"required":["regression_requirement"]}
+      "then":{
+        "required":["regression_requirement"],
+        "properties":{"regression_requirement":{"type":"string","minLength":1}}
+      }
     },
     {
-      "if":{"properties":{"state":{"const":"approved"}},"required":["state"]},
+      "if":{
+        "properties":{"human_approval":{"properties":{"approved":{"const":true}},"required":["approved"]}},
+        "required":["human_approval"]
+      },
       "then":{
         "properties":{
           "human_approval":{
             "properties":{
-              "approved":{"const":true},
               "approver":{"type":"string","minLength":1},
               "audit_reference":{"type":"string","minLength":1}
             },
@@ -68,6 +75,10 @@
           }
         }
       }
+    },
+    {
+      "if":{"properties":{"state":{"const":"approved"}},"required":["state"]},
+      "then":{"properties":{"human_approval":{"properties":{"approved":{"const":true}}}}}
     }
   ]
 }
