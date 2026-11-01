@@ -35,21 +35,32 @@
         "I_TOLD_YOU_NOT_TO_DO_THAT":{"type":"string","enum":["not_applicable","not_run","pass","partial","fail"]}
       }
     },
-    "critical_gates":{
-      "type":"object","additionalProperties":{"type":"boolean"},
-      "minProperties":1
-    },
+    "critical_gates":{"type":"object","additionalProperties":{"type":"boolean"},"minProperties":1},
     "best_practice":{
       "type":"object","additionalProperties":false,
-      "required":["score","promotion_blocked"],
+      "required":["score","promotion_blocked","domains"],
       "properties":{
         "score":{"type":"integer","minimum":0,"maximum":100},
-        "promotion_blocked":{"type":"boolean"}
+        "promotion_blocked":{"type":"boolean"},
+        "attestation_reference":{"type":["string","null"]},
+        "domains":{
+          "type":"array","items":{
+            "type":"object","additionalProperties":false,
+            "required":["domain","status"],
+            "properties":{
+              "domain":{"type":"string","minLength":1},
+              "status":{"type":"string","enum":["pass","partial","fail","not_applicable"]},
+              "evidence":{"type":"array","items":{"type":"string"}},
+              "tests":{"type":"array","items":{"type":"string"}},
+              "deviations":{"type":"array","items":{"type":"string"}},
+              "rationale":{"type":["string","null"]}
+            }
+          }
+        }
       }
     },
     "risks":{
-      "type":"array",
-      "items":{
+      "type":"array","items":{
         "type":"object","additionalProperties":false,
         "required":["severity","description","resolved"],
         "properties":{
@@ -60,8 +71,7 @@
       }
     },
     "regressions":{
-      "type":"array",
-      "items":{
+      "type":"array","items":{
         "type":"object","additionalProperties":false,
         "required":["severity","test_id","passed"],
         "properties":{
@@ -85,5 +95,11 @@
         "audit_reference":{"type":["string","null"]}
       }
     }
-  }
+  },
+  "allOf":[
+    {
+      "if":{"properties":{"human_approval":{"properties":{"approved":{"const":true}},"required":["approved"]}},"required":["human_approval"]},
+      "then":{"properties":{"human_approval":{"properties":{"approver":{"type":"string","minLength":1},"audit_reference":{"type":"string","minLength":1}},"required":["approver","audit_reference"]}}}
+    }
+  ]
 }
