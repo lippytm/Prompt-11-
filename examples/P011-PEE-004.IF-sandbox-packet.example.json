@@ -1,0 +1,14 @@
+{
+  "packet_id":"QS-IF-TEST-001",
+  "sandbox":"IF",
+  "state":"draft",
+  "objective":"Test whether modular Prompt #11 composition reduces prompt conflicts.",
+  "inputs":["baseline prompt package","candidate modular package"],
+  "outputs":["hypothesis","test plan","success criteria"],
+  "evidence":{"sources":[],"tests":[]},
+  "unresolved_gaps":["No comparative run completed yet."],
+  "handoff_to":"MAYBE",
+  "regression_requirement":null,
+  "production_activation":false,
+  "human_approval":{"required":true,"approved":false,"approver":null,"audit_reference":null}
+}
