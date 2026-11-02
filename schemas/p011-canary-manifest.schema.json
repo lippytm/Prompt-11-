@@ -1,0 +1,40 @@
+{
+  "$schema":"https://json-schema.org/draft/2020-12/schema",
+  "$id":"https://github.com/lippytm/Prompt-11-/schemas/p011-canary-manifest.schema.json",
+  "title":"Prompt #11 Controlled Canary Manifest",
+  "type":"object",
+  "additionalProperties":false,
+  "required":[
+    "canary_id","target","candidate_ref","baseline_ref","task_class","scope",
+    "max_runs","success_criteria","failure_criteria","stop_conditions",
+    "rollback_target","rollback_procedure_reference","post_canary_verification_plan",
+    "evidence_collection_plan","human_approval","production_activation"
+  ],
+  "properties":{
+    "canary_id":{"type":"string","minLength":1},
+    "target":{"type":"string","minLength":1},
+    "candidate_ref":{"type":"string","minLength":1},
+    "baseline_ref":{"type":"string","minLength":1},
+    "task_class":{"type":"string","minLength":1},
+    "scope":{"type":"string","minLength":1},
+    "max_runs":{"type":"integer","minimum":1,"maximum":1000},
+    "success_criteria":{"type":"array","minItems":1,"items":{"type":"string","minLength":1}},
+    "failure_criteria":{"type":"array","minItems":1,"items":{"type":"string","minLength":1}},
+    "stop_conditions":{"type":"array","minItems":1,"items":{"type":"string","minLength":1}},
+    "rollback_target":{"type":"string","minLength":1},
+    "rollback_procedure_reference":{"type":"string","minLength":1},
+    "post_canary_verification_plan":{"type":"string","minLength":1},
+    "evidence_collection_plan":{"type":"string","minLength":1},
+    "human_approval":{
+      "type":"object",
+      "additionalProperties":false,
+      "required":["approved","approver","audit_reference"],
+      "properties":{
+        "approved":{"const":true},
+        "approver":{"type":"string","minLength":1},
+        "audit_reference":{"type":"string","minLength":1}
+      }
+    },
+    "production_activation":{"const":false}
+  }
+}

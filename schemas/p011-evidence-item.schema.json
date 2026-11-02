@@ -1,0 +1,19 @@
+{
+  "$schema":"https://json-schema.org/draft/2020-12/schema",
+  "$id":"https://github.com/lippytm/Prompt-11-/schemas/p011-evidence-item.schema.json",
+  "title":"Prompt #11 Evidence Item",
+  "type":"object",
+  "additionalProperties":false,
+  "required":["evidence_id","source_type","source_locator","evidence_class","independence_group","freshness","verification_state","limitations"],
+  "properties":{
+    "evidence_id":{"type":"string","minLength":1},
+    "source_type":{"type":"string","minLength":1},
+    "source_locator":{"type":"string","minLength":1},
+    "source_version":{"type":["string","null"]},
+    "evidence_class":{"type":"string","enum":["DETERMINISTIC_TEST","PRIMARY_SOURCE","REPOSITORY_ARTIFACT","TOOL_OUTPUT","SECONDARY_SOURCE","MODEL_ASSERTION","USER_PROVIDED","SYNTHETIC_TEST_FIXTURE"]},
+    "independence_group":{"type":"string","minLength":1},
+    "freshness":{"type":"string","enum":["CURRENT","STALE","UNKNOWN","NOT_TIME_SENSITIVE"]},
+    "verification_state":{"type":"string","enum":["VERIFIED","PARTIAL","UNVERIFIED","FAILED"]},
+    "limitations":{"type":"array","items":{"type":"string"}}
+  }
+}

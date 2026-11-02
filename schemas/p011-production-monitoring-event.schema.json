@@ -1,0 +1,27 @@
+{
+  "$schema":"https://json-schema.org/draft/2020-12/schema",
+  "$id":"https://github.com/lippytm/Prompt-11-/schemas/p011-production-monitoring-event.schema.json",
+  "title":"Prompt #11 Production Monitoring Event",
+  "type":"object",
+  "additionalProperties":false,
+  "required":[
+    "event_id","target","deployed_ref","rollout_stage","health_signal",
+    "critical_error_count","high_severity_regression_count",
+    "security_or_privacy_violation","drift_class","evidence_completeness",
+    "rollback_available","production_mutation_allowed"
+  ],
+  "properties":{
+    "event_id":{"type":"string","minLength":1},
+    "target":{"type":"string","minLength":1},
+    "deployed_ref":{"type":"string","minLength":1},
+    "rollout_stage":{"type":"string","enum":["CANARY","LIMITED","PARTIAL","BROAD","FULL"]},
+    "health_signal":{"type":"string","enum":["HEALTHY","DEGRADED","UNKNOWN"]},
+    "critical_error_count":{"type":"integer","minimum":0},
+    "high_severity_regression_count":{"type":"integer","minimum":0},
+    "security_or_privacy_violation":{"type":"boolean"},
+    "drift_class":{"type":"string","enum":["NO_DRIFT","IMPROVEMENT","ACCEPTABLE_DRIFT","MATERIAL_DRIFT","CRITICAL_DRIFT","INSUFFICIENT_DATA"]},
+    "evidence_completeness":{"type":"integer","minimum":0,"maximum":100},
+    "rollback_available":{"type":"boolean"},
+    "production_mutation_allowed":{"const":false}
+  }
+}

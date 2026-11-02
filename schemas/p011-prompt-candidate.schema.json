@@ -1,0 +1,93 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/lippytm/Prompt-11-/schemas/p011-prompt-candidate.schema.json",
+  "title": "Prompt #11 Prompt Candidate",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["prompt_id","version","state","purpose","owner","inputs","acceptance_criteria","quantum_questions","evidence","human_approval"],
+  "properties": {
+    "prompt_id": {"type":"string","pattern":"^P11-[A-Z0-9-]+$","minLength":5},
+    "version": {"type":"string","pattern":"^[0-9]+\\.[0-9]+\\.[0-9]+$"},
+    "state": {"type":"string","enum":["draft","testable","evaluated","review_ready","approved","superseded","rejected","quarantined"]},
+    "purpose":{"type":"string","minLength":1},
+    "owner":{"type":"string","minLength":1},
+    "parent_prompt_id":{"type":["string","null"]},
+    "parent_version":{"type":["string","null"]},
+    "target_repositories":{"type":"array","items":{"type":"string","minLength":1},"uniqueItems":true},
+    "inputs":{"type":"array","items":{"type":"string","minLength":1},"minItems":1},
+    "agents":{"type":"array","items":{"type":"string","minLength":1},"uniqueItems":true},
+    "tools":{"type":"array","items":{"type":"string","minLength":1},"uniqueItems":true},
+    "acceptance_criteria":{"type":"array","items":{"type":"string","minLength":1},"minItems":1},
+    "quantum_questions":{
+      "type":"object","additionalProperties":false,
+      "required":["if","maybe","why_not","dont_do_that","i_told_you_not_to_do_that"],
+      "properties":{
+        "if":{"type":"string"},"maybe":{"type":"string"},"why_not":{"type":"string"},
+        "dont_do_that":{"type":"string"},"i_told_you_not_to_do_that":{"type":"string"}
+      }
+    },
+    "evidence":{
+      "type":"object","additionalProperties":false,
+      "required":["sources","tests","artifacts","unresolved_gaps"],
+      "properties":{
+        "sources":{"type":"array","items":{"type":"string"}},
+        "tests":{"type":"array","items":{"type":"string"}},
+        "artifacts":{"type":"array","items":{"type":"string"}},
+        "unresolved_gaps":{"type":"array","items":{"type":"string"}}
+      }
+    },
+    "evaluation":{
+      "type":"object","additionalProperties":false,
+      "required":["score","critical_gates_passed","evaluator"],
+      "properties":{
+        "score":{"type":"integer","minimum":0,"maximum":100},
+        "critical_gates_passed":{"type":"boolean"},
+        "evaluator":{"type":"string","minLength":1},
+        "notes":{"type":"string"}
+      }
+    },
+    "human_approval":{
+      "type":"object","additionalProperties":false,
+      "required":["required","approved"],
+      "properties":{
+        "required":{"const":true},
+        "approved":{"type":"boolean"},
+        "approver":{"type":["string","null"]},
+        "audit_reference":{"type":["string","null"]}
+      }
+    }
+  },
+  "allOf":[
+    {
+      "if":{"properties":{"state":{"enum":["evaluated","review_ready","approved","superseded"]}},"required":["state"]},
+      "then":{"required":["evaluation"]}
+    },
+    {
+      "if":{
+        "properties":{"human_approval":{"properties":{"approved":{"const":true}},"required":["approved"]}},
+        "required":["human_approval"]
+      },
+      "then":{
+        "properties":{
+          "human_approval":{
+            "properties":{
+              "approver":{"type":"string","minLength":1},
+              "audit_reference":{"type":"string","minLength":1}
+            },
+            "required":["approver","audit_reference"]
+          }
+        }
+      }
+    },
+    {
+      "if":{"properties":{"state":{"const":"approved"}},"required":["state"]},
+      "then":{
+        "required":["evaluation"],
+        "properties":{
+          "evaluation":{"properties":{"critical_gates_passed":{"const":true}}},
+          "human_approval":{"properties":{"approved":{"const":true}}}
+        }
+      }
+    }
+  ]
+}

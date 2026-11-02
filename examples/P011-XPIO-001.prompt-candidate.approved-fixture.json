@@ -1,0 +1,34 @@
+{
+  "prompt_id": "P11-XPIO-001",
+  "version": "1.0.0",
+  "state": "approved",
+  "purpose": "Synthetic schema-validation fixture only.",
+  "owner": "authorized-human-owner",
+  "inputs": ["task"],
+  "acceptance_criteria": ["Critical gates pass.", "Human approval evidence is recorded."],
+  "quantum_questions": {
+    "if": "Does approved-state validation enforce all gates?",
+    "maybe": "",
+    "why_not": "",
+    "dont_do_that": "Do not treat this fixture as real approval.",
+    "i_told_you_not_to_do_that": ""
+  },
+  "evidence": {
+    "sources": ["synthetic-test-fixture"],
+    "tests": ["schema-validation"],
+    "artifacts": [],
+    "unresolved_gaps": []
+  },
+  "evaluation": {
+    "score": 95,
+    "critical_gates_passed": true,
+    "evaluator": "synthetic-test-evaluator",
+    "notes": "Fixture only."
+  },
+  "human_approval": {
+    "required": true,
+    "approved": true,
+    "approver": "synthetic-authorized-owner",
+    "audit_reference": "TEST-FIXTURE-ONLY"
+  }
+}

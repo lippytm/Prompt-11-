@@ -1,0 +1,23 @@
+{
+  "$schema":"https://json-schema.org/draft/2020-12/schema",
+  "$id":"https://github.com/lippytm/Prompt-11-/schemas/p011-ai-council-position.schema.json",
+  "title":"Prompt #11 AI Council Position",
+  "type":"object",
+  "additionalProperties":false,
+  "required":["position_id","member_id","member_type","task_id","position","confidence","evidence","assumptions","uncertainties","recommended_action"],
+  "properties":{
+    "position_id":{"type":"string","minLength":1},
+    "member_id":{"type":"string","minLength":1},
+    "member_type":{"type":"string","enum":["CHATGPT","CLAUDE","GEMINI","JARVIS_SPECIALIST"]},
+    "model_or_role":{"type":["string","null"]},
+    "task_id":{"type":"string","minLength":1},
+    "position":{"type":"string","minLength":1},
+    "confidence":{"type":"integer","minimum":0,"maximum":100},
+    "evidence":{"type":"array","items":{"type":"string"}},
+    "assumptions":{"type":"array","items":{"type":"string"}},
+    "uncertainties":{"type":"array","items":{"type":"string"}},
+    "recommended_action":{"type":"string","minLength":1},
+    "warnings":{"type":"array","items":{"type":"string"}},
+    "unresolved_questions":{"type":"array","items":{"type":"string"}}
+  }
+}

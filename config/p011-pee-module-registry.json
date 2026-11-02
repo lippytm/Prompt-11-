@@ -1,0 +1,28 @@
+{
+  "registry_id": "P11-PEE-MODULE-REGISTRY",
+  "version": "0.1.3",
+  "canonical_prompt": "P-011-XPIO-001",
+  "modules": [
+    {"module_id":"P11-PEE-001","title":"Prompt Engineering & Evolution Engine","status":"review_ready","required":true},
+    {"module_id":"P11-PEE-002","title":"Jarvis Prompt Composition, Evaluation & Regression Framework","status":"review_ready","required":true},
+    {"module_id":"P11-PEE-003","title":"Prompt Evaluation, Red-Team & Continuous Improvement Harness","status":"review_ready","required":true},
+    {"module_id":"P11-PEE-004","title":"Quantum Question Five-Sandbox System","status":"review_ready","required":true},
+    {"module_id":"P11-PEE-005","title":"Global AI Best Practices Fabric","status":"review_ready","required":true},
+    {"module_id":"P11-PEE-006","title":"AI Control Tower & Best-Practice Scoreboard","status":"review_ready","required":true},
+    {"module_id":"P11-PEE-007","title":"Prioritized Next-Action & Decision Intelligence Engine","status":"review_ready","required":true},
+    {"module_id":"P11-PEE-008","title":"Multi-Model AI Council & Disagreement Resolution","status":"review_ready","required":true},
+    {"module_id":"P11-PEE-009","title":"Evidence Arbitration & Council Orchestration Engine","status":"review_ready","required":true},
+    {"module_id":"P11-PEE-010","title":"Collective Intelligence Consensus Amplification Mode","status":"review_ready","required":true},
+    {"module_id":"P11-PEE-011","title":"Human + AI Error Prevention, Detection & Recovery","status":"review_ready","required":true},
+    {"module_id":"P11-PEE-012","title":"Deployment Readiness & Canary Gate","status":"review_ready","required":true},
+    {"module_id":"P11-PEE-013","title":"Controlled Canary Manifest & Rollback Contract","status":"review_ready","required":true},
+    {"module_id":"P11-PEE-014","title":"Post-Deployment Verification & Rollback Recommendation","status":"review_ready","required":true},
+    {"module_id":"P11-PEE-015","title":"Canary Telemetry, Drift Detection & Baseline Comparison","status":"review_ready","required":true},
+    {"module_id":"P11-PEE-016","title":"Progressive Rollout & Rollback Decision Control","status":"review_ready","required":true},
+    {"module_id":"P11-PEE-017","title":"Continuous Production Monitoring, Incident Detection & Safe Rollback Orchestration","status":"review_ready","required":true},
+    {"module_id":"P11-PEE-018","title":"Self-Healing Proposal, Recovery Planning & Regression-Learning Engine","status":"review_ready","required":true},
+    {"module_id":"P11-PEE-019","title":"Autonomous Root-Cause Analysis, Failure Signature Memory & Repair Candidate Ranking Engine","status":"review_ready","required":true}
+  ],
+  "promotion_rule": "No module becomes canonical/active without required tests, evidence, regression checks, and HumanApprovalGate.",
+  "production_activation": false
+}
