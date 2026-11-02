@@ -1,6 +1,6 @@
 {
   "registry_id": "P11-PEE-MODULE-REGISTRY",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "canonical_prompt": "P-011-XPIO-001",
   "modules": [
     {"module_id":"P11-PEE-001","title":"Prompt Engineering & Evolution Engine","status":"review_ready","required":true},
@@ -18,7 +18,8 @@
     {"module_id":"P11-PEE-013","title":"Controlled Canary Manifest & Rollback Contract","status":"review_ready","required":true},
     {"module_id":"P11-PEE-014","title":"Post-Deployment Verification & Rollback Recommendation","status":"review_ready","required":true},
     {"module_id":"P11-PEE-015","title":"Canary Telemetry, Drift Detection & Baseline Comparison","status":"review_ready","required":true},
-    {"module_id":"P11-PEE-016","title":"Progressive Rollout & Rollback Decision Control","status":"review_ready","required":true}
+    {"module_id":"P11-PEE-016","title":"Progressive Rollout & Rollback Decision Control","status":"review_ready","required":true},
+    {"module_id":"P11-PEE-017","title":"Continuous Production Monitoring, Incident Detection & Safe Rollback Orchestration","status":"review_ready","required":true}
   ],
   "promotion_rule": "No module becomes canonical/active without required tests, evidence, regression checks, and HumanApprovalGate.",
   "production_activation": false
